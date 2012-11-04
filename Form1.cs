@@ -206,7 +206,7 @@ namespace WindowsFormsApplication1
             if (cb_subfolder.Checked &&(subfolder.Text != ""))
                 path +=  subfolder.Text +"\\";
            
-            MessageBox.Show(path);
+            
             string cmd_file = "@ECHO off" + Environment.NewLine;
             if (install_libo)
                 cmd_file += "start /wait msiexec /qr /norestart /a \"" + path_main.Text + "\" TARGETDIR=\"" + path + "\"" + Environment.NewLine;
@@ -434,7 +434,6 @@ namespace WindowsFormsApplication1
                     httpfile = httpfile.Remove(0, 9 + starting_position);
                     starting_position = httpfile.IndexOf(".msi");
                     httpfile = httpfile.Remove(starting_position + 4);
-                    filename = httpfile;
                 }
                 else if (testing)
                 {
@@ -453,7 +452,6 @@ namespace WindowsFormsApplication1
                     httpfile = httpfile.Remove(0, starting_position);
                     starting_position = httpfile.IndexOf(".msi") + 4;
                     httpfile = httpfile.Remove(starting_position);
-                    filename = httpfile;
                     url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
                 }
                 else if (latest_branch)
@@ -468,8 +466,7 @@ namespace WindowsFormsApplication1
                     httpfile = httpfile.Remove(5);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
                     httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
-                    filename = httpfile;
-
+                    
                 }
                 else if (older_branch)
                 {
@@ -482,9 +479,9 @@ namespace WindowsFormsApplication1
                     httpfile = httpfile.Remove(i);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
                     httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
-                    filename = httpfile;
-
+                    
                 }
+                filename = httpfile;
                 progressBar1.Minimum = 0;
                 progressBar1.Maximum = 10000;
                 string path = Path.GetTempPath();
@@ -502,14 +499,22 @@ namespace WindowsFormsApplication1
                     path += "liboobranch.msi";
                 path_to_file_ondisk.Text = path;
                 string mb_question = getstring("versiondl");
-                int k = mb_question.IndexOf("%version");
-                int l = k + 8;
-                mb_question = mb_question.Remove(k, l);
-                mb_question = mb_question.Insert(k, filename);
-              DialogResult dialog_result =  MessageBox.Show(mb_question, getstring("startdl"), MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                /* int k = mb_question.IndexOf("%version");
+                 int l = k + 3;
+                 mb_question = mb_question.Remove(k, l);*/
+                mb_question = mb_question.Replace("%version", filename);
+                
+              
 
-                if (dialog_result == DialogResult.Yes)
-                downloadmaster.DownloadFileAsync(uritofile, path);
+              if (MessageBox.Show(mb_question, getstring("startdl"), MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+              {
+                  downloadmaster.DownloadFileAsync(uritofile, path);
+                  int k = filename.IndexOf("LibO");
+                   filename = filename.Remove(k,5);
+                   k = filename.IndexOf("_");
+                   filename = filename.Remove(k);
+                   subfolder.Text = filename;
+              }
             }
         }
 
