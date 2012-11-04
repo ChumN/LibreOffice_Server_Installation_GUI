@@ -70,6 +70,24 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download latest branch ähnelt.
+        /// </summary>
+        internal static string bdllb {
+            get {
+                return ResourceManager.GetString("bdllb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Configure installation directory ähnelt.
+        /// </summary>
+        internal static string config_installdir {
+            get {
+                return ResourceManager.GetString("config_installdir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die German: ähnelt.
         /// </summary>
         internal static string de {
@@ -93,6 +111,42 @@ namespace WindowsFormsApplication1 {
         internal static string dirnotfoundmessage {
             get {
                 return ResourceManager.GetString("dirnotfoundmessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download older branch ähnelt.
+        /// </summary>
+        internal static string dl_ob {
+            get {
+                return ResourceManager.GetString("dl_ob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download latest master ähnelt.
+        /// </summary>
+        internal static string dlmaster {
+            get {
+                return ResourceManager.GetString("dlmaster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download latest testing build ähnelt.
+        /// </summary>
+        internal static string dltesting {
+            get {
+                return ResourceManager.GetString("dltesting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Edit bootdtrap.ini ähnelt.
+        /// </summary>
+        internal static string edit_bs_ini {
+            get {
+                return ResourceManager.GetString("edit_bs_ini", resourceCulture);
             }
         }
         
@@ -205,11 +259,65 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open bootstrap.ini ähnelt.
+        /// </summary>
+        internal static string open_bootstrap_ini {
+            get {
+                return ResourceManager.GetString("open_bootstrap_ini", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open bootstrap.ini ähnelt.
+        /// </summary>
+        internal static string open_bootstrap_title {
+            get {
+                return ResourceManager.GetString("open_bootstrap_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open LibreOffice help installer ähnelt.
+        /// </summary>
+        internal static string open_help {
+            get {
+                return ResourceManager.GetString("open_help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open LibreOffice installer ähnelt.
+        /// </summary>
+        internal static string open_installer {
+            get {
+                return ResourceManager.GetString("open_installer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Programmer: ähnelt.
         /// </summary>
         internal static string programmer {
             get {
                 return ResourceManager.GetString("programmer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Progress: ähnelt.
+        /// </summary>
+        internal static string progress {
+            get {
+                return ResourceManager.GetString("progress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Save bootstrap.ini ähnelt.
+        /// </summary>
+        internal static string save_bootstrap_ini {
+            get {
+                return ResourceManager.GetString("save_bootstrap_ini", resourceCulture);
             }
         }
         
@@ -237,6 +345,33 @@ namespace WindowsFormsApplication1 {
         internal static string standarderror {
             get {
                 return ResourceManager.GetString("standarderror", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Start installation ähnelt.
+        /// </summary>
+        internal static string start_install {
+            get {
+                return ResourceManager.GetString("start_install", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Should the file be downloaded? ähnelt.
+        /// </summary>
+        internal static string startdl {
+            get {
+                return ResourceManager.GetString("startdl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Should a subfolder be created automatically? Name of the subfolder: ähnelt.
+        /// </summary>
+        internal static string subfolder_do {
+            get {
+                return ResourceManager.GetString("subfolder_do", resourceCulture);
             }
         }
         
@@ -331,11 +466,29 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Should %version really be downloaded? ähnelt.
+        /// </summary>
+        internal static string versiondl {
+            get {
+                return ResourceManager.GetString("versiondl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Warning! ähnelt.
         /// </summary>
         internal static string warning {
             get {
                 return ResourceManager.GetString("warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Choose installation directory ähnelt.
+        /// </summary>
+        internal static string where_to_install {
+            get {
+                return ResourceManager.GetString("where_to_install", resourceCulture);
             }
         }
     }
