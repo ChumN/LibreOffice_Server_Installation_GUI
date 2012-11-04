@@ -153,7 +153,7 @@ namespace WindowsFormsApplication1
             if (path_installdir.TextLength > 0)
                 install_path = true;
 
-            // Throw an exeption, when no installdir choosen and a wearning if no LibreOffice was choosen.
+            // Throw an exeption, when no installdir choosen and a warning if no LibreOffice was choosen.
             try
             {
                 if (!install_path)
@@ -203,7 +203,7 @@ namespace WindowsFormsApplication1
         private string create_cmd(bool install_libo, bool install_help)
         {
             string path = path_installdir.Text;
-            if (cb_subfolder.Checked)
+            if (cb_subfolder.Checked &&(subfolder.Text != ""))
                 path +=  subfolder.Text +"\\";
            
             MessageBox.Show(path);
