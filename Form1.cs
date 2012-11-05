@@ -607,8 +607,8 @@ namespace WindowsFormsApplication1
                 ser.Serialize(str, thingstosave);
                 str.Close();
             }
-            catch (Exception ex)
-            { exeptionmessage(ex.Message); }
+            catch (Exception)
+            { /*exeptionmessage(ex.Message);*/ }
            
         }
         public class SETTINGS
