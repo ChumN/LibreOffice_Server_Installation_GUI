@@ -55,7 +55,7 @@
             this.about.Multiline = true;
             this.about.Name = "about";
             this.about.ReadOnly = true;
-            this.about.Size = new System.Drawing.Size(459, 120);
+            this.about.Size = new System.Drawing.Size(459, 320);
             this.about.TabIndex = 3;
             // 
             // lang_chooser
@@ -65,8 +65,9 @@
             "En",
             "De",
             "Fr",
-            "Es"});
-            this.lang_chooser.Location = new System.Drawing.Point(401, 229);
+            "Es",
+            "Sl"});
+            this.lang_chooser.Location = new System.Drawing.Point(401, 429);
             this.lang_chooser.Name = "lang_chooser";
             this.lang_chooser.Size = new System.Drawing.Size(71, 21);
             this.lang_chooser.TabIndex = 5;
@@ -75,7 +76,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 232);
+            this.label1.Location = new System.Drawing.Point(12, 432);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
@@ -85,14 +86,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 262);
+            this.ClientSize = new System.Drawing.Size(484, 462);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lang_chooser);
             this.Controls.Add(this.about);
             this.Controls.Add(this.pictureBox1);
-            this.MaximumSize = new System.Drawing.Size(500, 300);
+            this.MaximumSize = new System.Drawing.Size(500, 500);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(500, 300);
+            this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "Form2";
             this.Text = "About";
             this.Load += new System.EventHandler(this.Form2_Load);
