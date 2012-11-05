@@ -613,7 +613,8 @@ namespace WindowsFormsApplication1
                 str.Close();
             }
             catch (Exception ex)
-            { exeptionmessage(ex.Message); }
+            { //exeptionmessage(ex.Message); 
+            }
            
         }
         public class SETTINGS
