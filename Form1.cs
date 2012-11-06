@@ -22,8 +22,8 @@ namespace WindowsFormsApplication1
 
     public partial class Form1 : Form
     {
-        
 
+        ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public Form1()
         {
             //l10n
@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
             {
                 string temp = Path.GetTempPath() + "langsettings.config";
                 string lang = File.ReadAllText(temp);
-                
+               
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
 
             }
@@ -574,11 +574,8 @@ namespace WindowsFormsApplication1
         public string getstring(string strMessage)
         {
             string rt = "???";
-            
-            
             try
             {
-                ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
               rt = rm.GetString(strMessage);
             }
             catch (Exception)
@@ -612,7 +609,7 @@ namespace WindowsFormsApplication1
                 ser.Serialize(str, thingstosave);
                 str.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {}
            
         }

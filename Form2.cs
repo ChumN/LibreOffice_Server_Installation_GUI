@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form2 : Form
     {
+        ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public Form2()
         {
             
@@ -55,7 +56,6 @@ namespace WindowsFormsApplication1
 
             try
             {
-                ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
                 rt = rm.GetString(strMessage);
             }
             catch (Exception)
