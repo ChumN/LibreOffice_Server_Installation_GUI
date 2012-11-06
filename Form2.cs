@@ -48,6 +48,7 @@ namespace WindowsFormsApplication1
             abouttxt += sl + "Martin Srebotnjak";
             about.Text = abouttxt;
             this.Text = getstring("about");
+            lang_chooser.Sorted = true;
 
         }
         public string getstring(string strMessage)

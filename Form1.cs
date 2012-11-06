@@ -70,11 +70,12 @@ namespace WindowsFormsApplication1
             string tt_m = getstring("tt_m");
             string tt_tb = getstring("tt_tb");
             string tt_ob = getstring("tt_ob");
+            string bootstrap = getstring("tt_bootstrap");
             d_lb.SetToolTip(this.b_dl_lb, tt_lb);
             d_m.SetToolTip(this.b_dl_master, tt_m);
             d_tb.SetToolTip(this.b_dl_testing, tt_tb);
             d_ob.SetToolTip(this.b_dl_ob, tt_ob);
-            bootstrapini.SetToolTip(this.userinstallation,getstring("tt_bootstrap"));
+            bootstrapini.SetToolTip(this.bootstrap_text, bootstrap);
             bootstrapini.ShowAlways = true;
             d_lb.IsBalloon = true;
             d_m.IsBalloon = true;
