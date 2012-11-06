@@ -117,4 +117,154 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="dirnotfound" xml:space="preserve">
+		<value>Mapa ne obstaja!</value>
+	</data>
+	<data name="dirnotfoundmessage" xml:space="preserve">
+		<value>Preverite, če izbrana mapa obstaja.</value>
+	</data>
+	<data name="Error" xml:space="preserve">
+		<value>Napaka!</value>
+	</data>
+	<data name="filesave" xml:space="preserve">
+		<value>Datoteka uspešno shranjena!</value>
+	</data>
+	<data name="go_back" xml:space="preserve">
+		<value>Želite nazaj?</value>
+	</data>
+	<data name="help_runasadmin" xml:space="preserve">
+		<value>Morda bi pomagalo, če bi program zagnali kot skrbnik.</value>
+	</data>
+	<data name="installerror" xml:space="preserve">
+		<value>Namestitve ni mogoče zagnati zaradi naslednje napake:</value>
+	</data>
+	<data name="installnostart" xml:space="preserve">
+		<value>Namestitve ni mogoče zagnati!</value>
+	</data>
+	<data name="no_installdir" xml:space="preserve">
+		<value>Mapa namestitve ni izbrana!</value>
+	</data>
+	<data name="no_installfile" xml:space="preserve">
+		<value>Praviloma morate izbrati namestitveno datoteko LibreOffice. Želite nadaljevati?</value>
+	</data>
+	<data name="si" xml:space="preserve">
+		<value>Varnostna težava</value>
+	</data>
+	<data name="si_message" xml:space="preserve">
+		<value>Nimate pravic za pisanje v to mapo.</value>
+	</data>
+	<data name="standarderror" xml:space="preserve">
+		<value>Prišlo je do napake! Sporočilo:</value>
+	</data>
+	<data name="title_filesave" xml:space="preserve">
+		<value>Datoteka shranjena</value>
+	</data>
+	<data name="warning" xml:space="preserve">
+		<value>Opozorilo!</value>
+	</data>
+	<data name="de" xml:space="preserve">
+		<value>Nemščina:</value>
+	</data>
+	<data name="en" xml:space="preserve">
+		<value>Angleščina:</value>
+	</data>
+	<data name="fr" xml:space="preserve">
+		<value>Francoščina:</value>
+	</data>
+	<data name="lang" xml:space="preserve">
+		<value>Jezik</value>
+	</data>
+	<data name="programmer" xml:space="preserve">
+		<value>Programer:</value>
+	</data>
+	<data name="translations" xml:space="preserve">
+		<value>--- Prevodi ---</value>
+	</data>
+	<data name="translator" xml:space="preserve">
+		<value>Prevajalec:</value>
+	</data>
+	<data name="about" xml:space="preserve">
+		<value>Spremeni jezik</value>
+	</data>
+	<data name="tt_lb" xml:space="preserve">
+		<value>Zadnja gradnja najnovejše veje.</value>
+	</data>
+	<data name="tt_m" xml:space="preserve">
+		<value>Zadnja dnevna gradnja.</value>
+	</data>
+	<data name="tt_ob" xml:space="preserve">
+		<value>Zadnja gradnja starejše veje.</value>
+	</data>
+	<data name="tt_tb" xml:space="preserve">
+		<value>Zadnja preskusna gradnja.</value>
+	</data>
+	<data name="language_change_success" xml:space="preserve">
+		<value>Sprememba jezika bo veljala ob naslednjem zagonu!</value>
+	</data>
+	<data name="success" xml:space="preserve">
+		<value>Uspešno!</value>
+	</data>
+	<data name="tt_bootstrap" xml:space="preserve">
+		<value>Namesto vrstice, ki se začne z “UserInstallation=” lahko uporabite naslednje iz besedilnega polja zgoraj, da ne boste povozili svojega obstoječega uporabniškega profila.</value>
+	</data>
+	<data name="update_lang" xml:space="preserve">
+		<value>Spremeni jezik:</value>
+	</data>
+	<data name="versiondl" xml:space="preserve">
+		<value>Resnično želite prenesti %version?</value>
+	</data>
+	<data name="bdllb" xml:space="preserve">
+		<value>Prenesi zadnjo vejo</value>
+	</data>
+	<data name="open_help" xml:space="preserve">
+		<value>Odpri namestitveni program pomoči LibreOffice</value>
+	</data>
+	<data name="config_installdir" xml:space="preserve">
+		<value>Prilagodi namestitveno mapo</value>
+	</data>
+	<data name="open_bootstrap_ini" xml:space="preserve">
+		<value>Odpri bootstrap.ini</value>
+	</data>
+	<data name="dlmaster" xml:space="preserve">
+		<value>Prenesi zadnjo glavno gradnjo</value>
+	</data>
+	<data name="dltesting" xml:space="preserve">
+		<value>Prenesi zadnjo preskusno gradnjo</value>
+	</data>
+	<data name="dl_ob" xml:space="preserve">
+		<value>Prenesi starejšo vejo</value>
+	</data>
+	<data name="edit_bs_ini" xml:space="preserve">
+		<value>Uredi bootdtrap.ini</value>
+	</data>
+	<data name="progress" xml:space="preserve">
+		<value>Napredek:</value>
+	</data>
+	<data name="open_bootstrap_title" xml:space="preserve">
+		<value>Odpri bootstrap.ini</value>
+	</data>
+	<data name="open_installer" xml:space="preserve">
+		<value>Odpri namestitveni program LibreOffice</value>
+	</data>
+	<data name="startdl" xml:space="preserve">
+		<value>Želite prenesti datoteko?</value>
+	</data>
+	<data name="start_install" xml:space="preserve">
+		<value>Zaženi namestitev</value>
+	</data>
+	<data name="where_to_install" xml:space="preserve">
+		<value>Izberite namestitveno mapo</value>
+	</data>
+	<data name="save_bootstrap_ini" xml:space="preserve">
+		<value>Shrani bootstrap.ini</value>
+	</data>
+	<data name="subfolder_do" xml:space="preserve">
+		<value>Želite samodejno izdelati podmapo? Ime podmape:</value>
+	</data>
+	<data name="es" xml:space="preserve">
+		<value>Španščina:</value>
+	</data>
+	<data name="sl" xml:space="preserve">
+		<value>Slovenščina:</value>
+	</data>
 </root>
