@@ -95,8 +95,8 @@ namespace WindowsFormsApplication1
                 path_installdir.Text = toapply.installdir;
                 subfolder.Text = toapply.subfolder;
             }
-            catch (Exception ex)
-            { exeptionmessage(ex.Message); }
+            catch (Exception )
+            {}
 
             // End Loading settings
             button1.Text = getstring("about");
@@ -613,8 +613,7 @@ namespace WindowsFormsApplication1
                 str.Close();
             }
             catch (Exception ex)
-            { //exeptionmessage(ex.Message); 
-            }
+            {}
            
         }
         public class SETTINGS
