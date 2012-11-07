@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+/*using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using System.Text;*/
 using System.Windows.Forms;
 using System.Resources;
 using System.Reflection;
+using System.IO;
 
 
 namespace WindowsFormsApplication1
@@ -44,7 +45,10 @@ namespace WindowsFormsApplication1
 
         private void form3load(object sender, EventArgs e)
         {
-            this.Text = getstring("help"); 
+            this.Text = getstring("help");
+            string url = "http://reisi007.bplaced.com/program/doc.html";
+            Uri uriurl = new Uri(url);
+            help_browser.Url = uriurl;
         }
     }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.help_browser = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
@@ -40,17 +41,17 @@
             this.help_browser.Location = new System.Drawing.Point(0, 0);
             this.help_browser.MinimumSize = new System.Drawing.Size(20, 20);
             this.help_browser.Name = "help_browser";
-            this.help_browser.Size = new System.Drawing.Size(284, 262);
+            this.help_browser.Size = new System.Drawing.Size(584, 362);
             this.help_browser.TabIndex = 0;
-            this.help_browser.Url = new System.Uri("https://github.com/reisi007/LibreOffice_Server_Installation_GUI/wiki/Documentatio" +
-                    "n", System.UriKind.Absolute);
+            this.help_browser.Url = new System.Uri("", System.UriKind.Relative);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.help_browser);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.Text = "Help";
             this.Load += new System.EventHandler(this.form3load);

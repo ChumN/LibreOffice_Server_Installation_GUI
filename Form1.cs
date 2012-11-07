@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+/*using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using System.Text;*/
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
@@ -14,6 +14,7 @@ using System.Resources;
 using System.Reflection;
 using System.Globalization;
 using System.Xml.Serialization;
+using Microsoft.VisualBasic;
 
 
 namespace WindowsFormsApplication1
@@ -31,7 +32,7 @@ namespace WindowsFormsApplication1
             {
                 string temp = Path.GetTempPath() + "langsettings.config";
                 string lang = File.ReadAllText(temp);
-               
+
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
 
             }
@@ -40,9 +41,10 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
-           //l10n start
+            //l10n start
             b_dl_lb.Text = getstring("bdllb");
             b_dl_master.Text = getstring("dlmaster");
             b_dl_ob.Text = getstring("dl_ob");
@@ -83,7 +85,7 @@ namespace WindowsFormsApplication1
             d_tb.IsBalloon = true;
             bootstrapini.IsBalloon = true;
             /* End Setting tooltips
-             * Start Loading settings */
+             * Start Loading settings*/
             try
             {
                 XmlSerializer ser = new XmlSerializer(typeof(SETTINGS));
@@ -96,13 +98,22 @@ namespace WindowsFormsApplication1
                 path_installdir.Text = toapply.installdir;
                 subfolder.Text = toapply.subfolder;
             }
-            catch (Exception )
-            {}
+            catch (Exception)
+            { }
 
             // End Loading settings
             button1.Text = getstring("about");
             help.Text = getstring("help");
-
+            give_message.BalloonTipClicked += new EventHandler(gm_do);
+            give_message.BalloonTipClosed += new EventHandler(gm_do);
+            give_message.Click += new EventHandler(gm_do);
+            give_message.DoubleClick += new EventHandler(gm_do);
+            this.BringToFront();
+        }
+        private void gm_do(Object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            Interaction.AppActivate(this.Text);
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -111,7 +122,7 @@ namespace WindowsFormsApplication1
             path_main.Text = filename_install;
         }
 
-       
+
 
         private void openLibohelp(object sender, EventArgs e)
         {
@@ -133,16 +144,16 @@ namespace WindowsFormsApplication1
         private void config_installdir(object sender, EventArgs e)
         {
             if (wheretoinstall.ShowDialog() == DialogResult.OK)
-                {
-                    string fileame_installdir = wheretoinstall.SelectedPath;
-                    path_installdir.Text = fileame_installdir;
-                }
-       
+            {
+                string fileame_installdir = wheretoinstall.SelectedPath;
+                path_installdir.Text = fileame_installdir;
+            }
+
         }
 
         private void start_install_Click(object sender, EventArgs e)
         {
-           
+
             bool install_main = false;
             bool install_help = false;
             bool install_path = false;
@@ -205,10 +216,10 @@ namespace WindowsFormsApplication1
         private string create_cmd(bool install_libo, bool install_help)
         {
             string path = path_installdir.Text;
-            if (cb_subfolder.Checked &&(subfolder.Text != ""))
-                path +=  subfolder.Text +"\\";
-           
-            
+            if (cb_subfolder.Checked && (subfolder.Text != ""))
+                path += subfolder.Text + "\\";
+
+
             string cmd_file = "@ECHO off" + Environment.NewLine;
             if (install_libo)
                 cmd_file += "start /wait msiexec /qr /norestart /a \"" + path_main.Text + "\" TARGETDIR=\"" + path + "\"" + Environment.NewLine;
@@ -292,7 +303,7 @@ namespace WindowsFormsApplication1
 
 
         }
-       
+
         private bool secondtry(string path)
         {
             bool working = true;
@@ -413,7 +424,7 @@ namespace WindowsFormsApplication1
         {
 
 
-            give_message.ShowBalloonTip(10000, getstring("dl_finished_title"), getstring("dl_finished"),ToolTipIcon.Info);
+            give_message.ShowBalloonTip(10000, getstring("dl_finished_title"), getstring("dl_finished"), ToolTipIcon.Info);
             path_main.Text = path_to_file_ondisk.Text;
             progressBar1.Value = 0;
             percent.Text = "0 %";
@@ -422,8 +433,11 @@ namespace WindowsFormsApplication1
             b_dl_ob.Enabled = true;
             b_dl_testing.Enabled = true;
             start_install.Enabled = true;
+            give_message.Text = "LibreOffice Server Installation GUI";
+
 
         }
+
 
         public void startasyncdownload(string url, bool testing, bool master, bool latest_branch, bool older_branch)
         {
@@ -471,7 +485,7 @@ namespace WindowsFormsApplication1
                     httpfile = httpfile.Remove(5);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
                     httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
-                    
+
                 }
                 else if (older_branch)
                 {
@@ -484,7 +498,7 @@ namespace WindowsFormsApplication1
                     httpfile = httpfile.Remove(i);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
                     httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
-                    
+
                 }
                 filename = httpfile;
                 progressBar1.Minimum = 0;
@@ -504,22 +518,20 @@ namespace WindowsFormsApplication1
                     path += "liboobranch.msi";
                 path_to_file_ondisk.Text = path;
                 string mb_question = getstring("versiondl");
-                /* int k = mb_question.IndexOf("%version");
-                 int l = k + 3;
-                 mb_question = mb_question.Remove(k, l);*/
                 mb_question = mb_question.Replace("%version", filename);
-                
-              
 
-              if (MessageBox.Show(mb_question, getstring("startdl"), MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-              {
-                  downloadmaster.DownloadFileAsync(uritofile, path);
-                  int k = filename.IndexOf("LibO");
-                   filename = filename.Remove(k,5);
-                   k = filename.IndexOf("_");
-                   filename = filename.Remove(k);
-                   subfolder.Text = filename;
-              }
+
+
+                if (MessageBox.Show(mb_question, getstring("startdl"), MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    give_message.ShowBalloonTip(5000, getstring("dl_started_title"), getstring("dl_started"), ToolTipIcon.Info);
+                    downloadmaster.DownloadFileAsync(uritofile, path);
+                    int k = filename.IndexOf("LibO");
+                    filename = filename.Remove(k, 5);
+                    k = filename.IndexOf("_");
+                    filename = filename.Remove(k);
+                    subfolder.Text = filename;
+                }
             }
         }
 
@@ -573,24 +585,24 @@ namespace WindowsFormsApplication1
             openfile.ShowDialog();
         }
         public void exeptionmessage(string ex_message)
-    {
-        MessageBox.Show(getstring("standarderror") + ex_message, getstring("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-    }
+        {
+            MessageBox.Show(getstring("standarderror") + ex_message, getstring("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
         public string getstring(string strMessage)
         {
             string rt = "???";
             try
             {
-              rt = rm.GetString(strMessage);
+                rt = rm.GetString(strMessage);
             }
             catch (Exception)
             {
                 exeptionmessage("An error in the l10n part occured!");
             }
             return rt;
-        
+
         }
-        
+
 
 
         private void show_about(object sender, EventArgs e)
@@ -615,8 +627,8 @@ namespace WindowsFormsApplication1
                 str.Close();
             }
             catch (Exception)
-            {}
-           
+            { }
+
         }
         public class SETTINGS
         {
@@ -625,15 +637,17 @@ namespace WindowsFormsApplication1
             public bool checkbox;
 
         }
-       private string getsettingsfilename()
-       { return   Path.GetTempPath() + "libo_si_gui_path.config";}
+        private string getsettingsfilename()
+        { return Path.GetTempPath() + "libo_si_gui_path.config"; }
 
-       private void help_Click(object sender, EventArgs e)
-       {
+        private void help_Click(object sender, EventArgs e)
+        {
             Form3 fm = new Form3();
             fm.Show();
-       }
-      
+        }
 
+
+
+        public EventHandler balloon_tip_clicked { get; set; }
     }
 }

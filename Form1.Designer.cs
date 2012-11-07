@@ -50,6 +50,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.help = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.path_to_file_ondisk = new System.Windows.Forms.TextBox();
             this.percent = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.b_dl_testing = new System.Windows.Forms.Button();
             this.cb_subfolder = new System.Windows.Forms.CheckBox();
             this.subfolder = new System.Windows.Forms.TextBox();
-            this.help = new System.Windows.Forms.Button();
             this.give_message = new System.Windows.Forms.NotifyIcon(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -222,7 +222,7 @@
             this.b_dl_master.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.b_dl_master.Location = new System.Drawing.Point(225, 287);
             this.b_dl_master.Name = "b_dl_master";
-            this.b_dl_master.Size = new System.Drawing.Size(195, 23);
+            this.b_dl_master.Size = new System.Drawing.Size(204, 23);
             this.b_dl_master.TabIndex = 13;
             this.b_dl_master.Text = "Download latest master";
             this.b_dl_master.UseVisualStyleBackColor = true;
@@ -266,6 +266,17 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit bootdtrap.ini";
+            // 
+            // help
+            // 
+            this.help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.help.Location = new System.Drawing.Point(6, 215);
+            this.help.Name = "help";
+            this.help.Size = new System.Drawing.Size(175, 25);
+            this.help.TabIndex = 23;
+            this.help.Text = "Help";
+            this.help.UseVisualStyleBackColor = true;
+            this.help.Click += new System.EventHandler(this.help_Click);
             // 
             // button1
             // 
@@ -354,20 +365,10 @@
             this.subfolder.TabIndex = 23;
             this.subfolder.TextChanged += new System.EventHandler(this.savesettings);
             // 
-            // help
-            // 
-            this.help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.help.Location = new System.Drawing.Point(6, 215);
-            this.help.Name = "help";
-            this.help.Size = new System.Drawing.Size(175, 25);
-            this.help.TabIndex = 23;
-            this.help.Text = "Help";
-            this.help.UseVisualStyleBackColor = true;
-            this.help.Click += new System.EventHandler(this.help_Click);
-            // 
             // give_message
             // 
             this.give_message.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.give_message.Icon = ((System.Drawing.Icon)(resources.GetObject("give_message.Icon")));
             this.give_message.Text = "Libreoffice Server Installation GUI";
             this.give_message.Visible = true;
             // 

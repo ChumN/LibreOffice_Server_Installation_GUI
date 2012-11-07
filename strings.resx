@@ -279,4 +279,10 @@
   <data name="dl_finished_title" xml:space="preserve">
     <value>Download finished</value>
   </data>
+  <data name="dl_started" xml:space="preserve">
+    <value>A download has been started!</value>
+  </data>
+  <data name="dl_started_title" xml:space="preserve">
+    <value>Download started!</value>
+  </data>
 </root>
