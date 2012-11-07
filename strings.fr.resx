@@ -178,7 +178,7 @@
     <value>Programmeur :</value>
   </data>
 	<data name="translations" xml:space="preserve">
-    <value>--- Translations ---</value>
+    <value>--- Traductions ---</value>
   </data>
 	<data name="translator" xml:space="preserve">
     <value>Traducteur :</value>
@@ -187,22 +187,22 @@
     <value>À propos / Changer de langue</value>
   </data>
 	<data name="tt_lb" xml:space="preserve">
-    <value>Latest build of latest branch.</value>
+    <value>Dernière version de la dernière branche.</value>
   </data>
 	<data name="tt_m" xml:space="preserve">
-    <value>Latest daily build.</value>
+    <value>Dernière version journalière.</value>
   </data>
 	<data name="tt_ob" xml:space="preserve">
-    <value>Latest build of older branch.</value>
+    <value>Dernière version de la branche précédente.</value>
   </data>
 	<data name="tt_tb" xml:space="preserve">
-    <value>Latest testing build.</value>
+    <value>Dernière version de test.</value>
   </data>
 	<data name="language_change_success" xml:space="preserve">
-    <value>The language setting will apply at the next startup!</value>
+    <value>Les paramètres de langue s'appliqueront au prochaine démarrage !</value>
   </data>
 	<data name="success" xml:space="preserve">
-    <value>Success!</value>
+    <value>Installation réussie !</value>
   </data>
 	<data name="tt_bootstrap" xml:space="preserve">
     <value>Vous devrier utiliser la ligne suivante au lieu de celle commençant par “UserInstallation=” dans le champ texte ci-dessous afin de ne pas écraser le profil utilisateur existant .</value>
@@ -211,16 +211,16 @@
     <value>Changer de langue :</value>
   </data>
 	<data name="versiondl" xml:space="preserve">
-    <value>Should %version really be downloaded?</value>
+    <value>Est-ce que la %version doit vraiment être téléchargée?</value>
   </data>
 	<data name="bdllb" xml:space="preserve">
     <value>Télécharger la dernière version de la dernière branche</value>
   </data>
 	<data name="open_help" xml:space="preserve">
-    <value>Open LibreOffice help installer</value>
+    <value>Ouvrir l'installeur d'aide LibreOffice</value>
   </data>
 	<data name="config_installdir" xml:space="preserve">
-    <value>Choisir le répertoire d'installation</value>
+    <value>Configurer le répertoire d'installation</value>
   </data>
 	<data name="open_bootstrap_ini" xml:space="preserve">
     <value>Ouvrir bootstrap.ini</value>
@@ -235,7 +235,7 @@
     <value>Télécharger la dernière version de la branche précédente</value>
   </data>
 	<data name="edit_bs_ini" xml:space="preserve">
-    <value>Edit bootdtrap.ini</value>
+    <value>Éditer bootdtrap.ini</value>
   </data>
 	<data name="progress" xml:space="preserve">
     <value>Progression :</value>
@@ -244,24 +244,27 @@
     <value>Ouvrir bootstap.ini</value>
   </data>
 	<data name="open_installer" xml:space="preserve">
-    <value>Open LibreOffice installer</value>
+    <value>Ouvrir l'installeur LibreOffice</value>
   </data>
 	<data name="startdl" xml:space="preserve">
-    <value>Should the file be downkloaded?</value>
+    <value>Le fichier doit-il être téléchargé ?</value>
   </data>
 	<data name="start_install" xml:space="preserve">
     <value>Démarrer l'installation</value>
   </data>
 	<data name="where_to_install" xml:space="preserve">
-    <value>Choose installation directory</value>
+    <value>Choisir le répertoire d'installation</value>
   </data>
 	<data name="save_bootstrap_ini" xml:space="preserve">
-    <value>Save bootstrap.ini</value>
+    <value>Enregistrer bootstrap.ini</value>
   </data>
 	<data name="es" xml:space="preserve">
-		<value>Espagnol:</value>
+		<value>Espagnol :</value>
 	</data>
 	<data name="sl" xml:space="preserve">
-		<value>Slovène:</value>
+		<value>Slovène :</value>
+	</data>
+	<data name="subfolder_do" xml:space="preserve">
+		<value>Un sous-dossier doit-il automatiquement être créé ? Nom du sous-dossier :</value>
 	</data>
 </root>
