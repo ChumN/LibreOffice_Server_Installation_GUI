@@ -88,6 +88,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Danish: ähnelt.
+        /// </summary>
+        internal static string da {
+            get {
+                return ResourceManager.GetString("da", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die German: ähnelt.
         /// </summary>
         internal static string de {

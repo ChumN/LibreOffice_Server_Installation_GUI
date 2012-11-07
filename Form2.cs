@@ -40,12 +40,14 @@ namespace WindowsFormsApplication1
             string florei = "Florian Reisinger";
             string nemo = "NEMO ;)";
             string sl = getstring("sl") + " ";
+            string da = getstring("da") + " ";
             abouttxt = programmer + florei + Environment.NewLine + translations + Environment.NewLine  ;
             abouttxt += en + florei + Environment.NewLine;
             abouttxt+= de + florei + Environment.NewLine;
             abouttxt += fr + "Sophie Gautier" + Environment.NewLine;
             abouttxt += es + "Adolfo Jayme Barrientos" + Environment.NewLine;
-            abouttxt += sl + "Martin Srebotnjak";
+            abouttxt += sl + "Martin Srebotnjak" + Environment.NewLine;
+            abouttxt += da + "Leif Lodahl";
             about.Text = abouttxt;
             this.Text = getstring("about");
             lang_chooser.Sorted = true;
