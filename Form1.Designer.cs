@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.openfile = new System.Windows.Forms.OpenFileDialog();
             this.b_open_libo_installer = new System.Windows.Forms.Button();
@@ -57,6 +58,8 @@
             this.b_dl_testing = new System.Windows.Forms.Button();
             this.cb_subfolder = new System.Windows.Forms.CheckBox();
             this.subfolder = new System.Windows.Forms.TextBox();
+            this.help = new System.Windows.Forms.Button();
+            this.give_message = new System.Windows.Forms.NotifyIcon(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,6 +252,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.help);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.save_file);
@@ -268,9 +272,9 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(6, 215);
+            this.button1.Location = new System.Drawing.Point(187, 215);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(386, 25);
+            this.button1.Size = new System.Drawing.Size(205, 25);
             this.button1.TabIndex = 22;
             this.button1.Text = "About / Change language";
             this.button1.UseVisualStyleBackColor = true;
@@ -350,6 +354,23 @@
             this.subfolder.TabIndex = 23;
             this.subfolder.TextChanged += new System.EventHandler(this.savesettings);
             // 
+            // help
+            // 
+            this.help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.help.Location = new System.Drawing.Point(6, 215);
+            this.help.Name = "help";
+            this.help.Size = new System.Drawing.Size(175, 25);
+            this.help.TabIndex = 23;
+            this.help.Text = "Help";
+            this.help.UseVisualStyleBackColor = true;
+            this.help.Click += new System.EventHandler(this.help_Click);
+            // 
+            // give_message
+            // 
+            this.give_message.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.give_message.Text = "Libreoffice Server Installation GUI";
+            this.give_message.Visible = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +437,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox cb_subfolder;
         private System.Windows.Forms.TextBox subfolder;
+        private System.Windows.Forms.Button help;
+        private System.Windows.Forms.NotifyIcon give_message;
     }
 }
 

@@ -101,6 +101,7 @@ namespace WindowsFormsApplication1
 
             // End Loading settings
             button1.Text = getstring("about");
+            help.Text = getstring("help");
 
         }
 
@@ -410,6 +411,9 @@ namespace WindowsFormsApplication1
 
         void download_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+
+
+            give_message.ShowBalloonTip(10000, getstring("dl_finished_title"), getstring("dl_finished"),ToolTipIcon.Info);
             path_main.Text = path_to_file_ondisk.Text;
             progressBar1.Value = 0;
             percent.Text = "0 %";
@@ -623,6 +627,12 @@ namespace WindowsFormsApplication1
         }
        private string getsettingsfilename()
        { return   Path.GetTempPath() + "libo_si_gui_path.config";}
+
+       private void help_Click(object sender, EventArgs e)
+       {
+            Form3 fm = new Form3();
+            fm.Show();
+       }
       
 
     }

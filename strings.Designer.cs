@@ -124,6 +124,24 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The download has been finished and is ready for installation. ähnelt.
+        /// </summary>
+        internal static string dl_finished {
+            get {
+                return ResourceManager.GetString("dl_finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download finished ähnelt.
+        /// </summary>
+        internal static string dl_finished_title {
+            get {
+                return ResourceManager.GetString("dl_finished_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download older branch ähnelt.
         /// </summary>
         internal static string dl_ob {

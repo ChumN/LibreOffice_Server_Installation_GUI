@@ -273,4 +273,10 @@
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="dl_finished" xml:space="preserve">
+    <value>The download has been finished and is ready for installation.</value>
+  </data>
+  <data name="dl_finished_title" xml:space="preserve">
+    <value>Download finished</value>
+  </data>
 </root>
