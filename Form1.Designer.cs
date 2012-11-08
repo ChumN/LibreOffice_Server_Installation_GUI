@@ -67,7 +67,7 @@
             // 
             this.openfile.DefaultExt = "msi";
             this.openfile.Filter = "LibreOffice installation file|LibO*Win_x86_install_multi*.msi;*LibO-Dev*Win_x86_i" +
-                "nstall*.msi";
+                "nstall*.msi;libreoffice*.msi";
             this.openfile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // b_open_libo_installer
