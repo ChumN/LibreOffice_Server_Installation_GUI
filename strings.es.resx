@@ -267,4 +267,22 @@
 	<data name="sl" xml:space="preserve">
 		<value>Esloveno:</value>
 	</data>
+	<data name="da" xml:space="preserve">
+		<value>Danés:</value>
+	</data>
+	<data name="help" xml:space="preserve">
+		<value>Ayuda</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>La descarga ha finalizado y está lista para la instalación.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>Descarga finalizada.</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>Ha comenzado una descarga.</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>Descarga iniciada.</value>
+	</data>
 </root>

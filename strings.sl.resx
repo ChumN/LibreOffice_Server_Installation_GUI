@@ -267,4 +267,22 @@
 	<data name="sl" xml:space="preserve">
 		<value>Slovenščina:</value>
 	</data>
+	<data name="da" xml:space="preserve">
+		<value>Danščina:</value>
+	</data>
+	<data name="help" xml:space="preserve">
+		<value>Pomoč</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>Prenos se je uspešno zaključil in je pripravljen za namestitev.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>Prenos dokončan!</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>Prenos se je začel.</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>Prenos poteka!</value>
+	</data>
 </root>
