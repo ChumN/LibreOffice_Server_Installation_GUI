@@ -112,8 +112,8 @@ namespace WindowsFormsApplication1
         }
         private void gm_do(Object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
             Interaction.AppActivate(this.Text);
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
