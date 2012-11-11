@@ -28,22 +28,23 @@ namespace WindowsFormsApplication1
     {
 
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
-        ResourceManager rm2 = new ResourceManager("WindowsFormsApplication1.Pictures",Assembly.GetExecutingAssembly());
+        string pathtofile = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\Libo Server Install GUI";
         public Form1()
         {
             //l10n
             try
             {
 
-                //Properties.Settings
-                string lang = "";
-               lang = rm2.GetString("lang");
+                
+                string path = pathtofile + "\\lang.conf";
+                string lang = File.ReadAllText(path);
+                
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
                 
 
             }
-            catch (Exception)
-            { MessageBox.Show("error"); }
+            catch (Exception ex)
+            { exeptionmessage(ex.Message); }
             InitializeComponent();
         }
 

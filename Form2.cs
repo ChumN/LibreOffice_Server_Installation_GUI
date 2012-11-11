@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
     {
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         ResourceManager rm2 = new ResourceManager("WindowsFormsApplication1.Pictures", Assembly.GetExecutingAssembly());
+        string pathtofile = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\Libo Server Install GUI";
         public Form2()
         {
             
@@ -85,7 +86,10 @@ namespace WindowsFormsApplication1
             
             try
             {
-                // TODO
+                string lang = lang_chooser.SelectedItem.ToString();
+                string dir = pathtofile + "\\lang.conf";
+                Directory.CreateDirectory(pathtofile);
+                File.WriteAllText(dir, lang);
                 
             }
             catch (Exception ex)
