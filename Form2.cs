@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
     public partial class Form2 : Form
     {
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
+        ResourceManager rm2 = new ResourceManager("WindowsFormsApplication1.Pictures", Assembly.GetExecutingAssembly());
         public Form2()
         {
             
@@ -84,9 +85,8 @@ namespace WindowsFormsApplication1
             
             try
             {
-
-                string temp = Path.GetTempPath() + "langsettings.config";
-                File.WriteAllText(temp, lang_chooser.SelectedItem.ToString());
+                // TODO
+                
             }
             catch (Exception ex)
             {
@@ -97,6 +97,11 @@ namespace WindowsFormsApplication1
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void about_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-/*using System.Data;
+using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;*/
+using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
@@ -15,6 +15,9 @@ using System.Reflection;
 using System.Globalization;
 using System.Xml.Serialization;
 using Microsoft.VisualBasic;
+using System.Configuration;
+
+
 
 
 namespace WindowsFormsApplication1
@@ -25,19 +28,22 @@ namespace WindowsFormsApplication1
     {
 
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
+        ResourceManager rm2 = new ResourceManager("WindowsFormsApplication1.Pictures",Assembly.GetExecutingAssembly());
         public Form1()
         {
             //l10n
             try
             {
-                string temp = Path.GetTempPath() + "langsettings.config";
-                string lang = File.ReadAllText(temp);
 
+                //Properties.Settings
+                string lang = "";
+               lang = rm2.GetString("lang");
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
+                
 
             }
             catch (Exception)
-            { }
+            { MessageBox.Show("error"); }
             InitializeComponent();
         }
 
@@ -638,7 +644,7 @@ namespace WindowsFormsApplication1
 
         }
         private string getsettingsfilename()
-        { return Path.GetTempPath() + "libo_si_gui_path.config"; }
+        { return "libo_si_gui_path.config"; }
 
         private void help_Click(object sender, EventArgs e)
         {
@@ -646,8 +652,9 @@ namespace WindowsFormsApplication1
             fm.Show();
         }
 
+    
 
-
-        public EventHandler balloon_tip_clicked { get; set; }
+        
+        
     }
 }
