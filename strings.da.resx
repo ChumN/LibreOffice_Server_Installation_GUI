@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="dirnotfound" xml:space="preserve">
+		<value>Folderen eksisterer ikke!</value>
+	</data>
+	<data name="dirnotfoundmessage" xml:space="preserve">
+		<value>Kontroller venligst den folder du valgte.</value>
+	</data>
+	<data name="Error" xml:space="preserve">
+		<value>Fejl!</value>
+	</data>
+	<data name="filesave" xml:space="preserve">
+		<value>Filen er gemt uden fejl.</value>
+	</data>
+	<data name="go_back" xml:space="preserve">
+		<value>Tilbage?</value>
+	</data>
+	<data name="help_runasadmin" xml:space="preserve">
+		<value>Det hjælper måske at afvikle programmet som administrator.</value>
+	</data>
+	<data name="installerror" xml:space="preserve">
+		<value>Installationen kunne ikke starte på grund af følgende fejl:</value>
+	</data>
+	<data name="installnostart" xml:space="preserve">
+		<value>Installationen kunne ikke starte.</value>
+	</data>
+	<data name="no_installdir" xml:space="preserve">
+		<value>Ingen installationsfolder valgt.</value>
+	</data>
+	<data name="no_installfile" xml:space="preserve">
+		<value>Normalt skal du vælge en LibreOffice installationsfill. Fortsæt?</value>
+	</data>
+	<data name="si" xml:space="preserve">
+		<value>Sikkerhedsproblem.</value>
+	</data>
+	<data name="si_message" xml:space="preserve">
+		<value>Du har ikke rettigheder til at skrive til denne folder.</value>
+	</data>
+	<data name="standarderror" xml:space="preserve">
+		<value>Der er opstået en fejl! Besked:</value>
+	</data>
+	<data name="title_filesave" xml:space="preserve">
+		<value>Filen er gemt.</value>
+	</data>
+	<data name="warning" xml:space="preserve">
+		<value>Advarsel!</value>
+	</data>
+	<data name="de" xml:space="preserve">
+		<value>Tysk:</value>
+	</data>
+	<data name="en" xml:space="preserve">
+		<value>Engelsk:</value>
+	</data>
+	<data name="fr" xml:space="preserve">
+		<value>Fransk:</value>
+	</data>
+	<data name="lang" xml:space="preserve">
+		<value>Sprog</value>
+	</data>
+	<data name="programmer" xml:space="preserve">
+		<value>Programmør:</value>
+	</data>
+	<data name="translations" xml:space="preserve">
+		<value> Oversættelser ---</value>
+	</data>
+	<data name="translator" xml:space="preserve">
+		<value>Oversætter:</value>
+	</data>
+	<data name="about" xml:space="preserve">
+		<value>Om / Skift sprog</value>
+	</data>
+	<data name="tt_lb" xml:space="preserve">
+		<value>Seneste version</value>
+	</data>
+	<data name="tt_m" xml:space="preserve">
+		<value>Seneste daglige version</value>
+	</data>
+	<data name="tt_ob" xml:space="preserve">
+		<value>Seneste version af tidligere udgivelse.</value>
+	</data>
+	<data name="tt_tb" xml:space="preserve">
+		<value>Seneste testversion</value>
+	</data>
+	<data name="language_change_success" xml:space="preserve">
+		<value>Valg af sprog træder i kraf ved næste opstart!</value>
+	</data>
+	<data name="success" xml:space="preserve">
+		<value>Succes!</value>
+	</data>
+	<data name="tt_bootstrap" xml:space="preserve">
+		<value>Du skal måske bruge følgende istedet for den linje, der starter med 
+“UserInstallation=” fra tekstfeltet herover, for at overskrive din eksisterende brugerprofil.</value>
+	</data>
+	<data name="update_lang" xml:space="preserve">
+		<value>Slift sprog:</value>
+	</data>
+	<data name="versiondl" xml:space="preserve">
+		<value>Skal %version downloades?</value>
+	</data>
+	<data name="bdllb" xml:space="preserve">
+		<value>Download seneste version</value>
+	</data>
+	<data name="open_help" xml:space="preserve">
+		<value>Åbn LibreOffice's installation af hjælpen.</value>
+	</data>
+	<data name="config_installdir" xml:space="preserve">
+		<value>Konfigurere installationsfolderen</value>
+	</data>
+	<data name="open_bootstrap_ini" xml:space="preserve">
+		<value>Åbn bootstrap.ini</value>
+	</data>
+	<data name="dlmaster" xml:space="preserve">
+		<value>Download seneste hovedprogram</value>
+	</data>
+	<data name="dltesting" xml:space="preserve">
+		<value>Download seneste testversion</value>
+	</data>
+	<data name="dl_ob" xml:space="preserve">
+		<value>Download tidligere version</value>
+	</data>
+	<data name="edit_bs_ini" xml:space="preserve">
+		<value>Rediger bootstrap.ini</value>
+	</data>
+	<data name="progress" xml:space="preserve">
+		<value>Fremgang:</value>
+	</data>
+	<data name="open_bootstrap_title" xml:space="preserve">
+		<value>Åbn bootstrap.ini</value>
+	</data>
+	<data name="open_installer" xml:space="preserve">
+		<value>Åbn LibreOffice installationsprogrammet</value>
+	</data>
+	<data name="startdl" xml:space="preserve">
+		<value>Skal filen downloades?</value>
+	</data>
+	<data name="start_install" xml:space="preserve">
+		<value>Start installationen</value>
+	</data>
+	<data name="where_to_install" xml:space="preserve">
+		<value>Vælg installationsfolder</value>
+	</data>
+	<data name="save_bootstrap_ini" xml:space="preserve">
+		<value>Gem bootstrap.ini</value>
+	</data>
+	<data name="subfolder_do" xml:space="preserve">
+		<value>Skal der automatisk oprettes en underfolder? Navn på underfolder:</value>
+	</data>
+	<data name="es" xml:space="preserve">
+		<value>Spansk:</value>
+	</data>
+	<data name="sl" xml:space="preserve">
+		<value>Slovensk:</value>
+	</data>
+	<data name="da" xml:space="preserve">
+		<value>Dansk:</value>
+	</data>
+	<data name="help" xml:space="preserve">
+		<value>Hjælp</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>Doanload er afsluttet og er klar til at blive installeret.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>Download afsluttet!</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>Download påbegyndt!</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>Download begyndt!</value>
+	</data>
+</root>
