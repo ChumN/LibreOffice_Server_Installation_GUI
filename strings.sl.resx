@@ -118,153 +118,168 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="dirnotfound" xml:space="preserve">
-    <value>Le répertoire n'existe pas !</value>
-  </data>
+		<value>Mapa ne obstaja!</value>
+	</data>
 	<data name="dirnotfoundmessage" xml:space="preserve">
-    <value>Veuillez vérifier le répertoire choisi !</value>
-  </data>
+		<value>Preverite, če izbrana mapa obstaja.</value>
+	</data>
 	<data name="Error" xml:space="preserve">
-    <value>Erreur !</value>
-  </data>
+		<value>Napaka!</value>
+	</data>
 	<data name="filesave" xml:space="preserve">
-    <value>Le fichier a été correctement enregistré !</value>
-  </data>
+		<value>Datoteka uspešno shranjena!</value>
+	</data>
 	<data name="go_back" xml:space="preserve">
-    <value>Revenir en arrière ?</value>
-  </data>
+		<value>Želite nazaj?</value>
+	</data>
 	<data name="help_runasadmin" xml:space="preserve">
-    <value>Il serait préférable d'exécuter ce programme en tant qu'administrateur.</value>
-  </data>
+		<value>Morda bi pomagalo, če bi program zagnali kot skrbnik.</value>
+	</data>
 	<data name="installerror" xml:space="preserve">
-    <value>L'installation n'a pas pu être démarrée en raison de l'erreur suivante :</value>
-  </data>
+		<value>Namestitve ni mogoče zagnati zaradi naslednje napake:</value>
+	</data>
 	<data name="installnostart" xml:space="preserve">
-    <value>L'installation n'a pas pu être démarrée !</value>
-  </data>
+		<value>Namestitve ni mogoče zagnati!</value>
+	</data>
 	<data name="no_installdir" xml:space="preserve">
-    <value>Aucun répertoire choisi !</value>
-  </data>
+		<value>Mapa namestitve ni izbrana!</value>
+	</data>
 	<data name="no_installfile" xml:space="preserve">
-    <value>Vous devriez choisir un fichier d'installation LibreOffice. Continuer ?</value>
-  </data>
+		<value>Praviloma morate izbrati namestitveno datoteko LibreOffice. Želite nadaljevati?</value>
+	</data>
 	<data name="si" xml:space="preserve">
-    <value>Problème de sécurité.</value>
-  </data>
+		<value>Varnostna težava</value>
+	</data>
 	<data name="si_message" xml:space="preserve">
-    <value>Vous n'avez pas le droit d'écrire dans ce dossier.</value>
-  </data>
+		<value>Nimate pravic za pisanje v to mapo.</value>
+	</data>
 	<data name="standarderror" xml:space="preserve">
-    <value>Une erreur est survenue ! Message :</value>
-  </data>
+		<value>Prišlo je do napake! Sporočilo:</value>
+	</data>
 	<data name="title_filesave" xml:space="preserve">
-    <value>Fichier enregistré</value>
-  </data>
+		<value>Datoteka shranjena</value>
+	</data>
 	<data name="warning" xml:space="preserve">
-    <value>Avertissement !</value>
-  </data>
+		<value>Opozorilo!</value>
+	</data>
 	<data name="de" xml:space="preserve">
-    <value>Allemand :</value>
-  </data>
+		<value>Nemščina:</value>
+	</data>
 	<data name="en" xml:space="preserve">
-    <value>Anglais :</value>
-  </data>
+		<value>Angleščina:</value>
+	</data>
 	<data name="fr" xml:space="preserve">
-    <value>Français :</value>
-  </data>
+		<value>Francoščina:</value>
+	</data>
 	<data name="lang" xml:space="preserve">
-    <value>Langue</value>
-  </data>
+		<value>Jezik</value>
+	</data>
 	<data name="programmer" xml:space="preserve">
-    <value>Programmeur :</value>
-  </data>
+		<value>Programer:</value>
+	</data>
 	<data name="translations" xml:space="preserve">
-    <value>--- Traductions ---</value>
-  </data>
+		<value>--- Prevodi ---</value>
+	</data>
 	<data name="translator" xml:space="preserve">
-    <value>Traducteur :</value>
-  </data>
+		<value>Prevajalec:</value>
+	</data>
 	<data name="about" xml:space="preserve">
-    <value>À propos / Changer de langue</value>
-  </data>
+		<value>Spremeni jezik</value>
+	</data>
 	<data name="tt_lb" xml:space="preserve">
-    <value>Dernière version de la dernière branche.</value>
-  </data>
+		<value>Zadnja gradnja najnovejše veje.</value>
+	</data>
 	<data name="tt_m" xml:space="preserve">
-    <value>Dernière version journalière.</value>
-  </data>
+		<value>Zadnja dnevna gradnja.</value>
+	</data>
 	<data name="tt_ob" xml:space="preserve">
-    <value>Dernière version de la branche précédente.</value>
-  </data>
+		<value>Zadnja gradnja starejše veje.</value>
+	</data>
 	<data name="tt_tb" xml:space="preserve">
-    <value>Dernière version de test.</value>
-  </data>
+		<value>Zadnja preskusna gradnja.</value>
+	</data>
 	<data name="language_change_success" xml:space="preserve">
-    <value>Les paramètres de langue s'appliqueront au prochaine démarrage !</value>
-  </data>
+		<value>Sprememba jezika bo veljala ob naslednjem zagonu!</value>
+	</data>
 	<data name="success" xml:space="preserve">
-    <value>Installation réussie !</value>
-  </data>
+		<value>Uspešno!</value>
+	</data>
 	<data name="tt_bootstrap" xml:space="preserve">
-    <value>Vous devrier utiliser la ligne suivante au lieu de celle commençant par “UserInstallation=” dans le champ texte ci-dessous afin de ne pas écraser le profil utilisateur existant .</value>
-  </data>
+		<value>Namesto vrstice, ki se začne z “UserInstallation=” lahko uporabite naslednje iz besedilnega polja zgoraj, da ne boste povozili svojega obstoječega uporabniškega profila.</value>
+	</data>
 	<data name="update_lang" xml:space="preserve">
-    <value>Changer de langue :</value>
-  </data>
+		<value>Spremeni jezik:</value>
+	</data>
 	<data name="versiondl" xml:space="preserve">
-    <value>Est-ce que la %version doit vraiment être téléchargée?</value>
-  </data>
+		<value>Resnično želite prenesti %version?</value>
+	</data>
 	<data name="bdllb" xml:space="preserve">
-    <value>Télécharger la dernière version de la dernière branche</value>
-  </data>
+		<value>Prenesi zadnjo vejo</value>
+	</data>
 	<data name="open_help" xml:space="preserve">
-    <value>Ouvrir l'installeur d'aide LibreOffice</value>
-  </data>
+		<value>Odpri namestitveni program pomoči LibreOffice</value>
+	</data>
 	<data name="config_installdir" xml:space="preserve">
-    <value>Configurer le répertoire d'installation</value>
-  </data>
+		<value>Prilagodi namestitveno mapo</value>
+	</data>
 	<data name="open_bootstrap_ini" xml:space="preserve">
-    <value>Ouvrir bootstrap.ini</value>
-  </data>
+		<value>Odpri bootstrap.ini</value>
+	</data>
 	<data name="dlmaster" xml:space="preserve">
-    <value>Télécharger la dernière version</value>
-  </data>
+		<value>Prenesi zadnjo glavno gradnjo</value>
+	</data>
 	<data name="dltesting" xml:space="preserve">
-    <value>Télécharger la dernière version de test</value>
-  </data>
+		<value>Prenesi zadnjo preskusno gradnjo</value>
+	</data>
 	<data name="dl_ob" xml:space="preserve">
-    <value>Télécharger la dernière version de la branche précédente</value>
-  </data>
+		<value>Prenesi starejšo vejo</value>
+	</data>
 	<data name="edit_bs_ini" xml:space="preserve">
-    <value>Éditer bootdtrap.ini</value>
-  </data>
+		<value>Uredi bootdtrap.ini</value>
+	</data>
 	<data name="progress" xml:space="preserve">
-    <value>Progression :</value>
-  </data>
+		<value>Napredek:</value>
+	</data>
 	<data name="open_bootstrap_title" xml:space="preserve">
-    <value>Ouvrir bootstap.ini</value>
-  </data>
+		<value>Odpri bootstrap.ini</value>
+	</data>
 	<data name="open_installer" xml:space="preserve">
-    <value>Ouvrir l'installeur LibreOffice</value>
-  </data>
+		<value>Odpri namestitveni program LibreOffice</value>
+	</data>
 	<data name="startdl" xml:space="preserve">
-    <value>Le fichier doit-il être téléchargé ?</value>
-  </data>
+		<value>Želite prenesti datoteko?</value>
+	</data>
 	<data name="start_install" xml:space="preserve">
-    <value>Démarrer l'installation</value>
-  </data>
+		<value>Zaženi namestitev</value>
+	</data>
 	<data name="where_to_install" xml:space="preserve">
-    <value>Choisir le répertoire d'installation</value>
-  </data>
+		<value>Izberite namestitveno mapo</value>
+	</data>
 	<data name="save_bootstrap_ini" xml:space="preserve">
-    <value>Enregistrer bootstrap.ini</value>
-  </data>
+		<value>Shrani bootstrap.ini</value>
+	</data>
 	<data name="subfolder_do" xml:space="preserve">
-		<value>Un sous-dossier doit-il automatiquement être créé ? Nom du sous-dossier :</value>
+		<value>Želite samodejno izdelati podmapo? Ime podmape:</value>
+	</data>
+	<data name="da" xml:space="preserve">
+		<value>Danščina:</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>Prenos se je uspešno zaključil in je pripravljen za namestitev.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>Prenos dokončan!</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>Prenos se je začel.</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>Prenos poteka!</value>
 	</data>
 	<data name="es" xml:space="preserve">
-		<value>Espagnol :</value>
+		<value>Španščina:</value>
 	</data>
 	<data name="sl" xml:space="preserve">
-		<value>Slovène :</value>
+		<value>Slovenščina:</value>
 	</data>
 </root>

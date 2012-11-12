@@ -41,7 +41,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(459, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(559, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -55,7 +55,7 @@
             this.about.Multiline = true;
             this.about.Name = "about";
             this.about.ReadOnly = true;
-            this.about.Size = new System.Drawing.Size(459, 120);
+            this.about.Size = new System.Drawing.Size(559, 220);
             this.about.TabIndex = 3;
             // 
             // lang_chooser
@@ -64,8 +64,11 @@
             this.lang_chooser.Items.AddRange(new object[] {
             "En",
             "De",
-            "Fr"});
-            this.lang_chooser.Location = new System.Drawing.Point(401, 229);
+            "Fr",
+            "Sl",
+            "Pt",
+            "Pt-br"});
+            this.lang_chooser.Location = new System.Drawing.Point(501, 329);
             this.lang_chooser.Name = "lang_chooser";
             this.lang_chooser.Size = new System.Drawing.Size(71, 21);
             this.lang_chooser.TabIndex = 5;
@@ -74,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 232);
+            this.label1.Location = new System.Drawing.Point(10, 332);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
@@ -84,12 +87,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 262);
+            this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lang_chooser);
             this.Controls.Add(this.about);
             this.Controls.Add(this.pictureBox1);
-            this.MaximumSize = new System.Drawing.Size(500, 300);
+            this.MaximumSize = new System.Drawing.Size(5100, 3100);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "Form2";

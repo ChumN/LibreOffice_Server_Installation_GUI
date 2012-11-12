@@ -88,6 +88,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Danish ähnelt.
+        /// </summary>
+        internal static string da {
+            get {
+                return ResourceManager.GetString("da", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die German: ähnelt.
         /// </summary>
         internal static string de {
@@ -115,11 +124,47 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The download has been finished and is ready for installation. ähnelt.
+        /// </summary>
+        internal static string dl_finished {
+            get {
+                return ResourceManager.GetString("dl_finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The download has been finished and is ready for installation. ähnelt.
+        /// </summary>
+        internal static string dl_finished_title {
+            get {
+                return ResourceManager.GetString("dl_finished_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Download older branch ähnelt.
         /// </summary>
         internal static string dl_ob {
             get {
                 return ResourceManager.GetString("dl_ob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die A download has been started! ähnelt.
+        /// </summary>
+        internal static string dl_started {
+            get {
+                return ResourceManager.GetString("dl_started", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Download started! ähnelt.
+        /// </summary>
+        internal static string dl_started_title {
+            get {
+                return ResourceManager.GetString("dl_started_title", resourceCulture);
             }
         }
         
@@ -165,6 +210,15 @@ namespace WindowsFormsApplication1 {
         internal static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Spanish ähnelt.
+        /// </summary>
+        internal static string es {
+            get {
+                return ResourceManager.GetString("es", resourceCulture);
             }
         }
         
@@ -313,6 +367,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Portuguese ähnelt.
+        /// </summary>
+        internal static string pt {
+            get {
+                return ResourceManager.GetString("pt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Save bootstrap.ini ähnelt.
         /// </summary>
         internal static string save_bootstrap_ini {
@@ -336,6 +399,15 @@ namespace WindowsFormsApplication1 {
         internal static string si_message {
             get {
                 return ResourceManager.GetString("si_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Slovenian ähnelt.
+        /// </summary>
+        internal static string sl {
+            get {
+                return ResourceManager.GetString("sl", resourceCulture);
             }
         }
         

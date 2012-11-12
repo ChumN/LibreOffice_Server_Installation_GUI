@@ -118,153 +118,168 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="dirnotfound" xml:space="preserve">
-    <value>Le répertoire n'existe pas !</value>
-  </data>
+		<value>El directorio no existe.</value>
+	</data>
 	<data name="dirnotfoundmessage" xml:space="preserve">
-    <value>Veuillez vérifier le répertoire choisi !</value>
-  </data>
+		<value>Compruebe su directorio elegido.</value>
+	</data>
 	<data name="Error" xml:space="preserve">
-    <value>Erreur !</value>
-  </data>
+		<value>¡Error!</value>
+	</data>
 	<data name="filesave" xml:space="preserve">
-    <value>Le fichier a été correctement enregistré !</value>
-  </data>
+		<value>El archivo se ha guardado correctamente.</value>
+	</data>
 	<data name="go_back" xml:space="preserve">
-    <value>Revenir en arrière ?</value>
-  </data>
+		<value>¿Regresar?</value>
+	</data>
 	<data name="help_runasadmin" xml:space="preserve">
-    <value>Il serait préférable d'exécuter ce programme en tant qu'administrateur.</value>
-  </data>
+		<value>Ejecutar este programa como administrador podría ayudar.</value>
+	</data>
 	<data name="installerror" xml:space="preserve">
-    <value>L'installation n'a pas pu être démarrée en raison de l'erreur suivante :</value>
-  </data>
+		<value>No se pudo iniciar la instalación debido al siguiente error:</value>
+	</data>
 	<data name="installnostart" xml:space="preserve">
-    <value>L'installation n'a pas pu être démarrée !</value>
-  </data>
+		<value>No se pudo iniciar la instalación.</value>
+	</data>
 	<data name="no_installdir" xml:space="preserve">
-    <value>Aucun répertoire choisi !</value>
-  </data>
+		<value>No se eligió un directorio de instalación.</value>
+	</data>
 	<data name="no_installfile" xml:space="preserve">
-    <value>Vous devriez choisir un fichier d'installation LibreOffice. Continuer ?</value>
-  </data>
+		<value>Normalmente debería elegir un archivo de instalación de LibreOffice. ¿Continuar?</value>
+	</data>
 	<data name="si" xml:space="preserve">
-    <value>Problème de sécurité.</value>
-  </data>
+		<value>Problema de seguridad</value>
+	</data>
 	<data name="si_message" xml:space="preserve">
-    <value>Vous n'avez pas le droit d'écrire dans ce dossier.</value>
-  </data>
+		<value>No tiene permisos de escritura en esta carpeta.</value>
+	</data>
 	<data name="standarderror" xml:space="preserve">
-    <value>Une erreur est survenue ! Message :</value>
-  </data>
+		<value>Ha ocurrido un error. Mensaje:</value>
+	</data>
 	<data name="title_filesave" xml:space="preserve">
-    <value>Fichier enregistré</value>
-  </data>
+		<value>Archivo guardado</value>
+	</data>
 	<data name="warning" xml:space="preserve">
-    <value>Avertissement !</value>
-  </data>
+		<value>¡Advertencia!</value>
+	</data>
 	<data name="de" xml:space="preserve">
-    <value>Allemand :</value>
-  </data>
+		<value>Alemán:</value>
+	</data>
 	<data name="en" xml:space="preserve">
-    <value>Anglais :</value>
-  </data>
+		<value>Inglés:</value>
+	</data>
 	<data name="fr" xml:space="preserve">
-    <value>Français :</value>
-  </data>
+		<value>Francés:</value>
+	</data>
 	<data name="lang" xml:space="preserve">
-    <value>Langue</value>
-  </data>
+		<value>Idioma</value>
+	</data>
 	<data name="programmer" xml:space="preserve">
-    <value>Programmeur :</value>
-  </data>
+		<value>Programador:</value>
+	</data>
 	<data name="translations" xml:space="preserve">
-    <value>--- Traductions ---</value>
-  </data>
+		<value>--- Traducciones ---</value>
+	</data>
 	<data name="translator" xml:space="preserve">
-    <value>Traducteur :</value>
-  </data>
+		<value>Traductor:</value>
+	</data>
 	<data name="about" xml:space="preserve">
-    <value>À propos / Changer de langue</value>
-  </data>
+		<value>Acerca de / Cambiar idioma</value>
+	</data>
 	<data name="tt_lb" xml:space="preserve">
-    <value>Dernière version de la dernière branche.</value>
-  </data>
+		<value>Última compilación de la rama más reciente:</value>
+	</data>
 	<data name="tt_m" xml:space="preserve">
-    <value>Dernière version journalière.</value>
-  </data>
+		<value>Compilación diaria más reciente.</value>
+	</data>
 	<data name="tt_ob" xml:space="preserve">
-    <value>Dernière version de la branche précédente.</value>
-  </data>
+		<value>Compilación más reciente de una rama anterior.</value>
+	</data>
 	<data name="tt_tb" xml:space="preserve">
-    <value>Dernière version de test.</value>
-  </data>
+		<value>Compilación para pruebas más reciente.</value>
+	</data>
 	<data name="language_change_success" xml:space="preserve">
-    <value>Les paramètres de langue s'appliqueront au prochaine démarrage !</value>
-  </data>
+		<value>La configuración de idioma se aplicará en el siguiente inicio.</value>
+	</data>
 	<data name="success" xml:space="preserve">
-    <value>Installation réussie !</value>
-  </data>
+		<value>¡Éxito!</value>
+	</data>
 	<data name="tt_bootstrap" xml:space="preserve">
-    <value>Vous devrier utiliser la ligne suivante au lieu de celle commençant par “UserInstallation=” dans le champ texte ci-dessous afin de ne pas écraser le profil utilisateur existant .</value>
-  </data>
+		<value>Puede usar lo siguiente en lugar de la línea que inicia con «UserInstallation=» del campo de texto anterior, para no sobreescribir su perfil de usuario existente.</value>
+	</data>
 	<data name="update_lang" xml:space="preserve">
-    <value>Changer de langue :</value>
-  </data>
+		<value>Cambiar el idioma:</value>
+	</data>
 	<data name="versiondl" xml:space="preserve">
-    <value>Est-ce que la %version doit vraiment être téléchargée?</value>
-  </data>
+		<value>¿Realmente descargar %version?</value>
+	</data>
 	<data name="bdllb" xml:space="preserve">
-    <value>Télécharger la dernière version de la dernière branche</value>
-  </data>
+		<value>Descargar rama más reciente</value>
+	</data>
 	<data name="open_help" xml:space="preserve">
-    <value>Ouvrir l'installeur d'aide LibreOffice</value>
-  </data>
+		<value>Abrir instalador de ayuda de LibreOffice</value>
+	</data>
 	<data name="config_installdir" xml:space="preserve">
-    <value>Configurer le répertoire d'installation</value>
-  </data>
+		<value>Configurar directorio de instalación</value>
+	</data>
 	<data name="open_bootstrap_ini" xml:space="preserve">
-    <value>Ouvrir bootstrap.ini</value>
-  </data>
+		<value>Abrir bootstrap.ini</value>
+	</data>
 	<data name="dlmaster" xml:space="preserve">
-    <value>Télécharger la dernière version</value>
-  </data>
+		<value>Descargar «master» más reciente</value>
+	</data>
 	<data name="dltesting" xml:space="preserve">
-    <value>Télécharger la dernière version de test</value>
-  </data>
+		<value>Descargar compilación para pruebas más reciente</value>
+	</data>
 	<data name="dl_ob" xml:space="preserve">
-    <value>Télécharger la dernière version de la branche précédente</value>
-  </data>
+		<value>Descargar rama anterior</value>
+	</data>
 	<data name="edit_bs_ini" xml:space="preserve">
-    <value>Éditer bootdtrap.ini</value>
-  </data>
+		<value>Editar bootstrap.ini</value>
+	</data>
 	<data name="progress" xml:space="preserve">
-    <value>Progression :</value>
-  </data>
+		<value>Progreso:</value>
+	</data>
 	<data name="open_bootstrap_title" xml:space="preserve">
-    <value>Ouvrir bootstap.ini</value>
-  </data>
+		<value>Abrir bootstrap.ini</value>
+	</data>
 	<data name="open_installer" xml:space="preserve">
-    <value>Ouvrir l'installeur LibreOffice</value>
-  </data>
+		<value>Abrir instalador de LibreOffice</value>
+	</data>
 	<data name="startdl" xml:space="preserve">
-    <value>Le fichier doit-il être téléchargé ?</value>
-  </data>
+		<value>¿Descargar el archivo?</value>
+	</data>
 	<data name="start_install" xml:space="preserve">
-    <value>Démarrer l'installation</value>
-  </data>
+		<value>Iniciar la instalación</value>
+	</data>
 	<data name="where_to_install" xml:space="preserve">
-    <value>Choisir le répertoire d'installation</value>
-  </data>
+		<value>Elegir el directorio de instalación</value>
+	</data>
 	<data name="save_bootstrap_ini" xml:space="preserve">
-    <value>Enregistrer bootstrap.ini</value>
-  </data>
+		<value>Guardar bootstrap.ini</value>
+	</data>
 	<data name="subfolder_do" xml:space="preserve">
-		<value>Un sous-dossier doit-il automatiquement être créé ? Nom du sous-dossier :</value>
+		<value>¿Crear una subcarpeta automáticamente? Nombre de la subcarpeta:</value>
+	</data>
+	<data name="da" xml:space="preserve">
+		<value>Danés:</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>La descarga ha finalizado y está lista para la instalación.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>Descarga finalizada.</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>Ha comenzado una descarga.</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>Descarga iniciada.</value>
 	</data>
 	<data name="es" xml:space="preserve">
-		<value>Espagnol :</value>
+		<value>Español:</value>
 	</data>
 	<data name="sl" xml:space="preserve">
-		<value>Slovène :</value>
+		<value>Esloveno:</value>
 	</data>
 </root>

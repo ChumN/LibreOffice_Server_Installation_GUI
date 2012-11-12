@@ -261,4 +261,25 @@
 	<data name="subfolder_do" xml:space="preserve">
 		<value>Soll ein Unterordner automatisch erzeugt werden? Name des Unterordners:</value>
 	</data>
+	<data name="da" xml:space="preserve">
+		<value>Dänisch:</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>Das Herunterladen wurde abgeschlossen und die Datei ist für die Installation bereit.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>Herunterladen abgeschlossen!</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>Das Herunterladen einer Datei wurde gestartet!</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>Herunterladen begonnen!</value>
+	</data>
+	<data name="es" xml:space="preserve">
+		<value>Spanisch:</value>
+	</data>
+	<data name="sl" xml:space="preserve">
+		<value>Slowenisch:</value>
+	</data>
 </root>

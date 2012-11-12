@@ -34,6 +34,8 @@ namespace WindowsFormsApplication1
             string de = getstring("de") + " ";
             string en = getstring("en") + " ";
             string fr = getstring("fr") + " ";
+            string sl = getstring("sl") + " ";
+            string pt = getstring("pt") + " ";
             string programmer = getstring("programmer") + " ";
             string florei = "Florian Reisinger";
             string nemo = "no one ;)";
@@ -41,8 +43,11 @@ namespace WindowsFormsApplication1
             abouttxt += en + florei + Environment.NewLine;
             abouttxt+= de + florei + Environment.NewLine;
             abouttxt += fr + "Sophie Gautier" + Environment.NewLine;
+            abouttxt += sl + "Martin Srebotnjak" + Environment.NewLine;
+            abouttxt += pt + "Carlos Moreira" + Environment.NewLine;
             about.Text = abouttxt;
             this.Text = getstring("about");
+            lang_chooser.Sorted = true;
 
         }
         public string getstring(string strMessage)
