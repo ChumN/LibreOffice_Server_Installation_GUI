@@ -250,6 +250,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Help ähnelt.
+        /// </summary>
+        internal static string help {
+            get {
+                return ResourceManager.GetString("help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die It might help to run this program as administrator. ähnelt.
         /// </summary>
         internal static string help_runasadmin {
@@ -313,6 +322,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die No testversion available ähnelt.
+        /// </summary>
+        internal static string notest {
+            get {
+                return ResourceManager.GetString("notest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Open bootstrap.ini ähnelt.
         /// </summary>
         internal static string open_bootstrap_ini {
@@ -367,7 +385,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Portuguese ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Portuguese: ähnelt.
         /// </summary>
         internal static string pt {
             get {
@@ -403,7 +421,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Slovenian ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Slovenian: ähnelt.
         /// </summary>
         internal static string sl {
             get {

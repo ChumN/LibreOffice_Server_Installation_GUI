@@ -282,4 +282,7 @@
 	<data name="sl" xml:space="preserve">
 		<value>Slovenščina:</value>
 	</data>
+	<data name="help" xml:space="preserve">
+		<value>Pomoč</value>
+	</data>
 </root>

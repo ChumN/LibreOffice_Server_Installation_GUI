@@ -282,4 +282,10 @@
 	<data name="sl" xml:space="preserve">
 		<value>Slowenisch:</value>
 	</data>
+	<data name="help" xml:space="preserve">
+		<value>Hilfe</value>
+	</data>
+	<data name="notest" xml:space="preserve">
+		<value>Keine Testversion verfügbar!</value>
+	</data>
 </root>

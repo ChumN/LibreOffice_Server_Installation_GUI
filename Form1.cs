@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +14,8 @@ using System.Resources;
 using System.Reflection;
 using System.Globalization;
 using System.Xml.Serialization;
+using Microsoft.VisualBasic;
+using System.Configuration;
 
 
 namespace WindowsFormsApplication1
@@ -81,6 +83,7 @@ namespace WindowsFormsApplication1
             d_ob.IsBalloon = true;
             d_tb.IsBalloon = true;
             bootstrapini.IsBalloon = true;
+            help.Text = getstring("help");
             /* End Setting tooltips
              * Start Loading settings */
             try
@@ -94,13 +97,24 @@ namespace WindowsFormsApplication1
                 cb_subfolder.Checked = toapply.checkbox;
                 path_installdir.Text = toapply.installdir;
                 subfolder.Text = toapply.subfolder;
+
             }
             catch (Exception ex)
             { exeptionmessage(ex.Message); }
 
             // End Loading settings
             button1.Text = getstring("about");
+            give_message.BalloonTipClicked += new EventHandler(gm_do);
+            give_message.BalloonTipClosed += new EventHandler(gm_do);
+            give_message.Click += new EventHandler(gm_do);
+            give_message.DoubleClick += new EventHandler(gm_do);
 
+        }
+        private void gm_do(Object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            //Interaction.AppActivate(this.Text);
+            
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -409,6 +423,8 @@ namespace WindowsFormsApplication1
 
         void download_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            give_message.Text = "LibreOffice Server Installation GUI";
+
             path_main.Text = path_to_file_ondisk.Text;
             progressBar1.Value = 0;
             percent.Text = "0 %";
@@ -424,7 +440,7 @@ namespace WindowsFormsApplication1
         {
             // Download
             string httpfile = downloadfile(url);
-
+            
             if (httpfile != "error")
             {
                 string filename = "";
@@ -438,23 +454,31 @@ namespace WindowsFormsApplication1
                 }
                 else if (testing)
                 {
-                    int starting_position = httpfile.IndexOf("Directory</a>");
+                    try
+                    {
+                        int starting_position = httpfile.IndexOf("Directory</a>");
 
-                    httpfile = httpfile.Remove(0, starting_position);
+                        httpfile = httpfile.Remove(0, starting_position);
 
-                    starting_position = httpfile.IndexOf("<a href=\"");
+                        starting_position = httpfile.IndexOf("<a href=\"");
 
-                    starting_position += 9;
-                    httpfile = httpfile.Remove(0, starting_position);
-                    string version = httpfile.Remove(5);
-                    string link = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/?C=S;O=D";
-                    httpfile = downloadfile(link);
-                    starting_position = httpfile.IndexOf("LibO_");
-                    httpfile = httpfile.Remove(0, starting_position);
-                    starting_position = httpfile.IndexOf(".msi") + 4;
-                    httpfile = httpfile.Remove(starting_position);
-                    filename = httpfile;
-                    url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
+                        starting_position += 9;
+                        httpfile = httpfile.Remove(0, starting_position);
+                        string version = httpfile.Remove(5);
+                        string link = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/?C=S;O=D";
+                        httpfile = downloadfile(link);
+                        starting_position = httpfile.IndexOf("LibO_");
+                        httpfile = httpfile.Remove(0, starting_position);
+                        starting_position = httpfile.IndexOf(".msi") + 4;
+                        httpfile = httpfile.Remove(starting_position);
+                        filename = httpfile;
+                        url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
+                    }
+                    catch (Exception ex)
+                    {
+                        exeptionmessage(getstring("notest") + ex.Message);
+
+                    }
                 }
                 else if (latest_branch)
                 {
@@ -502,14 +526,18 @@ namespace WindowsFormsApplication1
                     path += "liboobranch.msi";
                 path_to_file_ondisk.Text = path;
                 string mb_question = getstring("versiondl");
-                int k = mb_question.IndexOf("%version");
-                int l = k + 8;
-                mb_question = mb_question.Remove(k, l);
-                mb_question = mb_question.Insert(k, filename);
-              DialogResult dialog_result =  MessageBox.Show(mb_question, getstring("startdl"), MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                mb_question = mb_question.Replace("%version", filename);
 
-                if (dialog_result == DialogResult.Yes)
-                downloadmaster.DownloadFileAsync(uritofile, path);
+                if (MessageBox.Show(mb_question, getstring("startdl"), MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    give_message.ShowBalloonTip(5000, getstring("dl_started_title"), getstring("dl_started"), ToolTipIcon.Info);
+                    downloadmaster.DownloadFileAsync(uritofile, path);
+                    int k = filename.IndexOf("LibO");
+                    filename = filename.Remove(k, 5);
+                    k = filename.IndexOf("_");
+                    filename = filename.Remove(k);
+                    subfolder.Text = filename;
+                }
             }
         }
 
@@ -620,6 +648,12 @@ namespace WindowsFormsApplication1
         }
        private string getsettingsfilename()
        { return   Path.GetTempPath() + "libo_si_gui_path.config";}
+
+       private void help_Click(object sender, EventArgs e)
+       {
+           Form3 fm3 = new Form3();
+           fm3.Show();
+       }
       
 
     }

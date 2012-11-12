@@ -67,7 +67,8 @@
             "Fr",
             "Sl",
             "Pt",
-            "Pt-br"});
+            "Pt-br",
+            "Da"});
             this.lang_chooser.Location = new System.Drawing.Point(501, 329);
             this.lang_chooser.Name = "lang_chooser";
             this.lang_chooser.Size = new System.Drawing.Size(71, 21);
@@ -92,6 +93,7 @@
             this.Controls.Add(this.lang_chooser);
             this.Controls.Add(this.about);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(5100, 3100);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(500, 300);
