@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+/*using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using System.Text;*/
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
@@ -15,9 +15,6 @@ using System.Reflection;
 using System.Globalization;
 using System.Xml.Serialization;
 using Microsoft.VisualBasic;
-using System.Configuration;
-
-
 
 
 namespace WindowsFormsApplication1
@@ -28,23 +25,19 @@ namespace WindowsFormsApplication1
     {
 
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
-        string pathtofile = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\Libo Server Install GUI";
         public Form1()
         {
             //l10n
             try
             {
+                string temp = Path.GetTempPath() + "langsettings.config";
+                string lang = File.ReadAllText(temp);
 
-                
-                string path = pathtofile + "\\lang.conf";
-                string lang = File.ReadAllText(path);
-                
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
-                
 
             }
-            catch (Exception ex)
-            { exeptionmessage(ex.Message); }
+            catch (Exception)
+            { }
             InitializeComponent();
         }
 
@@ -645,7 +638,7 @@ namespace WindowsFormsApplication1
 
         }
         private string getsettingsfilename()
-        { return "libo_si_gui_path.config"; }
+        { return Path.GetTempPath() + "libo_si_gui_path.config"; }
 
         private void help_Click(object sender, EventArgs e)
         {
@@ -653,9 +646,8 @@ namespace WindowsFormsApplication1
             fm.Show();
         }
 
-    
 
-        
-        
+
+        public EventHandler balloon_tip_clicked { get; set; }
     }
 }

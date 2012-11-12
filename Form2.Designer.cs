@@ -46,7 +46,6 @@
             this.about.ReadOnly = true;
             this.about.Size = new System.Drawing.Size(459, 320);
             this.about.TabIndex = 3;
-            this.about.TextChanged += new System.EventHandler(this.about_TextChanged);
             // 
             // lang_chooser
             // 
