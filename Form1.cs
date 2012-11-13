@@ -216,9 +216,11 @@ namespace WindowsFormsApplication1
         private string create_cmd(bool install_libo, bool install_help)
         {
             string path = path_installdir.Text;
-            if (cb_subfolder.Checked && (subfolder.Text != ""))
-                path += subfolder.Text + "\\";
+            if (cb_subfolder.Checked && (subfolder.Text != "") || ( path[path.Length - 1] == Convert.ToChar("\\")))
+            {
 
+                path +=   "\\" +subfolder.Text;
+            }
 
             string cmd_file = "@ECHO off" + Environment.NewLine;
             if (install_libo)
