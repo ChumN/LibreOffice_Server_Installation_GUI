@@ -45,6 +45,10 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
             //l10n start
+            string dl_hp_txt = getstring("helppack");
+            dl_hp_1.Text = dl_hp_txt;
+            dl_hp_2.Text = dl_hp_txt;
+            dl_hp_3.Text = dl_hp_txt;
             b_dl_lb.Text = getstring("bdllb");
             b_dl_master.Text = getstring("dlmaster");
             b_dl_ob.Text = getstring("dl_ob");
@@ -68,6 +72,9 @@ namespace WindowsFormsApplication1
             ToolTip d_tb = new ToolTip();
             ToolTip d_ob = new ToolTip();
             ToolTip bootstrapini = new ToolTip();
+            ToolTip b_hp_1 = new ToolTip();
+            ToolTip b_hp_2 = new ToolTip();
+            ToolTip b_hp_3 = new ToolTip();
             string tt_lb = getstring("tt_lb");
             string tt_m = getstring("tt_m");
             string tt_tb = getstring("tt_tb");
@@ -77,8 +84,14 @@ namespace WindowsFormsApplication1
             d_m.SetToolTip(this.b_dl_master, tt_m);
             d_tb.SetToolTip(this.b_dl_testing, tt_tb);
             d_ob.SetToolTip(this.b_dl_ob, tt_ob);
+            b_hp_1.SetToolTip(this.dl_hp_1, getstring("tt_hp_lb"));
+            b_hp_2.SetToolTip(this.dl_hp_2, getstring("tt_hp_test"));
+            b_hp_3.SetToolTip(this.dl_hp_3, getstring("tt_hp_ob"));
             bootstrapini.SetToolTip(this.bootstrap_text, bootstrap);
             bootstrapini.ShowAlways = true;
+            b_hp_1.IsBalloon = true;
+            b_hp_2.IsBalloon = true;
+            b_hp_3.IsBalloon = true;
             d_lb.IsBalloon = true;
             d_m.IsBalloon = true;
             d_ob.IsBalloon = true;
@@ -439,13 +452,31 @@ namespace WindowsFormsApplication1
 
 
         }
-
-
         public void startasyncdownload(string url, bool testing, bool master, bool latest_branch, bool older_branch)
         {
-            // Download
-            string httpfile = downloadfile(url);
+            startasyncdownload(url, testing, master, latest_branch, older_branch, false);
+        }
 
+        public void startasyncdownload(string url, bool testing, bool master, bool latest_branch, bool older_branch, bool helppack)
+        {
+            // Download
+            bool cont = true;
+            string lang = Convert.ToString(hp_lang_select.SelectedItem);
+           /* try
+            {
+                if (!(( lang != "") && helppack))
+                {
+                    cont = false;
+                    throw new System.InvalidOperationException("You have to choose a language before starting the download");
+                }
+            }
+            catch (Exception ex)
+            {
+                exeptionmessage(ex.Message);
+            }
+            if(cont)
+            {*/
+            string httpfile = downloadfile(url);
             if (httpfile != "error")
             {
                 string filename = "";
@@ -469,11 +500,18 @@ namespace WindowsFormsApplication1
                     string version = httpfile.Remove(5);
                     string link = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/?C=S;O=D";
                     httpfile = downloadfile(link);
-                    starting_position = httpfile.IndexOf("LibO_");
-                    httpfile = httpfile.Remove(0, starting_position);
-                    starting_position = httpfile.IndexOf(".msi") + 4;
-                    httpfile = httpfile.Remove(starting_position);
+                   /* if (!helppack)
+                    {*/
+                        starting_position = httpfile.IndexOf("LibO_");
+                        httpfile = httpfile.Remove(0, starting_position);
+                        starting_position = httpfile.IndexOf(".msi") + 4;
+                        httpfile = httpfile.Remove(starting_position);
+                  /*  }
+                    else*/
+                        httpfile = "LibO_" + version + "_Win_x86_helppack_" + lang + ".msi";
+
                     url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
+
                 }
                 else if (latest_branch)
                 {
@@ -486,7 +524,7 @@ namespace WindowsFormsApplication1
                     }
                     httpfile = httpfile.Remove(5);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
-                    httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
+                    httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi"; // Change
 
                 }
                 else if (older_branch)
@@ -499,7 +537,7 @@ namespace WindowsFormsApplication1
                     i = httpfile.IndexOf("/");
                     httpfile = httpfile.Remove(i);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
-                    httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
+                    httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi"; // Change
 
                 }
                 filename = httpfile;
@@ -534,6 +572,7 @@ namespace WindowsFormsApplication1
                     filename = filename.Remove(k);
                     subfolder.Text = filename;
                 }
+         //   }
             }
         }
 
@@ -651,5 +690,35 @@ namespace WindowsFormsApplication1
 
 
         public EventHandler balloon_tip_clicked { get; set; }
+
+        private void path_to_file_ondisk_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void path_help_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void path_main_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dl_hp_1_Click(object sender, EventArgs e)
+        {
+            startasyncdownload("http://download.documentfoundation.org/libreoffice/stable/", false, false, true, false, true);
+        }
+
+        private void dl_hp_2_Click(object sender, EventArgs e)
+        {
+            startasyncdownload("http://download.documentfoundation.org/libreoffice/stable/", true, false, false, false, true);
+        }
+
+        private void dl_hp_3_Click(object sender, EventArgs e)
+        {
+            startasyncdownload("http://download.documentfoundation.org/libreoffice/stable/", false, false, false, true, true);
+        }
     }
 }

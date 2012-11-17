@@ -60,6 +60,10 @@
             this.cb_subfolder = new System.Windows.Forms.CheckBox();
             this.subfolder = new System.Windows.Forms.TextBox();
             this.give_message = new System.Windows.Forms.NotifyIcon(this.components);
+            this.dl_hp_1 = new System.Windows.Forms.Button();
+            this.dl_hp_2 = new System.Windows.Forms.Button();
+            this.dl_hp_3 = new System.Windows.Forms.Button();
+            this.hp_lang_select = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,13 +71,14 @@
             // 
             this.openfile.DefaultExt = "msi";
             this.openfile.Filter = "LibreOffice installation file|LibO*Win_x86_install_multi*.msi;*LibO-Dev*Win_x86_i" +
-                "nstall*.msi;libreoffice*.msi";
+    "nstall*.msi;libreoffice*.msi";
             this.openfile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // b_open_libo_installer
             // 
+            this.b_open_libo_installer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.b_open_libo_installer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.b_open_libo_installer.Location = new System.Drawing.Point(13, 13);
+            this.b_open_libo_installer.Location = new System.Drawing.Point(13, 17);
             this.b_open_libo_installer.Name = "b_open_libo_installer";
             this.b_open_libo_installer.Size = new System.Drawing.Size(206, 23);
             this.b_open_libo_installer.TabIndex = 0;
@@ -83,30 +88,31 @@
             // 
             // path_main
             // 
-            this.path_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.path_main.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.path_main.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.path_main.Location = new System.Drawing.Point(225, 16);
+            this.path_main.Location = new System.Drawing.Point(225, 20);
             this.path_main.Name = "path_main";
             this.path_main.ReadOnly = true;
             this.path_main.Size = new System.Drawing.Size(195, 20);
             this.path_main.TabIndex = 1;
+            this.path_main.TextChanged += new System.EventHandler(this.path_main_TextChanged);
             // 
             // path_help
             // 
-            this.path_help.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.path_help.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.path_help.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.path_help.Location = new System.Drawing.Point(225, 42);
+            this.path_help.Location = new System.Drawing.Point(225, 46);
             this.path_help.Name = "path_help";
             this.path_help.ReadOnly = true;
             this.path_help.Size = new System.Drawing.Size(195, 20);
             this.path_help.TabIndex = 3;
+            this.path_help.TextChanged += new System.EventHandler(this.path_help_TextChanged);
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(13, 42);
+            this.button2.Location = new System.Drawing.Point(13, 46);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(206, 23);
             this.button2.TabIndex = 2;
@@ -122,13 +128,11 @@
             // 
             // start_install
             // 
-            this.start_install.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.start_install.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.start_install.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.start_install.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.start_install.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.start_install.Location = new System.Drawing.Point(13, 100);
+            this.start_install.Location = new System.Drawing.Point(13, 104);
             this.start_install.Name = "start_install";
             this.start_install.Size = new System.Drawing.Size(407, 74);
             this.start_install.TabIndex = 4;
@@ -144,8 +148,9 @@
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(12, 71);
+            this.button3.Location = new System.Drawing.Point(12, 75);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(207, 23);
             this.button3.TabIndex = 5;
@@ -155,10 +160,9 @@
             // 
             // path_installdir
             // 
-            this.path_installdir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.path_installdir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.path_installdir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.path_installdir.Location = new System.Drawing.Point(225, 73);
+            this.path_installdir.Location = new System.Drawing.Point(225, 77);
             this.path_installdir.Name = "path_installdir";
             this.path_installdir.ReadOnly = true;
             this.path_installdir.Size = new System.Drawing.Size(195, 20);
@@ -167,7 +171,7 @@
             // 
             // button4
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button4.Location = new System.Drawing.Point(6, 17);
             this.button4.Name = "button4";
@@ -179,8 +183,7 @@
             // 
             // bootstrap_text
             // 
-            this.bootstrap_text.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.bootstrap_text.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bootstrap_text.Location = new System.Drawing.Point(6, 72);
             this.bootstrap_text.Multiline = true;
             this.bootstrap_text.Name = "bootstrap_text";
@@ -195,7 +198,7 @@
             // 
             // save_file
             // 
-            this.save_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.save_file.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.save_file.Enabled = false;
             this.save_file.ForeColor = System.Drawing.SystemColors.ControlText;
             this.save_file.Location = new System.Drawing.Point(187, 17);
@@ -208,7 +211,7 @@
             // 
             // bootinipath
             // 
-            this.bootinipath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bootinipath.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bootinipath.ForeColor = System.Drawing.SystemColors.ControlText;
             this.bootinipath.Location = new System.Drawing.Point(6, 46);
             this.bootinipath.Name = "bootinipath";
@@ -218,7 +221,7 @@
             // 
             // userinstallation
             // 
-            this.userinstallation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.userinstallation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userinstallation.ForeColor = System.Drawing.SystemColors.ControlText;
             this.userinstallation.Location = new System.Drawing.Point(6, 185);
             this.userinstallation.Name = "userinstallation";
@@ -230,9 +233,9 @@
             // 
             // b_dl_master
             // 
-            this.b_dl_master.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.b_dl_master.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.b_dl_master.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.b_dl_master.Location = new System.Drawing.Point(225, 287);
+            this.b_dl_master.Location = new System.Drawing.Point(225, 291);
             this.b_dl_master.Name = "b_dl_master";
             this.b_dl_master.Size = new System.Drawing.Size(204, 23);
             this.b_dl_master.TabIndex = 13;
@@ -242,20 +245,18 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(86, 258);
+            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.progressBar1.Location = new System.Drawing.Point(86, 262);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(692, 23);
             this.progressBar1.TabIndex = 14;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(9, 262);
+            this.label2.Location = new System.Drawing.Point(9, 266);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 15;
@@ -263,8 +264,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.help);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button4);
@@ -273,7 +273,7 @@
             this.groupBox1.Controls.Add(this.userinstallation);
             this.groupBox1.Controls.Add(this.bootstrap_text);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(426, 6);
+            this.groupBox1.Location = new System.Drawing.Point(426, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(398, 246);
             this.groupBox1.TabIndex = 16;
@@ -282,6 +282,7 @@
             // 
             // help
             // 
+            this.help.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.help.ForeColor = System.Drawing.SystemColors.ControlText;
             this.help.Location = new System.Drawing.Point(6, 215);
@@ -294,8 +295,7 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(187, 215);
@@ -308,21 +308,22 @@
             // 
             // path_to_file_ondisk
             // 
-            this.path_to_file_ondisk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.path_to_file_ondisk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.path_to_file_ondisk.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.path_to_file_ondisk.Location = new System.Drawing.Point(13, 229);
+            this.path_to_file_ondisk.Location = new System.Drawing.Point(13, 233);
             this.path_to_file_ondisk.Name = "path_to_file_ondisk";
             this.path_to_file_ondisk.ReadOnly = true;
             this.path_to_file_ondisk.Size = new System.Drawing.Size(407, 20);
             this.path_to_file_ondisk.TabIndex = 17;
+            this.path_to_file_ondisk.TextChanged += new System.EventHandler(this.path_to_file_ondisk_TextChanged);
             // 
             // percent
             // 
-            this.percent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.percent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.percent.AutoSize = true;
             this.percent.BackColor = System.Drawing.Color.Transparent;
             this.percent.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.percent.Location = new System.Drawing.Point(784, 262);
+            this.percent.Location = new System.Drawing.Point(784, 266);
             this.percent.Name = "percent";
             this.percent.Size = new System.Drawing.Size(24, 13);
             this.percent.TabIndex = 18;
@@ -331,9 +332,9 @@
             // 
             // b_dl_lb
             // 
-            this.b_dl_lb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.b_dl_lb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.b_dl_lb.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.b_dl_lb.Location = new System.Drawing.Point(13, 287);
+            this.b_dl_lb.Location = new System.Drawing.Point(13, 291);
             this.b_dl_lb.Name = "b_dl_lb";
             this.b_dl_lb.Size = new System.Drawing.Size(206, 23);
             this.b_dl_lb.TabIndex = 19;
@@ -344,9 +345,9 @@
             // 
             // b_dl_ob
             // 
-            this.b_dl_ob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_dl_ob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.b_dl_ob.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.b_dl_ob.Location = new System.Drawing.Point(629, 287);
+            this.b_dl_ob.Location = new System.Drawing.Point(629, 291);
             this.b_dl_ob.Name = "b_dl_ob";
             this.b_dl_ob.Size = new System.Drawing.Size(195, 23);
             this.b_dl_ob.TabIndex = 20;
@@ -356,9 +357,9 @@
             // 
             // b_dl_testing
             // 
-            this.b_dl_testing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.b_dl_testing.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.b_dl_testing.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.b_dl_testing.Location = new System.Drawing.Point(435, 287);
+            this.b_dl_testing.Location = new System.Drawing.Point(435, 291);
             this.b_dl_testing.Name = "b_dl_testing";
             this.b_dl_testing.Size = new System.Drawing.Size(188, 23);
             this.b_dl_testing.TabIndex = 21;
@@ -368,9 +369,10 @@
             // 
             // cb_subfolder
             // 
+            this.cb_subfolder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_subfolder.AutoSize = true;
             this.cb_subfolder.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cb_subfolder.Location = new System.Drawing.Point(13, 180);
+            this.cb_subfolder.Location = new System.Drawing.Point(13, 184);
             this.cb_subfolder.Name = "cb_subfolder";
             this.cb_subfolder.Size = new System.Drawing.Size(348, 17);
             this.cb_subfolder.TabIndex = 22;
@@ -380,8 +382,9 @@
             // 
             // subfolder
             // 
+            this.subfolder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.subfolder.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.subfolder.Location = new System.Drawing.Point(12, 203);
+            this.subfolder.Location = new System.Drawing.Point(12, 207);
             this.subfolder.Name = "subfolder";
             this.subfolder.Size = new System.Drawing.Size(407, 20);
             this.subfolder.TabIndex = 23;
@@ -394,11 +397,116 @@
             this.give_message.Text = "Libreoffice Server Installation GUI";
             this.give_message.Visible = true;
             // 
+            // dl_hp_1
+            // 
+            this.dl_hp_1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dl_hp_1.Location = new System.Drawing.Point(12, 321);
+            this.dl_hp_1.Name = "dl_hp_1";
+            this.dl_hp_1.Size = new System.Drawing.Size(204, 23);
+            this.dl_hp_1.TabIndex = 24;
+            this.dl_hp_1.Text = "Download helppack";
+            this.dl_hp_1.UseVisualStyleBackColor = true;
+            this.dl_hp_1.Click += new System.EventHandler(this.dl_hp_1_Click);
+            // 
+            // dl_hp_2
+            // 
+            this.dl_hp_2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dl_hp_2.Location = new System.Drawing.Point(436, 321);
+            this.dl_hp_2.Name = "dl_hp_2";
+            this.dl_hp_2.Size = new System.Drawing.Size(187, 23);
+            this.dl_hp_2.TabIndex = 25;
+            this.dl_hp_2.Text = "Download helppack";
+            this.dl_hp_2.UseVisualStyleBackColor = true;
+            this.dl_hp_2.Click += new System.EventHandler(this.dl_hp_2_Click);
+            // 
+            // dl_hp_3
+            // 
+            this.dl_hp_3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dl_hp_3.Location = new System.Drawing.Point(630, 321);
+            this.dl_hp_3.Name = "dl_hp_3";
+            this.dl_hp_3.Size = new System.Drawing.Size(194, 23);
+            this.dl_hp_3.TabIndex = 26;
+            this.dl_hp_3.Text = "Download helppack";
+            this.dl_hp_3.UseVisualStyleBackColor = true;
+            this.dl_hp_3.Click += new System.EventHandler(this.dl_hp_3_Click);
+            // 
+            // hp_lang_select
+            // 
+            this.hp_lang_select.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.hp_lang_select.FormattingEnabled = true;
+            this.hp_lang_select.Items.AddRange(new object[] {
+            "ast",
+            "bg",
+            "bn-IN",
+            "bn",
+            "bo",
+            "bs",
+            "ca-XV",
+            "ca",
+            "cs",
+            "da",
+            "de",
+            "dz ",
+            "el",
+            "en-GB ",
+            "en-US ",
+            "en-ZA",
+            "eo",
+            "es",
+            "et ",
+            "eu",
+            "fi",
+            "fr",
+            "gl",
+            "gu",
+            "he",
+            "hi",
+            "hr",
+            "hu",
+            "id",
+            "is",
+            "it",
+            "ja",
+            "ka",
+            "km",
+            "ko",
+            "lb",
+            "nb",
+            "ne",
+            "nl",
+            "nn",
+            "om",
+            "pl",
+            "pt-BR",
+            "pt",
+            "ru",
+            "si",
+            "si",
+            "sk ",
+            "sl",
+            "sq",
+            "sv",
+            "tg",
+            "tr",
+            "ug",
+            "uk",
+            "vi",
+            "zh-CN",
+            "zh-TW"});
+            this.hp_lang_select.Location = new System.Drawing.Point(225, 323);
+            this.hp_lang_select.Name = "hp_lang_select";
+            this.hp_lang_select.Size = new System.Drawing.Size(204, 21);
+            this.hp_lang_select.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 322);
+            this.ClientSize = new System.Drawing.Size(836, 356);
+            this.Controls.Add(this.hp_lang_select);
+            this.Controls.Add(this.dl_hp_3);
+            this.Controls.Add(this.dl_hp_2);
+            this.Controls.Add(this.dl_hp_1);
             this.Controls.Add(this.subfolder);
             this.Controls.Add(this.cb_subfolder);
             this.Controls.Add(this.percent);
@@ -462,6 +570,10 @@
         private System.Windows.Forms.TextBox subfolder;
         private System.Windows.Forms.Button help;
         private System.Windows.Forms.NotifyIcon give_message;
+        private System.Windows.Forms.Button dl_hp_1;
+        private System.Windows.Forms.Button dl_hp_2;
+        private System.Windows.Forms.Button dl_hp_3;
+        private System.Windows.Forms.ComboBox hp_lang_select;
     }
 }
 
