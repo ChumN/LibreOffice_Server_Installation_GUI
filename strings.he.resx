@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="dirnotfound" xml:space="preserve">
+		<value>התיקייה אינה קיימת!</value>
+	</data>
+	<data name="dirnotfoundmessage" xml:space="preserve">
+		<value>נא לבדוק את התיקייה שבחרת!</value>
+	</data>
+	<data name="Error" xml:space="preserve">
+		<value>שגיאה!</value>
+	</data>
+	<data name="filesave" xml:space="preserve">
+		<value>הקובץ נשמר בהצלחה!</value>
+	</data>
+	<data name="go_back" xml:space="preserve">
+		<value>לחזור?</value>
+	</data>
+	<data name="help_runasadmin" xml:space="preserve">
+		<value>יתכן שעדיף להפעיל את התכנית הזאת כמנהל המערכת.</value>
+	</data>
+	<data name="installerror" xml:space="preserve">
+		<value>לא ניתן להתחיל בהתקנה עקב השגיאה הבאה:</value>
+	</data>
+	<data name="installnostart" xml:space="preserve">
+		<value>לא ניתן להתחיל בהתקנה!</value>
+	</data>
+	<data name="no_installdir" xml:space="preserve">
+		<value>לא נבחרה תיקייה להתקנה!</value>
+	</data>
+	<data name="no_installfile" xml:space="preserve">
+		<value>בדרך כלל עדיף לך לבחור בקובץ התקנה של LibreOffice! להמשיך?</value>
+	</data>
+	<data name="si" xml:space="preserve">
+		<value>בעיית אבטחה</value>
+	</data>
+	<data name="si_message" xml:space="preserve">
+		<value>אין לך הרשאות לכתוב לתיקייה זו.</value>
+	</data>
+	<data name="standarderror" xml:space="preserve">
+		<value>התרחשה תקלה! הודעה:</value>
+	</data>
+	<data name="title_filesave" xml:space="preserve">
+		<value>הקובץ נשמר</value>
+	</data>
+	<data name="warning" xml:space="preserve">
+		<value>אזהרה!</value>
+	</data>
+	<data name="de" xml:space="preserve">
+		<value>גרמנית:</value>
+	</data>
+	<data name="en" xml:space="preserve">
+		<value>אנגלית:</value>
+	</data>
+	<data name="fr" xml:space="preserve">
+		<value>צרפתית:</value>
+	</data>
+	<data name="lang" xml:space="preserve">
+		<value>שפה</value>
+	</data>
+	<data name="programmer" xml:space="preserve">
+		<value>מתכנת:</value>
+	</data>
+	<data name="translations" xml:space="preserve">
+		<value>--- תרגומים ---</value>
+	</data>
+	<data name="translator" xml:space="preserve">
+		<value>תרגום:</value>
+	</data>
+	<data name="about" xml:space="preserve">
+		<value>על אודות / החלפת שפה</value>
+	</data>
+	<data name="tt_lb" xml:space="preserve">
+		<value>ההרכבה האחרונה של הענף העדכני ביותר.</value>
+	</data>
+	<data name="tt_m" xml:space="preserve">
+		<value>ההרכבה היומית האחרונה.</value>
+	</data>
+	<data name="tt_ob" xml:space="preserve">
+		<value>ההרכבה היומית של ענף ישן יותר.</value>
+	</data>
+	<data name="tt_tb" xml:space="preserve">
+		<value>הרכבת הבדיקה העדכנית ביותר.</value>
+	</data>
+	<data name="language_change_success" xml:space="preserve">
+		<value>הגדרות השפה יחולו עם ההפעלה הבאה מחדש!</value>
+	</data>
+	<data name="success" xml:space="preserve">
+		<value>התהליך הצליח!</value>
+	</data>
+	<data name="tt_bootstrap" xml:space="preserve">
+		<value>ניתן להשתמש בהגדרה הבאה במקום השורה שמתחילה ב־“UserInstallation=‎” משדה הטקסט שלהלן כדי לא לדרוס את פרופיל המשתמש הקיים שלך.</value>
+	</data>
+	<data name="update_lang" xml:space="preserve">
+		<value>החלפת השפה:</value>
+	</data>
+	<data name="versiondl" xml:space="preserve">
+		<value>האם באמת להוריד את הגרסה %version?</value>
+	</data>
+	<data name="bdllb" xml:space="preserve">
+		<value>הורדת הענף העדכני ביותר</value>
+	</data>
+	<data name="open_help" xml:space="preserve">
+		<value>פתיחת מתקין העזרה של LibreOffice</value>
+	</data>
+	<data name="config_installdir" xml:space="preserve">
+		<value>הגדרת תיקייה ההתקנה</value>
+	</data>
+	<data name="open_bootstrap_ini" xml:space="preserve">
+		<value>פתיחת bootstrap.ini</value>
+	</data>
+	<data name="dlmaster" xml:space="preserve">
+		<value>הורדת הענף העיקרי העדכני ביותר</value>
+	</data>
+	<data name="dltesting" xml:space="preserve">
+		<value>הורדת ענף הבדיקה העדכני ביותר</value>
+	</data>
+	<data name="dl_ob" xml:space="preserve">
+		<value>הורדת ענף ישן יותר</value>
+	</data>
+	<data name="edit_bs_ini" xml:space="preserve">
+		<value>עריכת bootstrap.ini</value>
+	</data>
+	<data name="progress" xml:space="preserve">
+		<value>התקדמות:</value>
+	</data>
+	<data name="open_bootstrap_title" xml:space="preserve">
+		<value>פתיחת bootstrap.ini</value>
+	</data>
+	<data name="open_installer" xml:space="preserve">
+		<value>פתיחת תכנית ההתקנה של LibreOffice</value>
+	</data>
+	<data name="startdl" xml:space="preserve">
+		<value>האם להוריד את הקובץ?</value>
+	</data>
+	<data name="start_install" xml:space="preserve">
+		<value>התחלת ההתקנה</value>
+	</data>
+	<data name="where_to_install" xml:space="preserve">
+		<value>נא לבחור את תיקיית ההתקנה</value>
+	</data>
+	<data name="save_bootstrap_ini" xml:space="preserve">
+		<value>שמירת bootstrap.ini</value>
+	</data>
+	<data name="subfolder_do" xml:space="preserve">
+		<value>האם יש ליצור תת־תיקייה אוטומטית? שם תת־התיקייה:</value>
+	</data>
+	<data name="es" xml:space="preserve">
+		<value>ספרדית:</value>
+	</data>
+	<data name="sl" xml:space="preserve">
+		<value>סלובנית:</value>
+	</data>
+	<data name="da" xml:space="preserve">
+		<value>דנית:</value>
+	</data>
+	<data name="help" xml:space="preserve">
+		<value>עזרה</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>ההורדה הסתיימה והתכנית מוכנה להתקנה.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>ההורדה הושלמה!</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>הורדה החלה!</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>הורדה החלה!</value>
+	</data>
+</root>

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-/*using System.Data;
+using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;*/
+using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 using System.Diagnostics;
@@ -20,7 +20,20 @@ namespace WindowsFormsApplication1
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public Form2()
         {
-            
+            //l10n import
+            string l10n = "???";
+            string[] rtl = new string[] { "He" };
+            try
+            {
+                l10n = Path.GetTempPath() + "langsettings.config";
+                string lang = File.ReadAllText(l10n);
+                if (rtl.Contains(lang))
+                    this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
+
+            }
+            catch (Exception)
+            { }
             InitializeComponent();
         }
 
@@ -36,6 +49,8 @@ namespace WindowsFormsApplication1
             string en = getstring("en") + " ";
             string fr = getstring("fr") + " ";
             string es = getstring("es") + " ";
+            string he = getstring("he") + " ";
+            string pt = getstring("pt") + " ";
             string programmer = getstring("programmer") + " ";
             string florei = "Florian Reisinger";
             string nemo = "NEMO ;)";
@@ -47,7 +62,9 @@ namespace WindowsFormsApplication1
             abouttxt += fr + "Sophie Gautier" + Environment.NewLine;
             abouttxt += es + "Adolfo Jayme Barrientos" + Environment.NewLine;
             abouttxt += sl + "Martin Srebotnjak" + Environment.NewLine;
-            abouttxt += da + "Leif Lodahl";
+            abouttxt += da + "Leif Lodahl"+ Environment.NewLine;
+            abouttxt += pt + "Carlos Moreira" + Environment.NewLine;
+            abouttxt += he + "Yaron Shahrabani" + Environment.NewLine;
             about.Text = abouttxt;
             this.Text = getstring("about");
             lang_chooser.Sorted = true;

@@ -297,4 +297,10 @@
   <data name="tt_hp_test" xml:space="preserve">
     <value>Download helppack of the selected language of the latest testing build.</value>
   </data>
+  <data name="he" xml:space="preserve">
+    <value>Hebrew:</value>
+  </data>
+  <data name="pt" xml:space="preserve">
+    <value>Portuguese:</value>
+  </data>
 </root>

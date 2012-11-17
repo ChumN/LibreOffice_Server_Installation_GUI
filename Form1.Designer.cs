@@ -529,6 +529,7 @@
             this.MaximumSize = new System.Drawing.Size(852, 444);
             this.MinimumSize = new System.Drawing.Size(852, 360);
             this.Name = "Form1";
+            this.RightToLeftLayout = true;
             this.Text = "LibreOffice Server Installation GUI";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

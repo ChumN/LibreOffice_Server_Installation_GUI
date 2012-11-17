@@ -250,6 +250,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hebrew:.
+        /// </summary>
+        internal static string he {
+            get {
+                return ResourceManager.GetString("he", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
         internal static string help {
@@ -381,6 +390,15 @@ namespace WindowsFormsApplication1 {
         internal static string progress {
             get {
                 return ResourceManager.GetString("progress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portuguese:.
+        /// </summary>
+        internal static string pt {
+            get {
+                return ResourceManager.GetString("pt", resourceCulture);
             }
         }
         

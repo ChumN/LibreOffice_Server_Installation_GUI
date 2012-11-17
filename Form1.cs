@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-/*using System.Data;
+using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;*/
+using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
@@ -27,23 +27,28 @@ namespace WindowsFormsApplication1
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public Form1()
         {
-            //l10n
+            //l10n import
+            string l10n = "???";
+            string[] rtl = new string[] { "He" };
             try
             {
-                string temp = Path.GetTempPath() + "langsettings.config";
-                string lang = File.ReadAllText(temp);
-
+                l10n = Path.GetTempPath() + "langsettings.config";
+                string lang = File.ReadAllText(l10n);
+                if(rtl.Contains(lang))
+                    this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
 
             }
             catch (Exception)
             { }
+
             InitializeComponent();
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             //l10n start
             string dl_hp_txt = getstring("helppack");
             dl_hp_1.Text = dl_hp_txt;
@@ -122,6 +127,9 @@ namespace WindowsFormsApplication1
             give_message.Click += new EventHandler(gm_do);
             give_message.DoubleClick += new EventHandler(gm_do);
             this.BringToFront();
+
+           
+
         }
         private void gm_do(Object sender, EventArgs e)
         {
@@ -460,7 +468,7 @@ namespace WindowsFormsApplication1
         public void startasyncdownload(string url, bool testing, bool master, bool latest_branch, bool older_branch, bool helppack)
         {
             // Download
-            bool cont = true;
+           // bool cont = true;
             string lang = Convert.ToString(hp_lang_select.SelectedItem);
            /* try
             {
