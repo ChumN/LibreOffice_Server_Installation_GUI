@@ -34,9 +34,9 @@
             // 
             // help_browser
             // 
-            this.help_browser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.help_browser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.help_browser.IsWebBrowserContextMenuEnabled = false;
             this.help_browser.Location = new System.Drawing.Point(0, 0);
             this.help_browser.MinimumSize = new System.Drawing.Size(20, 20);
@@ -53,6 +53,7 @@
             this.Controls.Add(this.help_browser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
+            this.RightToLeftLayout = true;
             this.Text = "Help";
             this.Load += new System.EventHandler(this.form3load);
             this.ResumeLayout(false);
