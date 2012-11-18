@@ -468,14 +468,17 @@ namespace WindowsFormsApplication1
         public void startasyncdownload(string url, bool testing, bool master, bool latest_branch, bool older_branch, bool helppack)
         {
             // Download
-           // bool cont = true;
+            bool cont = true;
             string lang = Convert.ToString(hp_lang_select.SelectedItem);
-           /* try
+            try
             {
-                if (!(( lang != "") && helppack))
+                if (helppack)
                 {
-                    cont = false;
-                    throw new System.InvalidOperationException("You have to choose a language before starting the download");
+                    if (lang == "")
+                    {
+                        cont = false;
+                        throw new System.InvalidOperationException("You have to choose a language before starting the download");
+                    }
                 }
             }
             catch (Exception ex)
@@ -483,7 +486,7 @@ namespace WindowsFormsApplication1
                 exeptionmessage(ex.Message);
             }
             if(cont)
-            {*/
+            {
             string httpfile = downloadfile(url);
             if (httpfile != "error")
             {
@@ -508,16 +511,20 @@ namespace WindowsFormsApplication1
                     string version = httpfile.Remove(5);
                     string link = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/?C=S;O=D";
                     httpfile = downloadfile(link);
-                   /* if (!helppack)
-                    {*/
+                   
                         starting_position = httpfile.IndexOf("LibO_");
                         httpfile = httpfile.Remove(0, starting_position);
                         starting_position = httpfile.IndexOf(".msi") + 4;
                         httpfile = httpfile.Remove(starting_position);
-                  /*  }
-                    else*/
-                        httpfile = "LibO_" + version + "_Win_x86_helppack_" + lang + ".msi";
+                        if (helppack)
+                        {
 
+                            string vers2 = httpfile;
+                            vers2 = vers2.Remove(0, 5);
+                            vers2 = vers2.Remove(7);
+                            httpfile = "LibO_" + vers2 + "_Win_x86_helppack_" + lang + ".msi";
+                            MessageBox.Show(vers2);
+                        }
                     url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
 
                 }
@@ -556,14 +563,26 @@ namespace WindowsFormsApplication1
                 downloadmaster.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_DownloadProgressChanged);
                 downloadmaster.DownloadFileCompleted += new AsyncCompletedEventHandler(download_DownloadFileCompleted);
                 Uri uritofile = new Uri(url + httpfile);
-                if (master)
-                    path += "libomaster.msi";
-                else if (testing)
-                    path += "libotesting.msi";
-                else if (latest_branch)
-                    path += "libolbranch.msi";
-                else if (older_branch)
-                    path += "liboobranch.msi";
+                if (helppack)
+                {
+                    if (testing)
+                        path += "libotesting_hp.msi";
+                    else if (latest_branch)
+                        path += "libolbranch_hp.msi";
+                    else if (older_branch)
+                        path += "liboobranch_hp.msi";
+                }
+                else
+                {
+                    if (master)
+                        path += "libomaster.msi";
+                    else if (testing)
+                        path += "libotesting.msi";
+                    else if (latest_branch)
+                        path += "libolbranch.msi";
+                    else if (older_branch)
+                        path += "liboobranch.msi";
+                }
                 path_to_file_ondisk.Text = path;
                 string mb_question = getstring("versiondl");
                 mb_question = mb_question.Replace("%version", filename);
@@ -580,7 +599,7 @@ namespace WindowsFormsApplication1
                     filename = filename.Remove(k);
                     subfolder.Text = filename;
                 }
-         //   }
+           }
             }
         }
 
@@ -721,7 +740,7 @@ namespace WindowsFormsApplication1
 
         private void dl_hp_2_Click(object sender, EventArgs e)
         {
-            startasyncdownload("http://download.documentfoundation.org/libreoffice/stable/", true, false, false, false, true);
+            startasyncdownload("http://download.documentfoundation.org/libreoffice/testing/", true, false, false, false, true);
         }
 
         private void dl_hp_3_Click(object sender, EventArgs e)
