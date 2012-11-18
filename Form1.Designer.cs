@@ -93,6 +93,7 @@
             this.path_main.Location = new System.Drawing.Point(225, 20);
             this.path_main.Name = "path_main";
             this.path_main.ReadOnly = true;
+            this.path_main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.path_main.Size = new System.Drawing.Size(195, 20);
             this.path_main.TabIndex = 1;
             this.path_main.TextChanged += new System.EventHandler(this.path_main_TextChanged);
@@ -529,7 +530,7 @@
             this.MaximumSize = new System.Drawing.Size(852, 444);
             this.MinimumSize = new System.Drawing.Size(852, 360);
             this.Name = "Form1";
-            this.RightToLeftLayout = true;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "LibreOffice Server Installation GUI";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

@@ -32,15 +32,50 @@ namespace WindowsFormsApplication1
             string[] rtl = new string[] { "He" };
             try
             {
+               /*
                 l10n = Path.GetTempPath() + "langsettings.config";
                 string lang = File.ReadAllText(l10n);
-                if(rtl.Contains(lang))
-                    this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
+                
+                if (rtl.Contains(lang))
+                {
+                    MessageBox.Show("2");
+                    // this.RightToLeftLayout = true;
+                    bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    MessageBox.Show("2b");
+                    bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    MessageBox.Show("2c");
+                    path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    MessageBox.Show("2d");
+                    subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    MessageBox.Show("2e");
+                    path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    MessageBox.Show("2f");
+                    path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    MessageBox.Show("2g");
+                    path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
 
+                    
+
+                }
+                else
+                {
+                    
+                    //this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                    
+                }
+                */
+                
             }
-            catch (Exception)
-            { }
+            catch (Exception ex)
+            { exeptionmessage(ex.Message); }
 
             InitializeComponent();
         }
@@ -48,7 +83,47 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+             string l10n = "???";
+            string[] rtl_lang = new string[] { "He" };
+            l10n = Path.GetTempPath() + "langsettings.config";
+            string lang = File.ReadAllText(l10n);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
+
+            if (rtl_lang.Contains(lang))
+            {
+                MessageBox.Show("2");
+                 this.RightToLeftLayout = true;
+                 MessageBox.Show("2a");
+                bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                MessageBox.Show("2b");
+                bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                MessageBox.Show("2c");
+                path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                MessageBox.Show("2d");
+                subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                MessageBox.Show("2e");
+                path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                MessageBox.Show("2f");
+                path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                MessageBox.Show("2g");
+                path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                MessageBox.Show("2e");
+
+
+            }
+            else
+            {
+
+                //this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
+
+            }
             //l10n start
             string dl_hp_txt = getstring("helppack");
             dl_hp_1.Text = dl_hp_txt;
@@ -70,6 +145,7 @@ namespace WindowsFormsApplication1
             start_install.Text = getstring("start_install");
             wheretoinstall.Description = getstring("where_to_install");
             cb_subfolder.Text = getstring("subfolder_do");
+                     
             /* l10n end
              * Start Setting tooltips */
             ToolTip d_lb = new ToolTip();

@@ -32,8 +32,8 @@ namespace WindowsFormsApplication1
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
 
             }
-            catch (Exception)
-            { }
+            catch (Exception ex)
+            { exeptionmessage(ex.Message); }
             InitializeComponent();
         }
 
