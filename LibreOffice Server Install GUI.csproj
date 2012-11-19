@@ -189,6 +189,8 @@
       <LastGenOutput>strings.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="strings.he.resx" />
+    <EmbeddedResource Include="strings.pt-BR.resx" />
+    <EmbeddedResource Include="strings.pt.resx" />
     <EmbeddedResource Include="strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>strings.Designer.cs</LastGenOutput>
