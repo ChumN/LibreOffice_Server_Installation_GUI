@@ -285,4 +285,25 @@
 	<data name="dl_started_title" xml:space="preserve">
 		<value>Herunterladen begonnen!</value>
 	</data>
+	<data name="helppack" xml:space="preserve">
+		<value>Hilfedateien herunterladen</value>
+	</data>
+	<data name="tt_hp_lb" xml:space="preserve">
+		<value>Hilfedateien der neueren Branch herunterladen</value>
+	</data>
+	<data name="tt_hp_ob" xml:space="preserve">
+		<value>Hilfedateien der älteren Branch herunterladen</value>
+	</data>
+	<data name="tt_hp_test" xml:space="preserve">
+		<value>Hilfedateien der aktuellen Testversion herunterladen</value>
+	</data>
+	<data name="he" xml:space="preserve">
+		<value>Hebräisch:</value>
+	</data>
+	<data name="pt" xml:space="preserve">
+		<value>Portugiesisch:</value>
+	</data>
+	<data name="error_langpack_nolang" xml:space="preserve">
+		<value>Sie müssen zuerst eine Sprache auswählen, bevor Sie den Download starten können!</value>
+	</data>
 </root>

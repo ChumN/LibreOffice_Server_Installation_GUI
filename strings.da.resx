@@ -178,7 +178,7 @@
 		<value>Programmør:</value>
 	</data>
 	<data name="translations" xml:space="preserve">
-		<value> Oversættelser ---</value>
+		<value> --- Oversættelser ---</value>
 	</data>
 	<data name="translator" xml:space="preserve">
 		<value>Oversætter:</value>
@@ -227,7 +227,7 @@
 		<value>Åbn bootstrap.ini</value>
 	</data>
 	<data name="dlmaster" xml:space="preserve">
-		<value>Download seneste hovedprogram</value>
+		<value>Download seneste (daglig) master</value>
 	</data>
 	<data name="dltesting" xml:space="preserve">
 		<value>Download seneste testversion</value>

@@ -265,4 +265,22 @@
 	<data name="dl_started_title" xml:space="preserve">
 		<value>הורדה החלה!</value>
 	</data>
+	<data name="helppack" xml:space="preserve">
+		<value>הורדת חבילת עזרה</value>
+	</data>
+	<data name="tt_hp_lb" xml:space="preserve">
+		<value>הורדת חבילת העזרה של השפה הנבחרת של הענף העדכני ביותר</value>
+	</data>
+	<data name="tt_hp_ob" xml:space="preserve">
+		<value>הורדת חבילת העזרה של השפה הנבחרת של ענף קודם</value>
+	</data>
+	<data name="tt_hp_test" xml:space="preserve">
+		<value>הורדת חבילת העזרה של השפה הנבחרת של תרכובת הבדיקה העדכנית ביותר</value>
+	</data>
+	<data name="he" xml:space="preserve">
+		<value>עברית:</value>
+	</data>
+	<data name="pt" xml:space="preserve">
+		<value>פורטוגלית:</value>
+	</data>
 </root>
