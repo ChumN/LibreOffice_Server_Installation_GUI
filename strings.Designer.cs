@@ -214,6 +214,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have to choose a language before starting the download.
+        /// </summary>
+        internal static string error_langpack_nolang {
+            get {
+                return ResourceManager.GetString("error_langpack_nolang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spanish:.
         /// </summary>
         internal static string es {
@@ -529,7 +538,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Download langpack of the selected language of the plder branch.
+        ///   Looks up a localized string similar to Download langpack of the selected language of the older branch.
         /// </summary>
         internal static string tt_hp_ob {
             get {

@@ -32,46 +32,15 @@ namespace WindowsFormsApplication1
             string[] rtl = new string[] { "He" };
             try
             {
-               /*
+               
                 l10n = Path.GetTempPath() + "langsettings.config";
                 string lang = File.ReadAllText(l10n);
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
                 
                 if (rtl.Contains(lang))
-                {
-                    MessageBox.Show("2");
-                    // this.RightToLeftLayout = true;
-                    bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    MessageBox.Show("2b");
-                    bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    MessageBox.Show("2c");
-                    path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    MessageBox.Show("2d");
-                    subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    MessageBox.Show("2e");
-                    path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    MessageBox.Show("2f");
-                    path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    MessageBox.Show("2g");
-                    path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-
-                    
-
-                }
-                else
-                {
-                    
-                    //this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                    
-                }
-                */
+                     this.RightToLeftLayout = true;
+                     
+                
                 
             }
             catch (Exception ex)
@@ -91,39 +60,25 @@ namespace WindowsFormsApplication1
 
             if (rtl_lang.Contains(lang))
             {
-                MessageBox.Show("2");
-                 this.RightToLeftLayout = true;
-                 MessageBox.Show("2a");
+               
                 bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                MessageBox.Show("2b");
+
                 bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                MessageBox.Show("2c");
+               
                 path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                MessageBox.Show("2d");
+                
                 subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                MessageBox.Show("2e");
+                
                 path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                MessageBox.Show("2f");
+               
                 path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                MessageBox.Show("2g");
+              
                 path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                MessageBox.Show("2e");
+               
 
 
             }
-            else
-            {
-
-                //this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                bootinipath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                bootstrap_text.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                path_to_file_ondisk.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                subfolder.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                path_installdir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                path_help.RightToLeft = System.Windows.Forms.RightToLeft.No;
-                path_main.RightToLeft = System.Windows.Forms.RightToLeft.No;
-
-            }
+            
             //l10n start
             string dl_hp_txt = getstring("helppack");
             dl_hp_1.Text = dl_hp_txt;
@@ -191,6 +146,7 @@ namespace WindowsFormsApplication1
                 cb_subfolder.Checked = toapply.checkbox;
                 path_installdir.Text = toapply.installdir;
                 subfolder.Text = toapply.subfolder;
+                hp_lang_select.SelectedIndex = toapply.lang;
             }
             catch (Exception)
             { }
@@ -524,7 +480,10 @@ namespace WindowsFormsApplication1
 
 
             give_message.ShowBalloonTip(10000, getstring("dl_finished_title"), getstring("dl_finished"), ToolTipIcon.Info);
-            path_main.Text = path_to_file_ondisk.Text;
+            if (path_to_file_ondisk.Text.Contains("hp"))
+                path_help.Text = path_to_file_ondisk.Text;
+            else
+                path_main.Text = path_to_file_ondisk.Text;
             progressBar1.Value = 0;
             percent.Text = "0 %";
             b_dl_master.Enabled = true;
@@ -553,7 +512,7 @@ namespace WindowsFormsApplication1
                     if (lang == "")
                     {
                         cont = false;
-                        throw new System.InvalidOperationException("You have to choose a language before starting the download");
+                        throw new System.InvalidOperationException(getstring("error_langpack_nolang"));
                     }
                 }
             }
@@ -599,7 +558,6 @@ namespace WindowsFormsApplication1
                             vers2 = vers2.Remove(0, 5);
                             vers2 = vers2.Remove(7);
                             httpfile = "LibO_" + vers2 + "_Win_x86_helppack_" + lang + ".msi";
-                            MessageBox.Show(vers2);
                         }
                     url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
 
@@ -615,7 +573,10 @@ namespace WindowsFormsApplication1
                     }
                     httpfile = httpfile.Remove(5);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
-                    httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi"; // Change
+                    if (helppack)
+                        httpfile = "LibO_"+httpfile+"_Win_x86_helppack_"+lang+".msi";
+                    else
+                        httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
 
                 }
                 else if (older_branch)
@@ -628,7 +589,10 @@ namespace WindowsFormsApplication1
                     i = httpfile.IndexOf("/");
                     httpfile = httpfile.Remove(i);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
-                    httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi"; // Change
+                    if (helppack)
+                        httpfile = "LibO_" + httpfile + "_Win_x86_helppack_" + lang + ".msi";
+                    else
+                        httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
 
                 }
                 filename = httpfile;
@@ -761,6 +725,7 @@ namespace WindowsFormsApplication1
             thingstosave.installdir = path_installdir.Text;
             thingstosave.subfolder = subfolder.Text;
             thingstosave.checkbox = cb_subfolder.Checked;
+            thingstosave.lang = hp_lang_select.SelectedIndex;
 
             try
             {
@@ -779,6 +744,7 @@ namespace WindowsFormsApplication1
             public string installdir;
             public string subfolder;
             public bool checkbox;
+            public int lang;
 
         }
         private string getsettingsfilename()
