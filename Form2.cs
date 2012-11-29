@@ -17,23 +17,27 @@ namespace WindowsFormsApplication1
 {
     public partial class Form2 : Form
     {
+        access_settings set = new access_settings();
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public Form2()
         {
             //l10n import
-            string l10n = "???";
             string[] rtl = new string[] { "He" };
             try
             {
-                l10n = Path.GetTempPath() + "langsettings.config";
-                string lang = File.ReadAllText(l10n);
-                if (rtl.Contains(lang))
-                    this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+
+                SETTINGS temp = set.open_settings();
+                string lang = temp.l10n;
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
 
+                if (rtl.Contains(lang))
+                    this.RightToLeftLayout = true;
+
+
+
             }
-            catch (Exception ex)
-            { exeptionmessage(ex.Message); }
+            catch (Exception )
+            { }
             InitializeComponent();
         }
 
@@ -98,18 +102,11 @@ namespace WindowsFormsApplication1
 
         private void update_lang(object sender, EventArgs e)
         {
-            
-            try
-            {
-
-                string temp = Path.GetTempPath() + "langsettings.config";
-                File.WriteAllText(temp, lang_chooser.SelectedItem.ToString());
-            }
-            catch (Exception ex)
-            {
-                exeptionmessage(ex.Message);
-
-            }
+            SETTINGS temp = set.open_settings();
+            temp.l10n = Convert.ToString(lang_chooser.SelectedItem);
+            set.save_settings(temp);
+            // MessageBox.Show(temp.l10n);
+           
             MessageBox.Show(getstring("language_change_success"), getstring("success"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 

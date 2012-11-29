@@ -18,19 +18,22 @@ namespace WindowsFormsApplication1
     public partial class Form3 : Form
     {
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
-         
+        access_settings set = new access_settings();
         public Form3()
         {
             //l10n import
-            string l10n = "???";
             string[] rtl = new string[] { "He" };
             try
             {
-                l10n = Path.GetTempPath() + "langsettings.config";
-                string lang = File.ReadAllText(l10n);
-                if (rtl.Contains(lang))
-                    this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+
+                SETTINGS temp = set.open_settings();
+                string lang = temp.l10n;
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
+
+                if (rtl.Contains(lang))
+                    this.RightToLeftLayout = true;
+
+
 
             }
             catch (Exception)

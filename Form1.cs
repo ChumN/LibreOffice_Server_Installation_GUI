@@ -23,28 +23,28 @@ namespace WindowsFormsApplication1
 
     public partial class Form1 : Form
     {
-
+        access_settings set = new access_settings();
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public Form1()
         {
+            
             //l10n import
-            string l10n = "???";
             string[] rtl = new string[] { "He" };
             try
             {
-               
-                l10n = Path.GetTempPath() + "langsettings.config";
-                string lang = File.ReadAllText(l10n);
+
+                SETTINGS temp = set.open_settings();
+                string lang = temp.l10n;
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
-                
+
                 if (rtl.Contains(lang))
-                     this.RightToLeftLayout = true;
+                    this.RightToLeftLayout = true;
                      
                 
                 
             }
             catch (Exception ex)
-            { exeptionmessage(ex.Message); }
+            { MessageBox.Show(ex.Message); }
 
             InitializeComponent();
         }
@@ -52,11 +52,11 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-             string l10n = "???";
+            SETTINGS temp = set.open_settings(); 
+            string lang = temp.l10n;
             string[] rtl_lang = new string[] { "He" };
-            l10n = Path.GetTempPath() + "langsettings.config";
-            string lang = File.ReadAllText(l10n);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
+           
+
 
             if (rtl_lang.Contains(lang))
             {
@@ -137,11 +137,7 @@ namespace WindowsFormsApplication1
              * Start Loading settings*/
             try
             {
-                XmlSerializer ser = new XmlSerializer(typeof(SETTINGS));
-                string path = getsettingsfilename();
-                StreamReader sr = new StreamReader(@path);
-                SETTINGS toapply = (SETTINGS)ser.Deserialize(sr);
-                sr.Close();
+                SETTINGS toapply = set.open_settings();
                 //Apply settings
                 cb_subfolder.Checked = toapply.checkbox;
                 path_installdir.Text = toapply.installdir;
@@ -721,34 +717,19 @@ namespace WindowsFormsApplication1
 
         private void savesettings(object sender, EventArgs e)
         {
-            SETTINGS thingstosave = new SETTINGS();
+            SETTINGS thingstosave = set.open_settings();
             thingstosave.installdir = path_installdir.Text;
             thingstosave.subfolder = subfolder.Text;
             thingstosave.checkbox = cb_subfolder.Checked;
             thingstosave.lang = hp_lang_select.SelectedIndex;
+            set.save_settings(thingstosave);
+            
 
-            try
-            {
-                XmlSerializer ser = new XmlSerializer(typeof(SETTINGS));
-                string path = getsettingsfilename();
-                FileStream str = new FileStream(@path, FileMode.Create);
-                ser.Serialize(str, thingstosave);
-                str.Close();
-            }
-            catch (Exception)
-            { }
+        
+       
 
         }
-        public class SETTINGS
-        {
-            public string installdir;
-            public string subfolder;
-            public bool checkbox;
-            public int lang;
-
-        }
-        private string getsettingsfilename()
-        { return Path.GetTempPath() + "libo_si_gui_path.config"; }
+        
 
         private void help_Click(object sender, EventArgs e)
         {
