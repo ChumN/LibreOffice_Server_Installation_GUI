@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using System.IO;
-using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
@@ -42,6 +41,22 @@ namespace WindowsFormsApplication1
             catch (Exception)
             { }
     }
+      public string[] update_manager_array(string[] old_array, string toadd)
+      {
+           int arrylength = old_array.Length + 1;
+           if (old_array == null)
+               arrylength = 1;
+               string[] new_array = new string[arrylength];
+               if (old_array != null)
+               {
+                   for (int i = 0; i <= (arrylength - 2); i++)
+                   {
+                       new_array[i] = old_array[i];
+                   }
+               }
+          new_array[arrylength - 1] = toadd;
+          return new_array;
+      }
     }
 }
 public class SETTINGS
@@ -51,4 +66,5 @@ public class SETTINGS
     public bool checkbox;
     public int lang;
     public string l10n;
+    public string[] manager;
 }

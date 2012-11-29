@@ -770,5 +770,11 @@ namespace WindowsFormsApplication1
         {
             startasyncdownload("http://download.documentfoundation.org/libreoffice/stable/", false, false, false, true, true);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Manager fm = new Manager();
+            fm.Show();
+        }
     }
 }

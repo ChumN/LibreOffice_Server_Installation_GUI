@@ -105,8 +105,6 @@ namespace WindowsFormsApplication1
             SETTINGS temp = set.open_settings();
             temp.l10n = Convert.ToString(lang_chooser.SelectedItem);
             set.save_settings(temp);
-            // MessageBox.Show(temp.l10n);
-           
             MessageBox.Show(getstring("language_change_success"), getstring("success"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 

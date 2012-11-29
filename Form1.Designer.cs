@@ -64,6 +64,7 @@
             this.dl_hp_2 = new System.Windows.Forms.Button();
             this.dl_hp_3 = new System.Windows.Forms.Button();
             this.hp_lang_select = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -266,6 +267,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.help);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button4);
@@ -288,7 +290,7 @@
             this.help.ForeColor = System.Drawing.SystemColors.ControlText;
             this.help.Location = new System.Drawing.Point(6, 215);
             this.help.Name = "help";
-            this.help.Size = new System.Drawing.Size(175, 25);
+            this.help.Size = new System.Drawing.Size(90, 25);
             this.help.TabIndex = 23;
             this.help.Text = "Help";
             this.help.UseVisualStyleBackColor = true;
@@ -299,9 +301,9 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(187, 215);
+            this.button1.Location = new System.Drawing.Point(212, 215);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 25);
+            this.button1.Size = new System.Drawing.Size(180, 25);
             this.button1.TabIndex = 22;
             this.button1.Text = "About / Change language";
             this.button1.UseVisualStyleBackColor = true;
@@ -500,6 +502,17 @@
             this.hp_lang_select.TabIndex = 27;
             this.hp_lang_select.SelectedIndexChanged += new System.EventHandler(this.savesettings);
             // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(102, 215);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(104, 25);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "Manager";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +590,7 @@
         private System.Windows.Forms.Button dl_hp_2;
         private System.Windows.Forms.Button dl_hp_3;
         private System.Windows.Forms.ComboBox hp_lang_select;
+        private System.Windows.Forms.Button button5;
     }
 }
 
