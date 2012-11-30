@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
         access_settings set = new access_settings();
         public Manager()
         {
+            
             InitializeComponent();
         }
 
@@ -51,12 +52,27 @@ namespace WindowsFormsApplication1
         {
             SETTINGS temp = set.open_settings();
             string[] list = temp.manager;
+           
             manager_list.Items.Clear();
-            foreach (string s in list)
+            for (int i = 0; i < list.Length; i++ )
             {
-                manager_list.Items.Add(s);
+                manager_list.Items.Add(temp.manager[i]);
             }
 
+        }
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            manually_add_installation fm = new manually_add_installation();
+            if (fm.ShowDialog() == DialogResult.OK)
+            {
+                SETTINGS temp = set.open_settings();
+                temp.manager = set.update_manager_array(temp.manager, fm.shared_string);
+                set.save_settings(temp);
+                update_selector();
+
+            }
         }
 
     }

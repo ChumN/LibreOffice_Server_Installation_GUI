@@ -35,6 +35,7 @@ namespace WindowsFormsApplication1
 
                 SETTINGS temp = set.open_settings();
                 string lang = temp.l10n;
+                if (lang != null) 
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
 
                 if (rtl.Contains(lang))

@@ -43,15 +43,16 @@ namespace WindowsFormsApplication1
     }
       public string[] update_manager_array(string[] old_array, string toadd)
       {
-           int arrylength = old_array.Length + 1;
-           if (old_array == null)
-               arrylength = 1;
+          int arrylength = 1;
+          if(old_array != null) 
+           arrylength = old_array.Length + 1;
                string[] new_array = new string[arrylength];
                if (old_array != null)
                {
                    for (int i = 0; i <= (arrylength - 2); i++)
                    {
                        new_array[i] = old_array[i];
+                      
                    }
                }
           new_array[arrylength - 1] = toadd;
