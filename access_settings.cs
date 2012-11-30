@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
         }
       private string getpath()
       {
-          return  Path.GetTempPath() + "libosigui.settings";
+          return  Path.GetTempPath() + "libosigui.configuration";
           
       }
 
