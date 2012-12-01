@@ -145,7 +145,7 @@
     <value>Aucun répertoire choisi !</value>
   </data>
 	<data name="no_installfile" xml:space="preserve">
-    <value>Vous devriez choisir un fichier d'installation LibreOffice. Continuer ?</value>
+    <value>Vous devriez choisir un fichier d'installation LibreOffice.</value>
   </data>
 	<data name="si" xml:space="preserve">
     <value>Problème de sécurité.</value>

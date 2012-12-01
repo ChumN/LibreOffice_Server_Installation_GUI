@@ -145,7 +145,7 @@
     <value>Kein Installationsverzeichnis wurde ausgewählt</value>
   </data>
 	<data name="no_installfile" xml:space="preserve">
-    <value>Normalerweise sollten Sie eine LibreOffice Installationsdatei auswählen. Fortsetzen?</value>
+    <value>Normalerweise sollten Sie eine LibreOffice Installationsdatei auswählen.</value>
   </data>
 	<data name="si" xml:space="preserve">
     <value>Sicherheitsfehler</value>
@@ -305,5 +305,32 @@
 	</data>
 	<data name="error_langpack_nolang" xml:space="preserve">
 		<value>Sie müssen zuerst eine Sprache auswählen, bevor Sie den Download starten können!</value>
+	</data>
+	<data name="mai_abort" xml:space="preserve">
+		<value>Abbrechen</value>
+	</data>
+	<data name="mai_config_path" xml:space="preserve">
+		<value>Pfad konfigurieren</value>
+	</data>
+	<data name="mai_ok" xml:space="preserve">
+		<value>Okay</value>
+	</data>
+	<data name="mai_path_soffice" xml:space="preserve">
+		<value>Pfad zur soffice.exe der Parallelinstallation</value>
+	</data>
+	<data name="mai_text" xml:space="preserve">
+		<value>Parallelinstallation manuell hinzufügen</value>
+	</data>
+	<data name="man_addinstall" xml:space="preserve">
+		<value>Parallelinstallation manuell hinzufügen</value>
+	</data>
+	<data name="man_del" xml:space="preserve">
+		<value>Ausgewählte löschen</value>
+	</data>
+	<data name="man_exit" xml:space="preserve">
+		<value>Schließen</value>
+	</data>
+	<data name="man_title" xml:space="preserve">
+		<value>Manager</value>
 	</data>
 </root>

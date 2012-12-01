@@ -145,7 +145,7 @@
 		<value>Ingen installationsfolder valgt.</value>
 	</data>
 	<data name="no_installfile" xml:space="preserve">
-		<value>Normalt skal du vælge en LibreOffice installationsfill. Fortsæt?</value>
+		<value>Normalt skal du vælge en LibreOffice installationsfill.</value>
 	</data>
 	<data name="si" xml:space="preserve">
 		<value>Sikkerhedsproblem.</value>
@@ -205,7 +205,7 @@
 		<value>Succes!</value>
 	</data>
 	<data name="tt_bootstrap" xml:space="preserve">
-		<value>Du skal måske bruge følgende istedet for den linje, der starter med 
+		<value>Du skal måske bruge følgende i stedet for den linje, der starter med 
 “UserInstallation=” fra tekstfeltet herover, for at overskrive din eksisterende brugerprofil.</value>
 	</data>
 	<data name="update_lang" xml:space="preserve">
@@ -285,5 +285,26 @@
 	</data>
 	<data name="dl_started_title" xml:space="preserve">
 		<value>Download begyndt!</value>
+	</data>
+	<data name="helppack" xml:space="preserve">
+		<value>Download hjælpepakke</value>
+	</data>
+	<data name="tt_hp_lb" xml:space="preserve">
+		<value>Download hjælpepakke for det markerede sprog for seneste version</value>
+	</data>
+	<data name="tt_hp_ob" xml:space="preserve">
+		<value>Download hjælpepakke for det markerede sprog for tidligere version.</value>
+	</data>
+	<data name="tt_hp_test" xml:space="preserve">
+		<value>Download hjælpepakke for det markerede sprog for seneste testversion</value>
+	</data>
+	<data name="he" xml:space="preserve">
+		<value>Hebræisk:</value>
+	</data>
+	<data name="pt" xml:space="preserve">
+		<value>Portugisisk:</value>
+	</data>
+	<data name="error_langpack_nolang" xml:space="preserve">
+		<value>Du skal vælge et sprog først og derefter starte download!</value>
 	</data>
 </root>

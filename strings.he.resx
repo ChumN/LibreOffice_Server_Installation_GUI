@@ -125,7 +125,7 @@
 		<value>לא נבחרה תיקייה להתקנה!</value>
 	</data>
 	<data name="no_installfile" xml:space="preserve">
-		<value>בדרך כלל עדיף לך לבחור בקובץ התקנה של LibreOffice! להמשיך?</value>
+		<value>בדרך כלל עדיף לך לבחור בקובץ התקנה של LibreOffice! </value>
 	</data>
 	<data name="si" xml:space="preserve">
 		<value>בעיית אבטחה</value>

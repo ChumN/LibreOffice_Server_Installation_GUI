@@ -145,7 +145,7 @@
 		<value>Mapa namestitve ni izbrana!</value>
 	</data>
 	<data name="no_installfile" xml:space="preserve">
-		<value>Praviloma morate izbrati namestitveno datoteko LibreOffice. Želite nadaljevati?</value>
+		<value>Praviloma morate izbrati namestitveno datoteko LibreOffice.</value>
 	</data>
 	<data name="si" xml:space="preserve">
 		<value>Varnostna težava</value>
@@ -284,5 +284,26 @@
 	</data>
 	<data name="dl_started_title" xml:space="preserve">
 		<value>Prenos poteka!</value>
+	</data>
+	<data name="helppack" xml:space="preserve">
+		<value>Prenesi paket s pomočjo</value>
+	</data>
+	<data name="tt_hp_lb" xml:space="preserve">
+		<value>Prenesi paket s pomočjo v izbranem jeziku za zadnjo vejo.</value>
+	</data>
+	<data name="tt_hp_ob" xml:space="preserve">
+		<value>Prenesi paket s pomočjo v izbranem jeziku za starejšo vejo.</value>
+	</data>
+	<data name="tt_hp_test" xml:space="preserve">
+		<value>Prenesi paket s pomočjo v izbranem jeziku z zadnjo preskusno gradnjo</value>
+	</data>
+	<data name="he" xml:space="preserve">
+		<value>Hebrejščina:</value>
+	</data>
+	<data name="pt" xml:space="preserve">
+		<value>Portugalščina:</value>
+	</data>
+	<data name="error_langpack_nolang" xml:space="preserve">
+		<value>Pred prenosom morate izbrati jezik!</value>
 	</data>
 </root>

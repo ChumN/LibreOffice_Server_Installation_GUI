@@ -145,7 +145,7 @@
 		<value>No se eligió un directorio de instalación.</value>
 	</data>
 	<data name="no_installfile" xml:space="preserve">
-		<value>Normalmente debería elegir un archivo de instalación de LibreOffice. ¿Continuar?</value>
+		<value>Normalmente debería elegir un archivo de instalación de LibreOffice.</value>
 	</data>
 	<data name="si" xml:space="preserve">
 		<value>Problema de seguridad</value>
@@ -284,5 +284,26 @@
 	</data>
 	<data name="dl_started_title" xml:space="preserve">
 		<value>Descarga iniciada.</value>
+	</data>
+	<data name="helppack" xml:space="preserve">
+		<value>Descargar paquete de ayuda</value>
+	</data>
+	<data name="tt_hp_lb" xml:space="preserve">
+		<value>Descargar paquete de ayuda en el idioma seleccionado de la última rama.</value>
+	</data>
+	<data name="tt_hp_ob" xml:space="preserve">
+		<value>Descargar paquete de ayuda en el idioma seleccionado de la rama anterior</value>
+	</data>
+	<data name="tt_hp_test" xml:space="preserve">
+		<value>Descargar paquete de ayuda en el idioma seleccionado de la última compilación de pruebas.</value>
+	</data>
+	<data name="he" xml:space="preserve">
+		<value>Hebreo:</value>
+	</data>
+	<data name="pt" xml:space="preserve">
+		<value>Portugués:</value>
+	</data>
+	<data name="error_langpack_nolang" xml:space="preserve">
+		<value>Debe seleccionar un idioma antes de iniciar la descarga.</value>
 	</data>
 </root>
