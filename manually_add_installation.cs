@@ -6,14 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Resources;
+using System.Reflection;
 
 
 namespace WindowsFormsApplication1
 {
     public partial class manually_add_installation : Form
+
     {
         public string[,] manually_added { get; private set; }
-        
+        ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public manually_add_installation()
         {
             
@@ -21,7 +24,24 @@ namespace WindowsFormsApplication1
         }
         
         public string shared_string {get;  private set;}
-        
+        public void exeptionmessage(string ex_message)
+        {
+            MessageBox.Show(getstring("standarderror") + ex_message, getstring("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public string getstring(string strMessage)
+        {
+            string rt = "???";
+            try
+            {
+                rt = rm.GetString(strMessage);
+            }
+            catch (Exception)
+            {
+                exeptionmessage("An error in the l10n part occured!");
+            }
+            return rt;
+
+        }
        
 
 
@@ -29,6 +49,7 @@ namespace WindowsFormsApplication1
         {
             button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             button2.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

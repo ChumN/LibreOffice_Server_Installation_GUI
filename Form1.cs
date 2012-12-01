@@ -233,9 +233,10 @@ namespace WindowsFormsApplication1
                 try
                 {
                     if (!install_main)
-
-                        if (MessageBox.Show(getstring("no_installfile"), getstring("warning"), MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.No)
-                            throw new Exception(getstring("go_back"));
+                    {
+                        MessageBox.Show(getstring("no_installfile"), getstring("warning"), MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        throw new Exception(getstring("go_back"));
+                    }
                 }
 
                 catch (Exception) { go_on = false; }
@@ -266,7 +267,7 @@ namespace WindowsFormsApplication1
         private string create_cmd(bool install_libo, bool install_help)
         {
             string path = path_installdir.Text;
-            if (cb_subfolder.Checked && (subfolder.Text != "") || ( path[path.Length - 1] == Convert.ToChar("\\")))
+            if (cb_subfolder.Checked && (subfolder.Text != ""))
             {
 
                 path +=   "\\" +subfolder.Text;
@@ -282,6 +283,10 @@ namespace WindowsFormsApplication1
             try
             {
                 System.IO.File.WriteAllText(filename, cmd_file);
+                // If CMD file created --> Add to manager...
+                SETTINGS temp = set.open_settings();
+                temp.manager = set.update_manager_array(temp.manager, path);
+                set.save_settings(temp);
             }
             catch (System.IO.DirectoryNotFoundException)
             {

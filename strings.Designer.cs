@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Download finished.
+        ///   Looks up a localized string similar to Download finished!.
         /// </summary>
         internal static string dl_finished_title {
             get {
@@ -214,7 +214,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have to choose a language before starting the download.
+        ///   Looks up a localized string similar to You have to choose a language before starting the download!.
         /// </summary>
         internal static string error_langpack_nolang {
             get {
@@ -340,7 +340,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Normally you should choose a LibreOffice Installation file! Continue?.
+        ///   Looks up a localized string similar to You did not choose a LibreOffice Installation file!.
         /// </summary>
         internal static string no_installfile {
             get {

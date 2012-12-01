@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace WindowsFormsApplication1
 {
@@ -28,7 +29,7 @@ namespace WindowsFormsApplication1
 
         private void Manager_Load(object sender, EventArgs e)
         {
-
+            update_selector();
         }
         public void exeptionmessage(string ex_message)
         {
@@ -73,6 +74,62 @@ namespace WindowsFormsApplication1
                 update_selector();
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Create CMD file, which deletes the selected folders ...
+            List<string> list = new List<string>();
+            List<object> list_o = new List<object>();
+            foreach (object itemChecked in manager_list.CheckedItems)
+            {
+                list.Add(itemChecked.ToString());
+                list_o.Add(itemChecked);
+            }
+
+            string[] array = list.ToArray();
+
+            string output = "";
+
+            foreach (string s in array)
+            {
+                output += "del " + s + "\\*.*  /s /f  /q" + Environment.NewLine;
+            }
+            output += "exit";
+            string filename = System.IO.Path.GetTempPath() + "del_manager.cmd";
+            try
+            {
+                System.IO.File.WriteAllText(filename, output);
+               Process.Start(filename);
+                
+            }
+            catch (System.IO.DirectoryNotFoundException)
+            {
+                MessageBox.Show(getstring("dirnotfound") + getstring("dirnotfoundmessage"), getstring("dirnotfound"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (System.Security.SecurityException)
+            {
+                MessageBox.Show(getstring("si_message"), getstring("si"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                exeptionmessage(ex.Message);
+            }
+            object[] o_array = list_o.ToArray();
+            foreach (object o in o_array)
+            {
+                manager_list.Items.Remove(o);
+            }
+            List<string> new_manager = new List<string>();
+            foreach (string o in manager_list.Items)
+            {
+                new_manager.Add(o);
+            }
+            SETTINGS sett = set.open_settings();
+            sett.manager = new_manager.ToArray();
+            set.save_settings(sett);
+            
+            update_selector();
         }
 
     }
