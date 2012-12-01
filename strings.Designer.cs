@@ -331,6 +331,87 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Abort.
+        /// </summary>
+        internal static string mai_abort {
+            get {
+                return ResourceManager.GetString("mai_abort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configure path.
+        /// </summary>
+        internal static string mai_config_path {
+            get {
+                return ResourceManager.GetString("mai_config_path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Okay.
+        /// </summary>
+        internal static string mai_ok {
+            get {
+                return ResourceManager.GetString("mai_ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path to the soffice.exe of the parallel installation.
+        /// </summary>
+        internal static string mai_path_soffice {
+            get {
+                return ResourceManager.GetString("mai_path_soffice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manually add parallel installation.
+        /// </summary>
+        internal static string mai_text {
+            get {
+                return ResourceManager.GetString("mai_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manually add installation.
+        /// </summary>
+        internal static string man_addinstall {
+            get {
+                return ResourceManager.GetString("man_addinstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete selected.
+        /// </summary>
+        internal static string man_del {
+            get {
+                return ResourceManager.GetString("man_del", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string man_exit {
+            get {
+                return ResourceManager.GetString("man_exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manager.
+        /// </summary>
+        internal static string man_title {
+            get {
+                return ResourceManager.GetString("man_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No install directory choosen!.
         /// </summary>
         internal static string no_installdir {

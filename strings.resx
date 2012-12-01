@@ -306,4 +306,31 @@
   <data name="error_langpack_nolang" xml:space="preserve">
     <value>You have to choose a language before starting the download!</value>
   </data>
+  <data name="mai_abort" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="mai_config_path" xml:space="preserve">
+    <value>Configure path</value>
+  </data>
+  <data name="mai_ok" xml:space="preserve">
+    <value>Okay</value>
+  </data>
+  <data name="mai_path_soffice" xml:space="preserve">
+    <value>Path to the soffice.exe of the parallel installation</value>
+  </data>
+  <data name="mai_text" xml:space="preserve">
+    <value>Manually add parallel installation</value>
+  </data>
+  <data name="man_addinstall" xml:space="preserve">
+    <value>Manually add installation</value>
+  </data>
+  <data name="man_del" xml:space="preserve">
+    <value>Delete selected</value>
+  </data>
+  <data name="man_exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="man_title" xml:space="preserve">
+    <value>Manager</value>
+  </data>
 </root>

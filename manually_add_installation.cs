@@ -49,6 +49,15 @@ namespace WindowsFormsApplication1
         {
             button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             button2.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            // l10n
+            label2.Text = getstring("mai_path_soffice");
+            button3.Text = getstring("mai_config_path");
+            this.Text = getstring("mai_text");
+            button2.Text = getstring("mai_ok");
+            button1.Text = getstring("mai_abort");
+            
+
+
             
         }
 
