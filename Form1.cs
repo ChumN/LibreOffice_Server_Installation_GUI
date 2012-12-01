@@ -263,6 +263,7 @@ namespace WindowsFormsApplication1
 
             }
         }
+        private string final_installpath { get; set; }
 
         private string create_cmd(bool install_libo, bool install_help)
         {
@@ -270,9 +271,10 @@ namespace WindowsFormsApplication1
             if (cb_subfolder.Checked && (subfolder.Text != ""))
             {
 
-                path +=   "\\" +subfolder.Text;
+                path +=   "\\" + subfolder.Text;
             }
-
+            path = path.Replace("\\\\", "\\");
+            final_installpath = path;
             string cmd_file = "@ECHO off" + Environment.NewLine;
             if (install_libo)
                 cmd_file += "start /wait msiexec /qr /norestart /a \"" + path_main.Text + "\" TARGETDIR=\"" + path + "\"" + Environment.NewLine;
@@ -318,7 +320,10 @@ namespace WindowsFormsApplication1
         private bool openbootstrap_ini()
         {
             bool working = true;
-            string path = path_installdir.Text + "\\program\\bootstrap.ini";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "abc.txt";
+           if(final_installpath != null)
+               path = final_installpath + "\\" + "program"+"\\" + "bootstrap.ini";
+           
             try
             {
                 bootstrap_text.Text = System.IO.File.ReadAllText(path);
@@ -718,7 +723,7 @@ namespace WindowsFormsApplication1
         private void show_about(object sender, EventArgs e)
         {
             Form2 form = new Form2();
-            form.Visible = true;
+            form.ShowDialog();
         }
 
         private void savesettings(object sender, EventArgs e)
@@ -740,7 +745,7 @@ namespace WindowsFormsApplication1
         private void help_Click(object sender, EventArgs e)
         {
             Form3 fm = new Form3();
-            fm.Show();
+            fm.ShowDialog();
         }
 
 
@@ -780,7 +785,7 @@ namespace WindowsFormsApplication1
         private void button5_Click(object sender, EventArgs e)
         {
             Manager fm = new Manager();
-            fm.Show();
+            fm.ShowDialog();
         }
     }
 }

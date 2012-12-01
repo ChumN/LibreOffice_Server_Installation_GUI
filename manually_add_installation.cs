@@ -55,25 +55,26 @@ namespace WindowsFormsApplication1
         private void button3_Click(object sender, EventArgs e)
         {
             string path_text = "";
-            string delete = "\\program\\soffice.exe";
+            
             if(DialogResult.OK == openFileDialog1.ShowDialog())
            path_text = openFileDialog1.FileName;
-           int i = path_text.IndexOf(delete);
-           try
-           {
-               path_text = path_text.Remove(i);
-           }
-           catch (Exception) { }
-             path.Text = path_text;
+            path.Text = path_text;
+           
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
-           string array = path.Text;
-            shared_string = array;
+            string path_text = path.Text;
+            string delete = "\\program\\soffice.exe";
+            int i = path_text.IndexOf(delete);
+            try
+            {
+                System.IO.File.ReadAllBytes(path_text);
+                path_text = path_text.Remove(i);
+                shared_string = path_text;
+            }
+            catch(Exception ex) {exeptionmessage(ex.Message);}
         }
     }
 }

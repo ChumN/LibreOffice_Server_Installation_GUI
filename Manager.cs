@@ -57,6 +57,7 @@ namespace WindowsFormsApplication1
             manager_list.Items.Clear();
             for (int i = 0; i < list.Length; i++ )
             {
+                if(temp.manager[i] != null)
                 manager_list.Items.Add(temp.manager[i]);
             }
 
@@ -93,7 +94,9 @@ namespace WindowsFormsApplication1
 
             foreach (string s in array)
             {
-                output += "del " + s + "\\*.*  /s /f  /q" + Environment.NewLine;
+                string m = s.Replace("//","/");
+                output += "del " + m + " /s /f /q" + Environment.NewLine;
+                output += "rd " + m + " /s /q" + Environment.NewLine;
             }
             output += "exit";
             string filename = System.IO.Path.GetTempPath() + "del_manager.cmd";

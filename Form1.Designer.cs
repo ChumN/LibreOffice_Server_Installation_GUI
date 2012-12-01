@@ -50,6 +50,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.help = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.path_to_file_ondisk = new System.Windows.Forms.TextBox();
@@ -64,7 +65,6 @@
             this.dl_hp_2 = new System.Windows.Forms.Button();
             this.dl_hp_3 = new System.Windows.Forms.Button();
             this.hp_lang_select = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +94,6 @@
             this.path_main.Location = new System.Drawing.Point(225, 20);
             this.path_main.Name = "path_main";
             this.path_main.ReadOnly = true;
-            this.path_main.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.path_main.Size = new System.Drawing.Size(195, 20);
             this.path_main.TabIndex = 1;
             this.path_main.TextChanged += new System.EventHandler(this.path_main_TextChanged);
@@ -282,6 +281,17 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit bootdtrap.ini";
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(102, 215);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(104, 25);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "Manager";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // help
             // 
@@ -501,17 +511,6 @@
             this.hp_lang_select.Size = new System.Drawing.Size(204, 21);
             this.hp_lang_select.TabIndex = 27;
             this.hp_lang_select.SelectedIndexChanged += new System.EventHandler(this.savesettings);
-            // 
-            // button5
-            // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(102, 215);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(104, 25);
-            this.button5.TabIndex = 24;
-            this.button5.Text = "Manager";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
