@@ -96,11 +96,15 @@ namespace WindowsFormsApplication1
             button4.Text = getstring("open_bootstrap_ini");
             groupBox1.Text = getstring("edit_bs_ini");
             label2.Text = getstring("progress");
+            label3.Text = label2.Text;
             open_bootstrap.Title = getstring("open_bootstrap_title");
             save_file.Text = getstring("save_bootstrap_ini");
             start_install.Text = getstring("start_install");
             wheretoinstall.Description = getstring("where_to_install");
             cb_subfolder.Text = getstring("subfolder_do");
+
+            // Update version information
+            version.Text = "LibreOffice Server Install GUI v." + set.program_version();
                      
             /* l10n end
              * Start Setting tooltips */
@@ -487,16 +491,50 @@ namespace WindowsFormsApplication1
 
 
             give_message.ShowBalloonTip(10000, getstring("dl_finished_title"), getstring("dl_finished"), ToolTipIcon.Info);
-            if (path_to_file_ondisk.Text.Contains("hp"))
-                path_help.Text = path_to_file_ondisk.Text;
-            else
-                path_main.Text = path_to_file_ondisk.Text;
+            path_main.Text = path_to_file_ondisk.Text;
             progressBar1.Value = 0;
             percent.Text = "0 %";
             b_dl_master.Enabled = true;
             b_dl_lb.Enabled = true;
             b_dl_ob.Enabled = true;
             b_dl_testing.Enabled = true;
+            start_install.Enabled = true;
+            give_message.Text = "LibreOffice Server Installation GUI";
+
+
+        }
+        void download_hp_changed(object sender, DownloadProgressChangedEventArgs e)
+        {
+
+            double bytesIn = double.Parse(e.BytesReceived.ToString());
+            double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
+            double percentage = bytesIn / totalBytes * 100;
+            dl_hp_1.Enabled = false;
+            dl_hp_2.Enabled = false;
+            dl_hp_3.Enabled = false;
+            start_install.Enabled = false;
+            // Creating a double value like 2.5 %
+            double temp = percentage * 100;
+            temp = Math.Truncate(temp);
+            progressBar2.Value = Convert.ToInt16(temp);
+            temp /= 100;
+            string output = Convert.ToString(temp) + " %";
+            percent2.Text = output;
+        }
+
+        void download_hp_dl_completed(object sender, AsyncCompletedEventArgs e)
+        {
+
+
+            give_message.ShowBalloonTip(10000, getstring("dl_finished_title"), getstring("dl_finished"), ToolTipIcon.Info);
+            
+                path_help.Text = path_to_file_on_disk_2.Text;
+            
+            progressBar2.Value = 0;
+            percent2.Text = "0 %";
+            dl_hp_1.Enabled = true;
+            dl_hp_2.Enabled = true;
+            dl_hp_3.Enabled = true;
             start_install.Enabled = true;
             give_message.Text = "LibreOffice Server Installation GUI";
 
@@ -605,8 +643,13 @@ namespace WindowsFormsApplication1
                 filename = httpfile;
                 progressBar1.Minimum = 0;
                 progressBar1.Maximum = 10000;
+                progressBar2.Minimum = 0;
+                progressBar2.Maximum = 10000;
                 string path = Path.GetTempPath();
                 WebClient downloadmaster = new WebClient();
+                WebClient download_hp = new WebClient();
+                download_hp.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_hp_changed);
+                download_hp.DownloadFileCompleted += new AsyncCompletedEventHandler(download_hp_dl_completed);
                 downloadmaster.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_DownloadProgressChanged);
                 downloadmaster.DownloadFileCompleted += new AsyncCompletedEventHandler(download_DownloadFileCompleted);
                 Uri uritofile = new Uri(url + httpfile);
@@ -630,7 +673,10 @@ namespace WindowsFormsApplication1
                     else if (older_branch)
                         path += "liboobranch.msi";
                 }
-                path_to_file_ondisk.Text = path;
+                if (helppack)
+                    path_to_file_on_disk_2.Text = path;
+                else
+                    path_to_file_ondisk.Text = path;
                 string mb_question = getstring("versiondl");
                 mb_question = mb_question.Replace("%version", filename);
 
@@ -639,7 +685,10 @@ namespace WindowsFormsApplication1
                 if (MessageBox.Show(mb_question, getstring("startdl"), MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     give_message.ShowBalloonTip(5000, getstring("dl_started_title"), getstring("dl_started"), ToolTipIcon.Info);
-                    downloadmaster.DownloadFileAsync(uritofile, path);
+                    if (helppack)
+                        download_hp.DownloadFileAsync(uritofile, path);
+                    else
+                        downloadmaster.DownloadFileAsync(uritofile, path);
                     int k = filename.IndexOf("LibO");
                     filename = filename.Remove(k, 5);
                     k = filename.IndexOf("_");

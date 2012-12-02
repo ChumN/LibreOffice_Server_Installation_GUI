@@ -28,6 +28,8 @@ namespace WindowsFormsApplication1
           return  Path.GetTempPath() + "libosigui.configuration";
           
       }
+      public string program_version()
+      { return "2.2.9.5"; }
 
       public void  save_settings(SETTINGS set)
         {
