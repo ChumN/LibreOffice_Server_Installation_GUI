@@ -70,6 +70,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.path_to_file_on_disk_2 = new System.Windows.Forms.TextBox();
             this.version = new System.Windows.Forms.Label();
+            this.path_to_exe = new System.Windows.Forms.TextBox();
+            this.tb_version = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.create_ink = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -331,7 +335,7 @@
             this.path_to_file_ondisk.Location = new System.Drawing.Point(13, 229);
             this.path_to_file_ondisk.Name = "path_to_file_ondisk";
             this.path_to_file_ondisk.ReadOnly = true;
-            this.path_to_file_ondisk.Size = new System.Drawing.Size(407, 20);
+            this.path_to_file_ondisk.Size = new System.Drawing.Size(206, 20);
             this.path_to_file_ondisk.TabIndex = 17;
             this.path_to_file_ondisk.TextChanged += new System.EventHandler(this.path_to_file_ondisk_TextChanged);
             // 
@@ -553,26 +557,69 @@
             // 
             this.path_to_file_on_disk_2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.path_to_file_on_disk_2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.path_to_file_on_disk_2.Location = new System.Drawing.Point(12, 375);
+            this.path_to_file_on_disk_2.Location = new System.Drawing.Point(225, 229);
             this.path_to_file_on_disk_2.Name = "path_to_file_on_disk_2";
             this.path_to_file_on_disk_2.ReadOnly = true;
-            this.path_to_file_on_disk_2.Size = new System.Drawing.Size(407, 20);
+            this.path_to_file_on_disk_2.Size = new System.Drawing.Size(195, 20);
             this.path_to_file_on_disk_2.TabIndex = 31;
             // 
             // version
             // 
             this.version.AutoSize = true;
-            this.version.Location = new System.Drawing.Point(430, 378);
+            this.version.Location = new System.Drawing.Point(12, 384);
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(177, 13);
             this.version.TabIndex = 32;
             this.version.Text = "LibreOffice Server Install GUI v x.x.x";
+            // 
+            // path_to_exe
+            // 
+            this.path_to_exe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.path_to_exe.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.path_to_exe.Location = new System.Drawing.Point(225, 381);
+            this.path_to_exe.Name = "path_to_exe";
+            this.path_to_exe.ReadOnly = true;
+            this.path_to_exe.Size = new System.Drawing.Size(176, 20);
+            this.path_to_exe.TabIndex = 33;
+            this.path_to_exe.TextChanged += new System.EventHandler(this.savesettings);
+            // 
+            // tb_version
+            // 
+            this.tb_version.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_version.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tb_version.Location = new System.Drawing.Point(459, 381);
+            this.tb_version.Name = "tb_version";
+            this.tb_version.Size = new System.Drawing.Size(200, 20);
+            this.tb_version.TabIndex = 34;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(407, 384);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Version:";
+            // 
+            // create_ink
+            // 
+            this.create_ink.Location = new System.Drawing.Point(665, 375);
+            this.create_ink.Name = "create_ink";
+            this.create_ink.Size = new System.Drawing.Size(159, 26);
+            this.create_ink.TabIndex = 36;
+            this.create_ink.Text = "Create shortcut";
+            this.create_ink.UseVisualStyleBackColor = true;
+            this.create_ink.Click += new System.EventHandler(this.create_ink_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 406);
+            this.Controls.Add(this.create_ink);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tb_version);
+            this.Controls.Add(this.path_to_exe);
             this.Controls.Add(this.version);
             this.Controls.Add(this.path_to_file_on_disk_2);
             this.Controls.Add(this.percent2);
@@ -656,6 +703,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox path_to_file_on_disk_2;
         private System.Windows.Forms.Label version;
+        private System.Windows.Forms.TextBox path_to_exe;
+        private System.Windows.Forms.TextBox tb_version;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button create_ink;
     }
 }
 

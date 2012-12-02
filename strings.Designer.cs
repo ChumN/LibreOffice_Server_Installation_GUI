@@ -295,6 +295,24 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shortcut to a parallel installed LibreOffice %version..
+        /// </summary>
+        internal static string ink_des {
+            get {
+                return ResourceManager.GetString("ink_des", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No version specified!.
+        /// </summary>
+        internal static string ink_error_1 {
+            get {
+                return ResourceManager.GetString("ink_error_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Installation could not be startet due to the following error:.
         /// </summary>
         internal static string installerror {
@@ -637,6 +655,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create a desktop shortcut for this parallel installation.
+        /// </summary>
+        internal static string tt_ink {
+            get {
+                return ResourceManager.GetString("tt_ink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Latest build of latest branch..
         /// </summary>
         internal static string tt_lb {
@@ -660,6 +687,15 @@ namespace WindowsFormsApplication1 {
         internal static string tt_ob {
             get {
                 return ResourceManager.GetString("tt_ob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Link to the soffice.exe of the parallel installation (Automatically added).
+        /// </summary>
+        internal static string tt_path_to_exe {
+            get {
+                return ResourceManager.GetString("tt_path_to_exe", resourceCulture);
             }
         }
         

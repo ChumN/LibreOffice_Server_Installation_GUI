@@ -108,6 +108,7 @@ namespace WindowsFormsApplication1
                      
             /* l10n end
              * Start Setting tooltips */
+            ToolTip ink = new ToolTip();
             ToolTip d_lb = new ToolTip();
             ToolTip d_m = new ToolTip();
             ToolTip d_tb = new ToolTip();
@@ -116,11 +117,13 @@ namespace WindowsFormsApplication1
             ToolTip b_hp_1 = new ToolTip();
             ToolTip b_hp_2 = new ToolTip();
             ToolTip b_hp_3 = new ToolTip();
+            ToolTip pathtoexe = new ToolTip();
             string tt_lb = getstring("tt_lb");
             string tt_m = getstring("tt_m");
             string tt_tb = getstring("tt_tb");
             string tt_ob = getstring("tt_ob");
             string bootstrap = getstring("tt_bootstrap");
+            ink.SetToolTip(this.create_ink, getstring("tt_ink"));
             d_lb.SetToolTip(this.b_dl_lb, tt_lb);
             d_m.SetToolTip(this.b_dl_master, tt_m);
             d_tb.SetToolTip(this.b_dl_testing, tt_tb);
@@ -129,7 +132,10 @@ namespace WindowsFormsApplication1
             b_hp_2.SetToolTip(this.dl_hp_2, getstring("tt_hp_test"));
             b_hp_3.SetToolTip(this.dl_hp_3, getstring("tt_hp_ob"));
             bootstrapini.SetToolTip(this.bootstrap_text, bootstrap);
+            pathtoexe.SetToolTip(this.path_to_exe, getstring("tt_path_to_exe"));
             bootstrapini.ShowAlways = true;
+            pathtoexe.ShowAlways = true;
+            ink.IsBalloon = true;
             b_hp_1.IsBalloon = true;
             b_hp_2.IsBalloon = true;
             b_hp_3.IsBalloon = true;
@@ -138,21 +144,12 @@ namespace WindowsFormsApplication1
             d_ob.IsBalloon = true;
             d_tb.IsBalloon = true;
             bootstrapini.IsBalloon = true;
+            pathtoexe.IsBalloon = true;
             /* End Setting tooltips
-             * Start Loading settings*/
-            try
-            {
-                SETTINGS toapply = set.open_settings();
-                //Apply settings
-                cb_subfolder.Checked = toapply.checkbox;
-                path_installdir.Text = toapply.installdir;
-                subfolder.Text = toapply.subfolder;
-                hp_lang_select.SelectedIndex = toapply.lang;
-            }
-            catch (Exception)
-            { }
+             *  Loading settings*/
+            loadsettinmgs();
 
-            // End Loading settings
+            
             button1.Text = getstring("about");
             help.Text = getstring("help");
             give_message.BalloonTipClicked += new EventHandler(gm_do);
@@ -164,6 +161,22 @@ namespace WindowsFormsApplication1
            
 
         }
+        private void loadsettinmgs()
+        {
+            try
+            {
+                SETTINGS toapply = set.open_settings();
+                //Apply settings
+                cb_subfolder.Checked = toapply.checkbox;
+                path_installdir.Text = toapply.installdir;
+                subfolder.Text = toapply.subfolder;
+                hp_lang_select.SelectedIndex = toapply.lang;
+                path_to_exe.Text = toapply.last_path_to_sofficeEXE;
+            }
+            catch (Exception)
+            { }
+        }
+
         private void gm_do(Object sender, EventArgs e)
         {
             Interaction.AppActivate(this.Text);
@@ -293,6 +306,10 @@ namespace WindowsFormsApplication1
                 SETTINGS temp = set.open_settings();
                 temp.manager = set.update_manager_array(temp.manager, path);
                 set.save_settings(temp);
+                // Create path to soffice.exe
+                path += "\\program\\soffice.exe";
+                MessageBox.Show(path);
+                path_to_exe.Text = path;
             }
             catch (System.IO.DirectoryNotFoundException)
             {
@@ -780,11 +797,17 @@ namespace WindowsFormsApplication1
 
         private void savesettings(object sender, EventArgs e)
         {
+            // Changing text of version
+            tb_version.Text = subfolder.Text;
+            // Really save settings
             SETTINGS thingstosave = set.open_settings();
             thingstosave.installdir = path_installdir.Text;
             thingstosave.subfolder = subfolder.Text;
             thingstosave.checkbox = cb_subfolder.Checked;
             thingstosave.lang = hp_lang_select.SelectedIndex;
+            thingstosave.last_path_to_sofficeEXE = path_to_exe.Text;
+
+
             set.save_settings(thingstosave);
             
 
@@ -838,6 +861,12 @@ namespace WindowsFormsApplication1
         {
             Manager fm = new Manager();
             fm.ShowDialog();
+        }
+
+        private void create_ink_Click(object sender, EventArgs e)
+        {
+            LINK lnk = new LINK();
+            lnk.create_ink(path_to_exe.Text, tb_version.Text);
         }
     }
 }

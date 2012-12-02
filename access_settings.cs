@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using System.IO;
+using IWshRuntimeLibrary;
+using System.Windows.Forms;
+using System.Resources;
+using System.Reflection;
 
 namespace WindowsFormsApplication1
 {
@@ -70,4 +74,53 @@ public class SETTINGS
     public int lang;
     public string l10n;
     public string[] manager;
+    public string last_path_to_sofficeEXE;
+}
+public class LINK
+{
+    public LINK()
+    {
+
+    }
+    ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
+    public void exeptionmessage(string ex_message)
+    {
+        MessageBox.Show(getstring("standarderror") + ex_message, getstring("Error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+    public string getstring(string strMessage)
+    {
+        string rt = "???";
+        try
+        {
+            rt = rm.GetString(strMessage);
+        }
+        catch (Exception)
+        {
+            exeptionmessage("An error in the l10n part occured!");
+        }
+        return rt;
+    }
+
+    public void create_ink(string link_to_exe, string version)
+    {
+        /* NOT WORKING
+        
+        try
+        {
+            if (version == null || version == "")
+                throw new Exception(getstring("ink_error_1"));
+            WshShell wsh = new WshShell();
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) , "LibO Parallel " + version + ".Ink");
+            MessageBox.Show(path);
+            IWshShortcut shortcut = (IWshShortcut)wsh.CreateShortcut(@path);
+            string des = getstring("ink_des");
+            des = des.Replace("%version",version);
+            shortcut.Description = des;
+            shortcut.TargetPath = link_to_exe;
+            shortcut.Save();
+        }
+        catch (Exception ex)
+        { exeptionmessage(ex.Message); }
+         */
+    }
 }
