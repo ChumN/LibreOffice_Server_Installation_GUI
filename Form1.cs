@@ -648,6 +648,9 @@ namespace WindowsFormsApplication1
                 string path = Path.GetTempPath();
                 WebClient downloadmaster = new WebClient();
                 WebClient download_hp = new WebClient();
+                string ua = "LibreOffice Server Install Gui" + set.program_version();
+                downloadmaster.Headers["User-Agent"] = ua;
+                download_hp.Headers["User-Agent"] = ua;
                 download_hp.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_hp_changed);
                 download_hp.DownloadFileCompleted += new AsyncCompletedEventHandler(download_hp_dl_completed);
                 downloadmaster.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_DownloadProgressChanged);
