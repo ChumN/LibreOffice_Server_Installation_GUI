@@ -40,9 +40,7 @@ namespace WindowsFormsApplication1
 
                 if (rtl.Contains(lang))
                     this.RightToLeftLayout = true;
-                     
-                
-                
+               
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
@@ -208,6 +206,7 @@ namespace WindowsFormsApplication1
 
 
         }
+       
 
         private void config_installdir(object sender, EventArgs e)
         {

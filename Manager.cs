@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1
 
         private void Manager_Load(object sender, EventArgs e)
         {
+
             this.Text = getstring("man_title");
             button1.Text = getstring("man_exit");
             button3.Text = getstring("man_addinstall");

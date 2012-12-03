@@ -8,13 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 using System.Resources;
 using System.Reflection;
+using System.Threading;
+using System.Globalization;
 
 
 namespace WindowsFormsApplication1
 {
     public partial class manually_add_installation : Form
-
     {
+        access_settings set = new access_settings();
         public string[,] manually_added { get; private set; }
         ResourceManager rm = new ResourceManager("WindowsFormsApplication1.strings", Assembly.GetExecutingAssembly());
         public manually_add_installation()
@@ -47,6 +49,26 @@ namespace WindowsFormsApplication1
 
         private void manually_add_installation_Load(object sender, EventArgs e)
         {
+            //l10n import
+            string[] rtl = new string[] { "He" };
+            try
+            {
+
+                SETTINGS temp = set.open_settings();
+                string lang = temp.l10n;
+                if (lang != null)
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang, false);
+
+                if (rtl.Contains(lang))
+                {
+                    this.RightToLeftLayout = true;
+                    path.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                }
+
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+            
             button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             button2.DialogResult = System.Windows.Forms.DialogResult.Abort;
             // l10n
