@@ -73,7 +73,7 @@
             this.path_to_exe = new System.Windows.Forms.TextBox();
             this.tb_version = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.create_ink = new System.Windows.Forms.Button();
+            this.create_lnk = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -601,22 +601,22 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Version:";
             // 
-            // create_ink
+            // create_lnk
             // 
-            this.create_ink.Location = new System.Drawing.Point(665, 375);
-            this.create_ink.Name = "create_ink";
-            this.create_ink.Size = new System.Drawing.Size(159, 26);
-            this.create_ink.TabIndex = 36;
-            this.create_ink.Text = "Create shortcut";
-            this.create_ink.UseVisualStyleBackColor = true;
-            this.create_ink.Click += new System.EventHandler(this.create_ink_Click);
+            this.create_lnk.Location = new System.Drawing.Point(665, 375);
+            this.create_lnk.Name = "create_lnk";
+            this.create_lnk.Size = new System.Drawing.Size(159, 26);
+            this.create_lnk.TabIndex = 36;
+            this.create_lnk.Text = "Create shortcut";
+            this.create_lnk.UseVisualStyleBackColor = true;
+            this.create_lnk.Click += new System.EventHandler(this.create_ink_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 406);
-            this.Controls.Add(this.create_ink);
+            this.Controls.Add(this.create_lnk);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_version);
             this.Controls.Add(this.path_to_exe);
@@ -706,7 +706,7 @@
         private System.Windows.Forms.TextBox path_to_exe;
         private System.Windows.Forms.TextBox tb_version;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button create_ink;
+        private System.Windows.Forms.Button create_lnk;
     }
 }
 

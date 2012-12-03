@@ -345,4 +345,13 @@
   <data name="tt_path_to_exe" xml:space="preserve">
     <value>Link to the soffice.exe of the parallel installation (Automatically added)</value>
   </data>
+  <data name="b_create_shortcut" xml:space="preserve">
+    <value>Create Shortcut</value>
+  </data>
+  <data name="msb_lnk_title" xml:space="preserve">
+    <value>Shortcut created!</value>
+  </data>
+  <data name="msb_lnk_txt" xml:space="preserve">
+    <value>Shortcut has sucessfully been created!</value>
+  </data>
 </root>

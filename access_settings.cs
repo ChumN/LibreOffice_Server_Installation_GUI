@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
           
       }
       public string program_version()
-      { return "2.2.9.5"; }
+      { return "3.0.0.0"; }
 
       public void  save_settings(SETTINGS set)
         {
@@ -100,18 +100,16 @@ public class LINK
         }
         return rt;
     }
-
     public void create_ink(string link_to_exe, string version)
     {
-        /* NOT WORKING
-        
+
+        bool ok = true;
         try
         {
             if (version == null || version == "")
                 throw new Exception(getstring("ink_error_1"));
             WshShell wsh = new WshShell();
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) , "LibO Parallel " + version + ".Ink");
-            MessageBox.Show(path);
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) , "LibO Parallel " + version + ".lnk");
             IWshShortcut shortcut = (IWshShortcut)wsh.CreateShortcut(@path);
             string des = getstring("ink_des");
             des = des.Replace("%version",version);
@@ -120,7 +118,10 @@ public class LINK
             shortcut.Save();
         }
         catch (Exception ex)
-        { exeptionmessage(ex.Message); }
-         */
+        { exeptionmessage(ex.Message);
+        ok = false;
+        }
+        if (ok)
+            MessageBox.Show(getstring("msb_lnk_txt"), getstring("msb_lnk_title"), MessageBoxButtons.OK);
     }
 }

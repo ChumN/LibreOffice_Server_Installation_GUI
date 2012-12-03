@@ -70,6 +70,15 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create Shortcut.
+        /// </summary>
+        internal static string b_create_shortcut {
+            get {
+                return ResourceManager.GetString("b_create_shortcut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Download latest branch.
         /// </summary>
         internal static string bdllb {
@@ -426,6 +435,24 @@ namespace WindowsFormsApplication1 {
         internal static string man_title {
             get {
                 return ResourceManager.GetString("man_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shortcut created!.
+        /// </summary>
+        internal static string msb_lnk_title {
+            get {
+                return ResourceManager.GetString("msb_lnk_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shortcut has sucessfully been created!.
+        /// </summary>
+        internal static string msb_lnk_txt {
+            get {
+                return ResourceManager.GetString("msb_lnk_txt", resourceCulture);
             }
         }
         

@@ -102,6 +102,7 @@ namespace WindowsFormsApplication1
             start_install.Text = getstring("start_install");
             wheretoinstall.Description = getstring("where_to_install");
             cb_subfolder.Text = getstring("subfolder_do");
+            create_lnk.Text = getstring("b_create_shortcut");
 
             // Update version information
             version.Text = "LibreOffice Server Install GUI v." + set.program_version();
@@ -123,7 +124,7 @@ namespace WindowsFormsApplication1
             string tt_tb = getstring("tt_tb");
             string tt_ob = getstring("tt_ob");
             string bootstrap = getstring("tt_bootstrap");
-            ink.SetToolTip(this.create_ink, getstring("tt_ink"));
+            ink.SetToolTip(this.create_lnk, getstring("tt_ink"));
             d_lb.SetToolTip(this.b_dl_lb, tt_lb);
             d_m.SetToolTip(this.b_dl_master, tt_m);
             d_tb.SetToolTip(this.b_dl_testing, tt_tb);
