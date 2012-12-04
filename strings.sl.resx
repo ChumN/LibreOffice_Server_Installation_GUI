@@ -306,4 +306,52 @@
 	<data name="error_langpack_nolang" xml:space="preserve">
 		<value>Pred prenosom morate izbrati jezik!</value>
 	</data>
+	<data name="mai_abort" xml:space="preserve">
+		<value>Ustavi</value>
+	</data>
+	<data name="mai_config_path" xml:space="preserve">
+		<value>Prilagodi pot</value>
+	</data>
+	<data name="mai_ok" xml:space="preserve">
+		<value>V redu</value>
+	</data>
+	<data name="mai_path_soffice" xml:space="preserve">
+		<value>Pot do soffice.exe vzporedne namestitve</value>
+	</data>
+	<data name="mai_text" xml:space="preserve">
+		<value>Ročno dodaj vzporedno namestitev</value>
+	</data>
+	<data name="man_addinstall" xml:space="preserve">
+		<value>Ročno dodaj namestitev</value>
+	</data>
+	<data name="man_del" xml:space="preserve">
+		<value>Izbriši izbrane</value>
+	</data>
+	<data name="man_exit" xml:space="preserve">
+		<value>Izhod</value>
+	</data>
+	<data name="man_title" xml:space="preserve">
+		<value>Upravljalnik</value>
+	</data>
+	<data name="ink_des" xml:space="preserve">
+		<value>Bližnjica do vzporedno nameščenega paketa LibreOffice %version.</value>
+	</data>
+	<data name="ink_error_1" xml:space="preserve">
+		<value>Različica ni določena!</value>
+	</data>
+	<data name="tt_ink" xml:space="preserve">
+		<value>Ustvari bližnjico na namizju za to vzporedno namestitev</value>
+	</data>
+	<data name="tt_path_to_exe" xml:space="preserve">
+		<value>Povezava na soffice.exe vzporedne namestitve (dodana samodejno)</value>
+	</data>
+	<data name="b_create_shortcut" xml:space="preserve">
+		<value>Ustvari bližnjico</value>
+	</data>
+	<data name="msb_lnk_title" xml:space="preserve">
+		<value>Bližnjica ustvarjena!</value>
+	</data>
+	<data name="msb_lnk_txt" xml:space="preserve">
+		<value>Bližnjica uspešno ustvarjena.</value>
+	</data>
 </root>

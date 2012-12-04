@@ -7,7 +7,7 @@ using System.Resources;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("LibreOffice Server Install GUI")]
-[assembly: AssemblyDescription("A GUI for performinga parallel installation")]
+[assembly: AssemblyDescription("A GUI for performing a parallel installation")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LibreOffice Server Install GUI")]

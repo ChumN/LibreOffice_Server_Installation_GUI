@@ -283,4 +283,55 @@
 	<data name="pt" xml:space="preserve">
 		<value>פורטוגלית:</value>
 	</data>
+	<data name="error_langpack_nolang" xml:space="preserve">
+		<value>עליך לבחור שפה בטרם התחלת ההורדה!</value>
+	</data>
+	<data name="mai_abort" xml:space="preserve">
+		<value>ביטול</value>
+	</data>
+	<data name="mai_config_path" xml:space="preserve">
+		<value>הגדרת נתיב</value>
+	</data>
+	<data name="mai_ok" xml:space="preserve">
+		<value>אישור</value>
+	</data>
+	<data name="mai_path_soffice" xml:space="preserve">
+		<value>המיקום של soffice.exe של ההתקנה המקבילה</value>
+	</data>
+	<data name="mai_text" xml:space="preserve">
+		<value>הוספת התקנה מקבילה ידנית</value>
+	</data>
+	<data name="man_addinstall" xml:space="preserve">
+		<value>הוספת התקנה ידנית</value>
+	</data>
+	<data name="man_del" xml:space="preserve">
+		<value>מחיקת הנבחרת</value>
+	</data>
+	<data name="man_exit" xml:space="preserve">
+		<value>יציאה</value>
+	</data>
+	<data name="man_title" xml:space="preserve">
+		<value>מנהל</value>
+	</data>
+	<data name="ink_des" xml:space="preserve">
+		<value>קיצור דרך להתקנה מקבילה של LibreOffice %version</value>
+	</data>
+	<data name="ink_error_1" xml:space="preserve">
+		<value>לא צוינה גרסה!</value>
+	</data>
+	<data name="tt_ink" xml:space="preserve">
+		<value>יצירת קיצור דרך להתקנה מקבילה זו</value>
+	</data>
+	<data name="tt_path_to_exe" xml:space="preserve">
+		<value>קישור לקובץ soffice.exe של ההתקנה המקבילה (יתווסף אוטומטית)</value>
+	</data>
+	<data name="b_create_shortcut" xml:space="preserve">
+		<value>יצירת קיצור דרך</value>
+	</data>
+	<data name="msb_lnk_title" xml:space="preserve">
+		<value>קיצור הדרך נוצר</value>
+	</data>
+	<data name="msb_lnk_txt" xml:space="preserve">
+		<value>קיצור הדרך נוצר בהצלחה!</value>
+	</data>
 </root>

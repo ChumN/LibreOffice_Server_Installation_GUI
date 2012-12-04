@@ -307,4 +307,49 @@
 	<data name="error_langpack_nolang" xml:space="preserve">
 		<value>Du skal vælge et sprog først og derefter starte download!</value>
 	</data>
+	<data name="mai_abort" xml:space="preserve">
+		<value>Afbryd</value>
+	</data>
+	<data name="mai_config_path" xml:space="preserve">
+		<value>Konfigurer sti</value>
+	</data>
+	<data name="mai_ok" xml:space="preserve">
+		<value>OK</value>
+	</data>
+	<data name="mai_path_soffice" xml:space="preserve">
+		<value>Sti til soffice.exe for parallelinstallationen</value>
+	</data>
+	<data name="mai_text" xml:space="preserve">
+		<value>Manuelt tilføj parallelinstallation</value>
+	</data>
+	<data name="man_addinstall" xml:space="preserve">
+		<value>manuelt tilføj installation</value>
+	</data>
+	<data name="man_del" xml:space="preserve">
+		<value>Fjern det markerede</value>
+	</data>
+	<data name="man_exit" xml:space="preserve">
+		<value>Forlad</value>
+	</data>
+	<data name="man_title" xml:space="preserve">
+		<value>Manager</value>
+	</data>
+	<data name="ink_des" xml:space="preserve">
+		<value>Genvej til en parallelinstalleret LibreOffice %version.</value>
+	</data>
+	<data name="ink_error_1" xml:space="preserve">
+		<value>Ingen version angivet!</value>
+	</data>
+	<data name="tt_ink" xml:space="preserve">
+		<value>Opret en skrivebordsgenvej for denne parallelinstallation</value>
+	</data>
+	<data name="tt_path_to_exe" xml:space="preserve">
+		<value>Opret genvej</value>
+	</data>
+	<data name="msb_lnk_title" xml:space="preserve">
+		<value>Genvej oprettet!</value>
+	</data>
+	<data name="msb_lnk_txt" xml:space="preserve">
+		<value>Genvejen blev oprettet!</value>
+	</data>
 </root>

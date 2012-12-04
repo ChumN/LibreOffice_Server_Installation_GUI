@@ -306,4 +306,52 @@
 	<data name="error_langpack_nolang" xml:space="preserve">
 		<value>Debe seleccionar un idioma antes de iniciar la descarga.</value>
 	</data>
+	<data name="mai_abort" xml:space="preserve">
+		<value>Cancelar</value>
+	</data>
+	<data name="mai_config_path" xml:space="preserve">
+		<value>Configurar ruta</value>
+	</data>
+	<data name="mai_ok" xml:space="preserve">
+		<value>Aceptar</value>
+	</data>
+	<data name="mai_path_soffice" xml:space="preserve">
+		<value>Ruta al soffice.exe de la instalación en paralelo</value>
+	</data>
+	<data name="mai_text" xml:space="preserve">
+		<value>Añadir instalación en paralelo manualmente</value>
+	</data>
+	<data name="man_addinstall" xml:space="preserve">
+		<value>Añadir instalación manualmente</value>
+	</data>
+	<data name="man_del" xml:space="preserve">
+		<value>Eliminar seleccionados</value>
+	</data>
+	<data name="man_exit" xml:space="preserve">
+		<value>Salir</value>
+	</data>
+	<data name="man_title" xml:space="preserve">
+		<value>Gestor</value>
+	</data>
+	<data name="ink_des" xml:space="preserve">
+		<value>Acceso directo a LibreOffice %version instalada en paralelo.</value>
+	</data>
+	<data name="ink_error_1" xml:space="preserve">
+		<value>No se especificó una versión.</value>
+	</data>
+	<data name="tt_ink" xml:space="preserve">
+		<value>Crear un acceso directo de escritorio para esta instalación en paralelo</value>
+	</data>
+	<data name="tt_path_to_exe" xml:space="preserve">
+		<value>Enlace al soffice.exe de la instalación en paralelo (añadida automáticamente)</value>
+	</data>
+	<data name="b_create_shortcut" xml:space="preserve">
+		<value>Crear acceso directo</value>
+	</data>
+	<data name="msb_lnk_title" xml:space="preserve">
+		<value>Acceso directo creado</value>
+	</data>
+	<data name="msb_lnk_txt" xml:space="preserve">
+		<value>El acceso directo se ha creado correctamente.</value>
+	</data>
 </root>

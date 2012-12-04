@@ -333,4 +333,25 @@
 	<data name="man_title" xml:space="preserve">
 		<value>Manager</value>
 	</data>
+	<data name="ink_des" xml:space="preserve">
+		<value>Verknüpfung zur parallel installierten LibreOffice %version.</value>
+	</data>
+	<data name="ink_error_1" xml:space="preserve">
+		<value>Es wurde keine Version angegeben.</value>
+	</data>
+	<data name="tt_ink" xml:space="preserve">
+		<value>Eine Verknüfung für diese parallel installierte Version erstellen</value>
+	</data>
+	<data name="tt_path_to_exe" xml:space="preserve">
+		<value>Pfad zur soffice.exe der parallelen Installation (Wird automatisch erzeugt)</value>
+	</data>
+	<data name="b_create_shortcut" xml:space="preserve">
+		<value>Verknüpfung erstellen</value>
+	</data>
+	<data name="msb_lnk_title" xml:space="preserve">
+		<value>Verknüpfung erstellt.</value>
+	</data>
+	<data name="msb_lnk_txt" xml:space="preserve">
+		<value>Die Verknüpfung wurde erfolgreich hergestellt.</value>
+	</data>
 </root>
