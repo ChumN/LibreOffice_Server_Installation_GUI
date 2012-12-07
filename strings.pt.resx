@@ -97,4 +97,241 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="dirnotfound" xml:space="preserve">
+		<value>A pasta não existe!</value>
+	</data>
+	<data name="dirnotfoundmessage" xml:space="preserve">
+		<value>Por favor verifique a pasta escolhida!</value>
+	</data>
+	<data name="Error" xml:space="preserve">
+		<value>Erro!</value>
+	</data>
+	<data name="filesave" xml:space="preserve">
+		<value>O ficheiro foi guardado com sucesso!</value>
+	</data>
+	<data name="go_back" xml:space="preserve">
+		<value>Voltar atrás?</value>
+	</data>
+	<data name="help_runasadmin" xml:space="preserve">
+		<value>Poderá ajudar executar este programa como administrador.</value>
+	</data>
+	<data name="installerror" xml:space="preserve">
+		<value>A instalação não pôde iniciar devido ao seguinte erro:</value>
+	</data>
+	<data name="installnostart" xml:space="preserve">
+		<value>A instalação não pôde iniciar!</value>
+	</data>
+	<data name="no_installdir" xml:space="preserve">
+		<value>Sem pasta de instalação escolhida!</value>
+	</data>
+	<data name="no_installfile" xml:space="preserve">
+		<value>Você não escolheu um ficheiro de instalação LibreOffice!</value>
+	</data>
+	<data name="si" xml:space="preserve">
+		<value>Problema de Segurança</value>
+	</data>
+	<data name="si_message" xml:space="preserve">
+		<value>Não tem permissão para escrever nesta pasta.</value>
+	</data>
+	<data name="standarderror" xml:space="preserve">
+		<value>Ocorreu um erro! Mensagem:</value>
+	</data>
+	<data name="title_filesave" xml:space="preserve">
+		<value>Ficheiro guardado</value>
+	</data>
+	<data name="warning" xml:space="preserve">
+		<value>Aviso!</value>
+	</data>
+	<data name="de" xml:space="preserve">
+		<value>Alemão:</value>
+	</data>
+	<data name="en" xml:space="preserve">
+		<value>Inglês:</value>
+	</data>
+	<data name="fr" xml:space="preserve">
+		<value>Francês:</value>
+	</data>
+	<data name="lang" xml:space="preserve">
+		<value>Idioma</value>
+	</data>
+	<data name="programmer" xml:space="preserve">
+		<value>Programador</value>
+	</data>
+	<data name="translations" xml:space="preserve">
+		<value>--- Traduções ---</value>
+	</data>
+	<data name="translator" xml:space="preserve">
+		<value>Tradutor:</value>
+	</data>
+	<data name="about" xml:space="preserve">
+		<value>Sobre / Alterar o idioma</value>
+	</data>
+	<data name="tt_lb" xml:space="preserve">
+		<value>Última compilação da última ramificação.</value>
+	</data>
+	<data name="tt_m" xml:space="preserve">
+		<value>Última compilação diária.</value>
+	</data>
+	<data name="tt_ob" xml:space="preserve">
+		<value>Última compilação da última ramificação.</value>
+	</data>
+	<data name="tt_tb" xml:space="preserve">
+		<value>Última compilação de testes</value>
+	</data>
+	<data name="language_change_success" xml:space="preserve">
+		<value>A definição de idioma será aplicada no próximo arranque!</value>
+	</data>
+	<data name="success" xml:space="preserve">
+		<value>Sucesso!</value>
+	</data>
+	<data name="tt_bootstrap" xml:space="preserve">
+		<value>Pode usar o seguinte em vez da linha que começa com “UserInstallation=” a partir do campo de texto acima de modo a não alterar o seu perfil de utilizador.</value>
+	</data>
+	<data name="update_lang" xml:space="preserve">
+		<value>Alterar idioma:</value>
+	</data>
+	<data name="versiondl" xml:space="preserve">
+		<value>A versão %version deve ser transferida?</value>
+	</data>
+	<data name="bdllb" xml:space="preserve">
+		<value>Transferir última ramificação</value>
+	</data>
+	<data name="open_help" xml:space="preserve">
+		<value>Abrir instalador de ajuda do LibreOffice</value>
+	</data>
+	<data name="config_installdir" xml:space="preserve">
+		<value>Configurar pasta de instalação</value>
+	</data>
+	<data name="open_bootstrap_ini" xml:space="preserve">
+		<value>Abrir bootstrap.ini</value>
+	</data>
+	<data name="dlmaster" xml:space="preserve">
+		<value>Transferir última versão master</value>
+	</data>
+	<data name="dltesting" xml:space="preserve">
+		<value>Transferir última compilação de testes</value>
+	</data>
+	<data name="dl_ob" xml:space="preserve">
+		<value>Transferir ramificação anterior</value>
+	</data>
+	<data name="edit_bs_ini" xml:space="preserve">
+		<value>Editar bootstrap.ini</value>
+	</data>
+	<data name="progress" xml:space="preserve">
+		<value>Progresso:</value>
+	</data>
+	<data name="open_bootstrap_title" xml:space="preserve">
+		<value>Abrir bootstrap.ini</value>
+	</data>
+	<data name="open_installer" xml:space="preserve">
+		<value>Abrir instalador LibreOffice</value>
+	</data>
+	<data name="startdl" xml:space="preserve">
+		<value>Deve o ficheiro ser transferido?</value>
+	</data>
+	<data name="start_install" xml:space="preserve">
+		<value>Iniciar instalação</value>
+	</data>
+	<data name="where_to_install" xml:space="preserve">
+		<value>Escolher pasta de instalação</value>
+	</data>
+	<data name="save_bootstrap_ini" xml:space="preserve">
+		<value>Guardar bootstrap.ini</value>
+	</data>
+	<data name="subfolder_do" xml:space="preserve">
+		<value>Deve ser criada uma subpasta automaticamente? Nome da subpasta:</value>
+	</data>
+	<data name="es" xml:space="preserve">
+		<value>Espanhol:</value>
+	</data>
+	<data name="sl" xml:space="preserve">
+		<value>Esloveno:</value>
+	</data>
+	<data name="da" xml:space="preserve">
+		<value>Dinamarquês:</value>
+	</data>
+	<data name="help" xml:space="preserve">
+		<value>Ajuda</value>
+	</data>
+	<data name="dl_finished" xml:space="preserve">
+		<value>A transferência acabou e está pronta para a instalação.</value>
+	</data>
+	<data name="dl_finished_title" xml:space="preserve">
+		<value>Transferência concluída!</value>
+	</data>
+	<data name="dl_started" xml:space="preserve">
+		<value>Começou uma transferência!</value>
+	</data>
+	<data name="dl_started_title" xml:space="preserve">
+		<value>Transferência iniciou!</value>
+	</data>
+	<data name="helppack" xml:space="preserve">
+		<value>Transferir pacote de ajuda</value>
+	</data>
+	<data name="tt_hp_lb" xml:space="preserve">
+		<value>Transferir pacote de ajuda do idioma selecionado da última ramificação</value>
+	</data>
+	<data name="tt_hp_ob" xml:space="preserve">
+		<value>Transferir pacote de ajuda do idioma selecionado da ramificação anterior</value>
+	</data>
+	<data name="tt_hp_test" xml:space="preserve">
+		<value>Transferir pacote de ajuda do idioma selecionado da última compilação de testes</value>
+	</data>
+	<data name="he" xml:space="preserve">
+		<value>Hebraico:</value>
+	</data>
+	<data name="pt" xml:space="preserve">
+		<value>Português:</value>
+	</data>
+	<data name="error_langpack_nolang" xml:space="preserve">
+		<value>Deve escolher um idioma antes de iniciar a transferência!</value>
+	</data>
+	<data name="mai_abort" xml:space="preserve">
+		<value>Abortar</value>
+	</data>
+	<data name="mai_config_path" xml:space="preserve">
+		<value>Configurar caminho</value>
+	</data>
+	<data name="mai_ok" xml:space="preserve">
+		<value>Aceitar</value>
+	</data>
+	<data name="mai_path_soffice" xml:space="preserve">
+		<value>Caminho para soffice.exe da instalação paralela</value>
+	</data>
+	<data name="mai_text" xml:space="preserve">
+		<value>Adicionar instalação paralela manualmente</value>
+	</data>
+	<data name="man_addinstall" xml:space="preserve">
+		<value>Adicionar instalação manualmente</value>
+	</data>
+	<data name="man_del" xml:space="preserve">
+		<value>Eliminar escolha(s)</value>
+	</data>
+	<data name="man_exit" xml:space="preserve">
+		<value>Sair</value>
+	</data>
+	<data name="man_title" xml:space="preserve">
+		<value>Gerente</value>
+	</data>
+	<data name="ink_des" xml:space="preserve">
+		<value>Atalho para um LibreOffice %version paralelo instalado.</value>
+	</data>
+	<data name="ink_error_1" xml:space="preserve">
+		<value>Nenhuma versão especificada!</value>
+	</data>
+	<data name="tt_ink" xml:space="preserve">
+		<value>Criar um atalho desta instalação paralela no ambiente de trabalho</value>
+	</data>
+	<data name="tt_path_to_exe" xml:space="preserve">
+		<value>Caminho para soffice.exe da instalação paralela (Adicionado automaticamente)</value>
+	</data>
+	<data name="b_create_shortcut" xml:space="preserve">
+		<value>Criar Atalho</value>
+	</data>
+	<data name="msb_lnk_title" xml:space="preserve">
+		<value>Atalho criado!</value>
+	</data>
+	<data name="msb_lnk_txt" xml:space="preserve">
+		<value>O atalho foi criado com sucesso!</value>
+	</data>
 </root>

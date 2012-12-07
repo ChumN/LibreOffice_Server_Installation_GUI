@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1
             abouttxt += es + "Adolfo Jayme Barrientos" + Environment.NewLine;
             abouttxt += sl + "Martin Srebotnjak" + Environment.NewLine;
             abouttxt += da + "Leif Lodahl"+ Environment.NewLine;
-        /*  abouttxt += pt + "Carlos Moreira" + Environment.NewLine; No translation yet */
+            abouttxt += pt + "Carlos Moreira" + Environment.NewLine; 
             abouttxt += he + "Yaron Shahrabani" + Environment.NewLine;
             about.Text = abouttxt;
             this.Text = getstring("about");
