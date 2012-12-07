@@ -101,6 +101,7 @@ namespace WindowsFormsApplication1
             wheretoinstall.Description = getstring("where_to_install");
             cb_subfolder.Text = getstring("subfolder_do");
             create_lnk.Text = getstring("b_create_shortcut");
+            button5.Text = getstring("man_title");
 
             // Update version information
             version.Text = "LibreOffice Server Install GUI v." + set.program_version();
