@@ -179,7 +179,7 @@ namespace WindowsFormsApplication1
 
         private void gm_do(Object sender, EventArgs e)
         {
-            Interaction.AppActivate(this.Text);
+           // Interaction.AppActivate(this.Text);
             this.WindowState = FormWindowState.Normal;
         }
 
@@ -309,7 +309,6 @@ namespace WindowsFormsApplication1
                 set.save_settings(temp);
                 // Create path to soffice.exe
                 path += "\\program\\soffice.exe";
-                MessageBox.Show(path);
                 path_to_exe.Text = path;
             }
             catch (System.IO.DirectoryNotFoundException)

@@ -97,6 +97,8 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             string path_text = path.Text;
+           if(path_text != "")
+            {
             string delete = "\\program\\soffice.exe";
             int i = path_text.IndexOf(delete);
             try
@@ -106,6 +108,7 @@ namespace WindowsFormsApplication1
                 shared_string = path_text;
             }
             catch(Exception ex) {exeptionmessage(ex.Message);}
+            }
         }
     }
 }
