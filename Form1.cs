@@ -721,7 +721,7 @@ namespace WindowsFormsApplication1
 
         private void b_dl_master_Click(object sender, EventArgs e)
         {
-            startasyncdownload("http://dev-builds.libreoffice.org/daily/Win-x86@6/master/current/", false, true, false, false);
+            startasyncdownload("http://dev-builds.libreoffice.org/daily/master/Win-x86@6/current/", false, true, false, false);
         }
 
         private void b_dl_lb_Click(object sender, EventArgs e)
