@@ -600,7 +600,6 @@ namespace WindowsFormsApplication1
                     int starting_position = httpfile.IndexOf("Directory</a>");
 
                     httpfile = httpfile.Remove(0, starting_position);
-
                     starting_position = httpfile.IndexOf("<a href=\"");
 
                     starting_position += 9;
@@ -608,18 +607,15 @@ namespace WindowsFormsApplication1
                     string version = httpfile.Remove(5);
                     string link = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/?C=S;O=D";
                     httpfile = downloadfile(link);
-                   
-                        starting_position = httpfile.IndexOf("LibO_");
+                        starting_position = httpfile.IndexOf("LibO");
                         httpfile = httpfile.Remove(0, starting_position);
                         starting_position = httpfile.IndexOf(".msi") + 4;
                         httpfile = httpfile.Remove(starting_position);
                         if (helppack)
                         {
-
                             string vers2 = httpfile;
-                            vers2 = vers2.Remove(0, 5);
-                            vers2 = vers2.Remove(7);
-                            httpfile = "LibO_" + vers2 + "_Win_x86_helppack_" + lang + ".msi";
+                            string insert = "helppack_"+lang;
+                            vers2 = vers2.Replace("install_multi",insert);
                         }
                     url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
 
@@ -709,10 +705,20 @@ namespace WindowsFormsApplication1
                         download_hp.DownloadFileAsync(uritofile, path);
                     else
                         downloadmaster.DownloadFileAsync(uritofile, path);
-                    int k = filename.IndexOf("LibO");
-                    filename = filename.Remove(k, 5);
-                    k = filename.IndexOf("_");
-                    filename = filename.Remove(k);
+                    int k =0;
+                    if (!master)
+                    {
+                        k = filename.IndexOf("_") + 1;
+                        filename = filename.Remove(0, k);
+                        k = filename.IndexOf("_");
+                        filename = filename.Remove(k);
+                    }
+                    else
+                    {
+                        k = filename.IndexOf("_");
+                        filename = filename.Remove(k);
+                    }
+                    if(!helppack)
                     subfolder.Text = filename;
                 }
            }

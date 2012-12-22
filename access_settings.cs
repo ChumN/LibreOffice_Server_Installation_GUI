@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
           
       }
       public string program_version()
-      { return "3.0"; }
+      { return "3.0.1"; }
 
       public void  save_settings(SETTINGS set)
         {

@@ -9,7 +9,7 @@ using System.Resources;
 [assembly: AssemblyTitle("LibreOffice Server Install GUI")]
 [assembly: AssemblyDescription("A GUI for performing a parallel installation")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Reisisoft")]
 [assembly: AssemblyProduct("LibreOffice Server Install GUI")]
 [assembly: AssemblyCopyright("Florian Reisinger  2012")]
 [assembly: AssemblyTrademark("")]
