@@ -155,7 +155,7 @@
 		<value>Idioma</value>
 	</data>
 	<data name="programmer" xml:space="preserve">
-		<value>Programador</value>
+		<value>Programador:</value>
 	</data>
 	<data name="translations" xml:space="preserve">
 		<value>--- Traduções ---</value>
@@ -197,7 +197,7 @@
 		<value>Transferir última ramificação</value>
 	</data>
 	<data name="open_help" xml:space="preserve">
-		<value>Abrir instalador de ajuda do LibreOffice</value>
+		<value>Abrir instalador de ajuda LO</value>
 	</data>
 	<data name="config_installdir" xml:space="preserve">
 		<value>Configurar pasta de instalação</value>
@@ -209,7 +209,7 @@
 		<value>Transferir última versão master</value>
 	</data>
 	<data name="dltesting" xml:space="preserve">
-		<value>Transferir última compilação de testes</value>
+		<value>Transferir última versão testes</value>
 	</data>
 	<data name="dl_ob" xml:space="preserve">
 		<value>Transferir ramificação anterior</value>
@@ -254,7 +254,7 @@
 		<value>Ajuda</value>
 	</data>
 	<data name="dl_finished" xml:space="preserve">
-		<value>A transferência acabou e está pronta para a instalação.</value>
+		<value>A transferência acabou e está pronta para ser instalada.</value>
 	</data>
 	<data name="dl_finished_title" xml:space="preserve">
 		<value>Transferência concluída!</value>
@@ -269,13 +269,13 @@
 		<value>Transferir pacote de ajuda</value>
 	</data>
 	<data name="tt_hp_lb" xml:space="preserve">
-		<value>Transferir pacote de ajuda do idioma selecionado da última ramificação</value>
+		<value>Transferir pacote de ajuda do idioma selecionado da última ramificação.</value>
 	</data>
 	<data name="tt_hp_ob" xml:space="preserve">
-		<value>Transferir pacote de ajuda do idioma selecionado da ramificação anterior</value>
+		<value>Transferir pacote de ajuda do idioma selecionado da ramificação anterior.</value>
 	</data>
 	<data name="tt_hp_test" xml:space="preserve">
-		<value>Transferir pacote de ajuda do idioma selecionado da última compilação de testes</value>
+		<value>Transferir pacote de ajuda do idioma selecionado da última compilação de testes.</value>
 	</data>
 	<data name="he" xml:space="preserve">
 		<value>Hebraico:</value>
@@ -311,7 +311,7 @@
 		<value>Sair</value>
 	</data>
 	<data name="man_title" xml:space="preserve">
-		<value>Gerente</value>
+		<value>Gestor</value>
 	</data>
 	<data name="ink_des" xml:space="preserve">
 		<value>Atalho para um LibreOffice %version paralelo instalado.</value>

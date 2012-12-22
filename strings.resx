@@ -235,7 +235,7 @@
     <value>Download older branch</value>
   </data>
 	<data name="edit_bs_ini" xml:space="preserve">
-    <value>Edit bootdtrap.ini</value>
+    <value>Edit bootstrap.ini</value>
   </data>
 	<data name="progress" xml:space="preserve">
     <value>Progress:</value>
