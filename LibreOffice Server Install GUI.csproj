@@ -27,13 +27,13 @@
     <InstallUrl>http://reisi007.bplaced.com/program/</InstallUrl>
     <SupportUrl>http://libreoffice-server-installation-gui.5927.n7.nabble.com/</SupportUrl>
     <ErrorReportUrl>https://github.com/reisi007/LibreOffice_Server_Installation_GUI/issues%3fmilestone=none&amp;state=open</ErrorReportUrl>
-    <ProductName>LibreOffice Server Install GUI</ProductName>
+    <ProductName>Server Install GUI</ProductName>
     <PublisherName>Reisisoft</PublisherName>
-    <SuiteName>LibO SI GUI</SuiteName>
+    <SuiteName>LibreOffice Tools</SuiteName>
     <MinimumRequiredVersion>3.0.0.1</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>3.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

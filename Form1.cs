@@ -607,7 +607,7 @@ namespace WindowsFormsApplication1
                     string version = httpfile.Remove(5);
                     string link = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/?C=S;O=D";
                     httpfile = downloadfile(link);
-                        starting_position = httpfile.IndexOf("LibO");
+                        starting_position = httpfile.IndexOf("Lib");
                         httpfile = httpfile.Remove(0, starting_position);
                         starting_position = httpfile.IndexOf(".msi") + 4;
                         httpfile = httpfile.Remove(starting_position);
