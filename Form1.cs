@@ -613,9 +613,11 @@ namespace WindowsFormsApplication1
                         httpfile = httpfile.Remove(starting_position);
                         if (helppack)
                         {
-                            string vers2 = httpfile;
-                            string insert = "helppack_"+lang;
-                            vers2 = vers2.Replace("install_multi",insert);
+                            string vers2  = httpfile;
+                            string insert = "_helppack_"+lang;
+                            starting_position = vers2.IndexOf("x86")+3;
+                            vers2 = vers2.Insert(starting_position, insert); ;
+                            httpfile = vers2;
                         }
                     url = "http://download.documentfoundation.org/libreoffice/testing/" + version + "/win/x86/";
 
@@ -632,9 +634,9 @@ namespace WindowsFormsApplication1
                     httpfile = httpfile.Remove(5);
                     url = "http://download.documentfoundation.org/libreoffice/stable/" + httpfile + "/win/x86/";
                     if (helppack)
-                        httpfile = "LibO_"+httpfile+"_Win_x86_helppack_"+lang+".msi";
+                        httpfile = "LibreOffice_"+httpfile+"_Win_x86_helppack_"+lang+".msi";
                     else
-                        httpfile = "LibO_" + httpfile + "_Win_x86_install_multi.msi";
+                        httpfile = "LibreOffice_" + httpfile + "_Win_x86.msi";
 
                 }
                 else if (older_branch)
