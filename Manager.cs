@@ -60,10 +60,10 @@ namespace WindowsFormsApplication1
             string[] list = temp.manager;
            
             manager_list.Items.Clear();
-            for (int i = 0; i < list.Length; i++ )
+            foreach( string s in list)
             {
-                if(temp.manager[i] != null)
-                manager_list.Items.Add(temp.manager[i]);
+                if(s != null)
+                    manager_list.Items.Add(s);
             }
 
         }
@@ -72,14 +72,15 @@ namespace WindowsFormsApplication1
         private void button3_Click(object sender, EventArgs e)
         {
             manually_add_installation fm = new manually_add_installation();
-            if (fm.ShowDialog() == DialogResult.OK)
+            fm.ShowDialog();
+            if(fm.shared_string != null)
             {
                 SETTINGS temp = set.open_settings();
                 temp.manager = set.update_manager_array(temp.manager, fm.shared_string);
                 set.save_settings(temp);
                 update_selector();
-
             }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
