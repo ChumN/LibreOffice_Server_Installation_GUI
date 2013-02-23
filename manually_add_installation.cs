@@ -69,46 +69,45 @@ namespace WindowsFormsApplication1
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
             
-            button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            button2.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            okay.DialogResult = System.Windows.Forms.DialogResult.OK;
+            abort.DialogResult = System.Windows.Forms.DialogResult.Abort;
             // l10n
             label2.Text = getstring("mai_path_soffice");
-            button3.Text = getstring("mai_config_path");
+            configure.Text = getstring("mai_config_path");
             this.Text = getstring("mai_text");
-            button2.Text = getstring("mai_ok");
-            button1.Text = getstring("mai_abort");
+            abort.Text = getstring("mai_ok");
+            okay.Text = getstring("mai_abort");
             
 
 
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void configure_Click(object sender, EventArgs e)
         {
             string path_text = "";
+
+            if (DialogResult.OK == openFileDialog1.ShowDialog())
+                path_text = openFileDialog1.FileName;
             
-            if(DialogResult.OK == openFileDialog1.ShowDialog())
-           path_text = openFileDialog1.FileName;
-            path.Text = path_text;
-           
-            
+            if (path_text != "")
+            {
+                string delete = "\\program\\soffice.exe";
+                int i = path_text.IndexOf(delete);
+                try
+                {
+                    System.IO.File.ReadAllBytes(path_text);
+                    path_text = path_text.Remove(i);
+                    shared_string = path_text;
+                }
+                catch (Exception ex) { exeptionmessage(ex.Message); }
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void okay_Click(object sender, EventArgs e)
         {
-            string path_text = path.Text;
-           if(path_text != "")
-            {
-            string delete = "\\program\\soffice.exe";
-            int i = path_text.IndexOf(delete);
-            try
-            {
-                System.IO.File.ReadAllBytes(path_text);
-                path_text = path_text.Remove(i);
-                shared_string = path_text;
-            }
-            catch(Exception ex) {exeptionmessage(ex.Message);}
-            }
+            
         }
     }
 }

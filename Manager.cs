@@ -60,11 +60,11 @@ namespace WindowsFormsApplication1
             string[] list = temp.manager;
            
             manager_list.Items.Clear();
-            foreach( string s in list)
-            {
-                if(s != null)
+            if(list != null)
+                foreach( string s in list)
+                {
                     manager_list.Items.Add(s);
-            }
+                }
 
         }
         
