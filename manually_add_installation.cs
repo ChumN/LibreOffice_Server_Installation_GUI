@@ -1,4 +1,9 @@
-﻿using System;
+﻿#region Licence
+/*This file is part of the project "Reisisoft Server Install GUI",
+ * which is licenced under LGPL v3+. You may find a copy in the source,
+ * or obtain one at http://www.gnu.org/licenses/lgpl-3.0-standalone.html */
+#endregion
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

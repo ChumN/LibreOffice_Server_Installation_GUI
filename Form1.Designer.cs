@@ -6,6 +6,11 @@
         /// Erforderliche Designervariable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        #region Licence
+        /*This file is part of the project "Reisisoft Server Install GUI",
+        * which is licenced under LGPL v3+. You may find a copy in the source,
+        * or obtain one at http://www.gnu.org/licenses/lgpl-3.0-standalone.html */
+        #endregion
 
         /// <summary>
         /// Verwendete Ressourcen bereinigen.
